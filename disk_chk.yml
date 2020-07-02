@@ -5,7 +5,7 @@
   tasks:
   - set_fact:
       dk_info: |
-        {{ dk_info|default([]) + [{}] }}
+        {{ dk_info|default([]) + [{'disk_usage':dk_us, 'disk_usage_ratio':dk_us_r}] }}
     loop: "{{ ansible_mounts }}"
     vars:
       dk_us: "{{ item.size_total - item.size_available }}"
