@@ -1,0 +1,15 @@
+---
+- hosts: all
+  gather_facts: yes
+  
+  tasks:
+  - set_fact:
+      dk_info: |
+        {{ dk_info|default([]) + [{'disk_usage':dk_us, 'disk_usage_ratio':dk_us_r}] }}
+    loop: "{{ ansible_mounts }}"
+    vars:
+      dk_us: "{{ item.size_total - item.size_available }}"
+      dk_us_r: "{{ (dk_us|int / item.size_total*100)|int }}"
+      
+   - debug:
+       var: dk_info
