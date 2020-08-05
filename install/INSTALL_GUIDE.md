@@ -1,5 +1,8 @@
+# README
+- Tartget OS is CentOS 7.x
+- Python version 2.7.x to install
 
-# Python download
+# Download Python 
 ```sh
 $ wget "https://www.python.org/ftp/python/2.7.15/Python-2.7.15.tgz"
 ```
@@ -23,7 +26,8 @@ you must write this script in ~/.bashrc:
 export PATH=/home/$USER/local/bin:$PATH
 ```
 
-# Install pip 
+# Install pip
+"python2-pip...rpm" Depends on other "...rpm", so you must install Dependence rpm
 ```sh
 $ yum install python-backports-1.0-8.el7.x86_64.rpm
 $ yum install python-backports-ssl_match_hostname-3.5.0.1-1.el7.noarch.rpm
@@ -33,6 +37,7 @@ $ yum install python2-pip-8.1.2-10.el7.noarch.rpm
 ```
 
 # install ansible
+This installation is also the same as before
 ```sh
 $ pip install -user cffi-1.14.1-cp27-cp27mu-manylinux1_x86_64.whl
 $ pip install -user cryptography-3.0-cp27-cp27mu-manylinux1_x86_64.whl
