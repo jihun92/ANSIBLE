@@ -1,6 +1,6 @@
 # README
-Tartget OS is CentOS 7.x
-Python version 2.7.x to install
+> Tartget OS is CentOS 7.x
+> Python version 2.7.x to install
 
 # Download Python 
 ```sh
