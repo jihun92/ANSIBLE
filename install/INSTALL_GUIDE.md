@@ -1,4 +1,5 @@
-Tartget OS: CentOS
+# Tartget OS
+Tartget OS is CentOS
 
 # Download Python 
 ```sh
