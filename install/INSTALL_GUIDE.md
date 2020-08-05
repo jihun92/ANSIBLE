@@ -24,7 +24,7 @@ export PATH=/home/$USER/local/bin:$PATH
 ```
 
 # Install pip
-"python2-pip...rpm" Depends on other "...rpm", so you must install Dependence rmp
+"python2-pip...rpm" Depends on other "...rpm", so you must install Dependence r
 ```sh
 $ yum install python-backports-1.0-8.el7.x86_64.rpm
 $ yum install python-backports-ssl_match_hostname-3.5.0.1-1.el7.noarch.rpm
