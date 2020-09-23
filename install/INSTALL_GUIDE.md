@@ -2,27 +2,25 @@
 - Tartget OS is CentOS 7.x
 - Python version 2.7.x to install
 
-# Download Python 
+# if not installed python
+Download Python
 ```sh
 $ wget "https://www.python.org/ftp/python/2.7.15/Python-2.7.15.tgz"
 ```
-
-# Decompress tgz
+Decompress tgz
 ```sh
 $ tar -xvf /ansible/install/python/Python-2.7.15.tgz
 ```
-
-# Python install
-python install in /home/$USER/local:
+Python install in /home/$USER/local
+you can python install path using --prefix optin
 ```sh
 $ cd /ansible/install/python/Python-2.7.15
 $ ./configure --prefix=/home/$USER/local
 $ make install
 ```
-you can python install path using --prefix optin
 
-# Set Environment (python path)
-you must write this script in ~/.bashrc:
+Set Environment (python path)
+you must write this script in ~/.bashrc
 ```sh
 export PATH=/home/$USER/local/bin:$PATH
 ```
@@ -84,8 +82,9 @@ ansible 2.9.11
 
 installation path of pip and whl
 ```sh
-[vagrant@ansible-server site-packages]$ pwd
+[vagrant@ansible-server site-packages]$ pwd && ll
 /home/vagrant/.local/lib/python2.7/site-packages
+total 1080
 drwxrwxr-x. 17 vagrant vagrant   4096 Sep 23 08:36 ansible
 drwxrwxr-x.  2 vagrant vagrant    142 Sep 23 08:36 ansible-2.9.11.dist-info
 drwxrwxr-x.  5 vagrant vagrant     89 Sep 23 08:36 ansible_test
