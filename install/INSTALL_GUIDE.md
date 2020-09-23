@@ -12,6 +12,7 @@ Decompress tgz
 $ tar -xvf /ansible/install/python/Python-2.7.15.tgz
 ```
 Python install in /home/$USER/local
+
 you can python install path using --prefix optin
 ```sh
 $ cd /ansible/install/python/Python-2.7.15
@@ -20,6 +21,7 @@ $ make install
 ```
 
 Set Environment (python path)
+
 you must write this script in ~/.bashrc
 ```sh
 export PATH=/home/$USER/local/bin:$PATH
