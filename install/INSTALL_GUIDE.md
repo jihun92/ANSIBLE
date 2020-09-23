@@ -2,7 +2,7 @@
 - Tartget OS is CentOS 7.x
 - Python version 2.7.x to install
 
-# if not installed python
+# If not installed python
 Download Python
 ```sh
 $ wget "https://www.python.org/ftp/python/2.7.15/Python-2.7.15.tgz"
@@ -47,7 +47,7 @@ pip install --user --no-deps ./dependency_whl/wheel-0.35.1-py2.py3-none-any.whl
 pip install --user --no-deps ./dependency_whl/download-0.3.5.tar.gz
 ```
 
-# install ansible
+# Install ansible
 ```sh
 $ cd /ansible/install/ansible
 $ install_ansible.sh
@@ -67,7 +67,7 @@ pip install --user --no-deps ./dependency_whl/six-1.15.0-py2.py3-none-any.whl
 pip install --user --no-deps ansible-2.9.11.tar.gz
 ```
 
-# result
+# Result
 
 installation path of ansible
 ```sh
