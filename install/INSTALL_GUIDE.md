@@ -9,12 +9,13 @@ $ wget "https://www.python.org/ftp/python/2.7.15/Python-2.7.15.tgz"
 
 # Decompress tgz
 ```sh
-tar -xvf Python-2.7.15.tgz
+$ tar -xvf /ansible/install/python/Python-2.7.15.tgz
 ```
 
 # Python install
 python install in /home/$USER/local:
 ```sh
+$ cd /ansible/install/python/Python-2.7.15
 $ ./configure --prefix=/home/$USER/local
 $ make install
 ```
@@ -26,29 +27,46 @@ you must write this script in ~/.bashrc:
 export PATH=/home/$USER/local/bin:$PATH
 ```
 
-# Install pip
-"python2-pip...rpm" Depends on other "...rpm", so you must install Dependence rpm
+# Install pip and dependence whl
+install pip and pip dependence whl
 ```sh
-$ yum install python-backports-1.0-8.el7.x86_64.rpm
-$ yum install python-backports-ssl_match_hostname-3.5.0.1-1.el7.noarch.rpm
-$ yum install python-ipaddress-1.0.16-2.el7.noarch.rpm
-$ yum install python-setuptools-0.9.8-7.el7.noarch.rpm
-$ yum install python2-pip-8.1.2-10.el7.noarch.rpm
+$ cd /ansible/install/python/pip
+$ python pip-20.2.3-py2.py3-none-any.whl/pip install --user pip-20.2.3-py2.py3-none-any.whl
+$ install_dependency.sh
+```
+
+in install_dependency.sh 
+```sh
+pip install --user --no-deps ./dependency_whl/certifi-2020.6.20-py2.py3-none-any.whl
+pip install --user --no-deps ./dependency_whl/chardet-3.0.4-py2.py3-none-any.whl
+pip install --user --no-deps ./dependency_whl/idna-2.10-py2.py3-none-any.whl
+pip install --user --no-deps ./dependency_whl/requests-2.24.0-py2.py3-none-any.whl
+pip install --user --no-deps ./dependency_whl/setuptools-44.1.1-py2.py3-none-any.whl
+pip install --user --no-deps ./dependency_whl/six-1.15.0-py2.py3-none-any.whl
+pip install --user --no-deps ./dependency_whl/tqdm-4.49.0-py2.py3-none-any.whl
+pip install --user --no-deps ./dependency_whl/urllib3-1.25.10-py2.py3-none-any.whl
+pip install --user --no-deps ./dependency_whl/wheel-0.35.1-py2.py3-none-any.whl
+pip install --user --no-deps ./dependency_whl/download-0.3.5.tar.gz
 ```
 
 # install ansible
-This installation is also the same as before
 ```sh
-$ pip install --user cffi-1.14.1-cp27-cp27mu-manylinux1_x86_64.whl
-$ pip install --user cryptography-3.0-cp27-cp27mu-manylinux1_x86_64.whl
-$ pip install --user enum34-1.1.10-py2-none-any.whl
-$ pip install --user ipaddress-1.0.23-py2.py3-none-any.whl
-$ pip install --user Jinja2-2.11.2-py2.py3-none-any.whl
-$ pip install --user MarkupSafe-1.1.1-cp27-cp27mu-manylinux1_x86_64.whl
-$ pip install --user pycparser-2.20-py2.py3-none-any.whl
-$ pip install --user six-1.15.0-py2.py3-none-any.whl
-$ pip install --user PyYAML-5.3.1.tar.gz
-$ pip install --user ansible-2.9.11.tar.gz
+$ cd /ansible/install/ansible
+$ install_ansible.sh
+```
+
+in install_ansible.sh 
+```sh
+pip install --user --no-deps ./dependency_whl/cffi-1.14.3-cp27-cp27mu-manylinux1_x86_64.whl
+pip install --user --no-deps ./dependency_whl/cryptography-3.1-cp27-cp27mu-manylinux2010_x86_64.whl
+pip install --user --no-deps ./dependency_whl/enum34-1.1.10-py2-none-any.whl
+pip install --user --no-deps ./dependency_whl/ipaddress-1.0.23-py2.py3-none-any.whl
+pip install --user --no-deps ./dependency_whl/MarkupSafe-1.1.1-cp27-cp27mu-manylinux1_x86_64.whl
+pip install --user --no-deps ./dependency_whl/Jinja2-2.11.2-py2.py3-none-any.whl
+pip install --user --no-deps ./dependency_whl/pycparser-2.20-py2.py3-none-any.whl
+pip install --user --no-deps ./dependency_whl/PyYAML-5.3.1.tar.gz
+pip install --user --no-deps ./dependency_whl/six-1.15.0-py2.py3-none-any.whl
+pip install --user --no-deps ansible-2.9.11.tar.gz
 ```
 
 # reference 
