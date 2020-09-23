@@ -30,7 +30,7 @@ install pip and pip dependence whl
 ```sh
 $ cd /ansible/install/python/pip
 $ python pip-20.2.3-py2.py3-none-any.whl/pip install --user pip-20.2.3-py2.py3-none-any.whl
-$ install_dependency.sh
+$ . install_dependency.sh
 ```
 
 in install_dependency.sh 
@@ -50,7 +50,7 @@ pip install --user --no-deps ./dependency_whl/download-0.3.5.tar.gz
 # Install ansible
 ```sh
 $ cd /ansible/install/ansible
-$ install_ansible.sh
+$ . install_ansible.sh
 ```
 
 in install_ansible.sh 
