@@ -28,7 +28,7 @@ export PATH=/home/$USER/local/bin:$PATH
 # Install pip and dependence whl
 install pip and pip dependence whl
 ```sh
-$ cd /ansible/install/python/pip
+$ cd /ansible/install/python/whl/pip
 $ python pip-20.2.3-py2.py3-none-any.whl/pip install --user pip-20.2.3-py2.py3-none-any.whl
 $ . install_dependency.sh
 ```
@@ -49,7 +49,7 @@ pip install --user --no-deps ./dependency_whl/download-0.3.5.tar.gz
 
 # Install ansible
 ```sh
-$ cd /ansible/install/ansible
+$ cd /ansible/install/ansible/ansible-2.7.11
 $ . install_ansible.sh
 ```
 
