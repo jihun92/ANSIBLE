@@ -1,5 +1,5 @@
 # install dependency of ansible and paramiko
-
+```sh
 pip install --user bcrypt-3.1.7-cp27-cp27mu-manylinux1_x86_64.whl
 pip install --user certifi-2020.6.20-py2.py3-none-any.whl
 pip install --user cffi-1.14.3-cp27-cp27mu-manylinux1_x86_64.whl
@@ -21,9 +21,15 @@ pip install --user urllib3-1.25.10-py2.py3-none-any.whl
 pip install --user xmltodict-0.12.0-py2.py3-none-any.whl
 pip install --user pywinrm-0.4.1.tar.gz
 pip install --user PyYAML-5.3.1.tar.gz
+```
+
 
 # install paramiko
+```sh
 pip install --user paramiko-2.7.2-py2.py3-none-any.whl
+```
 
 # install ansible
+```sh
 pip install --user ansible-2.7.8.tar.gz
+```
