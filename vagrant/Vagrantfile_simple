@@ -1,0 +1,71 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+	#==============#
+	# CentOS nodes #
+	#==============#
+	
+	#Ansible-Node01
+	config.vm.define "ansible-node01" do |cfg|
+	   cfg.vm.box = "centos/7"
+	   cfg.vm.provider "virtualbox" do |vb|
+		 vb.name = "Ansible-node01"
+	   end
+	   cfg.vm.host_name = "ansible-node01"
+	   cfg.vm.network "public_network", ip: "192.168.1.11", bridge: "eth1"
+	   cfg.vm.network "forwarded_port", guest: 22, host: 60011, auto_correct: true, id: "ssh"
+	   cfg.vm.synced_folder "../data", "/vagrant", disabled: true 
+	end
+  
+    #==============#
+    # Ubuntu nodes #
+    #==============#
+	
+    #Ansible-Node02
+    config.vm.define "ansible-node02" do |cfg|
+       cfg.vm.box = "ubuntu/trusty64"
+  	 cfg.vm.provider "virtualbox" do |vb|
+  	   vb.name = "Ansible-node02"
+  	 end
+  	 cfg.vm.host_name = "ansible-node02"
+  	 cfg.vm.network "public_network", ip: "192.168.1.12", bridge: "eth1"
+  	 cfg.vm.network "forwarded_port", guest: 22, host: 60014, auto_correct: true, id: "ssh"
+  	 cfg.vm.synced_folder "../data", "/vagrant", disabled: true 
+    end
+
+    #==============#
+    # Windows node #
+    #==============#
+	
+    #Ansible-win01
+    config.vm.define "ansible-win01" do |cfg|
+       cfg.vm.box = "sysnet4admin/Windows2016"
+  	 cfg.vm.provider "virtualbox" do |vb|
+  	   vb.name = "Ansible-Win01"
+  	   vb.customize ['modifyvm', :id, '--clipboard', 'bidirectional']
+  	   vb.gui = false
+  	 end
+  	 cfg.vm.host_name = "ansible-win01"
+  	 cfg.vm.network "public_network", ip: "192.168.1.13", bridge: "eth1"
+  	 cfg.vm.network "forwarded_port", guest: 22, host: 60017, auto_correct: true, id: "ssh"
+  	 cfg.vm.synced_folder "../data", "/vagrant", disabled: true
+  	 cfg.vm.provision "shell", inline: "netsh advfirewall set allprofiles state off"
+    end  
+	
+	#================#
+	# Ansible Server #
+	#================#
+	
+	config.vm.define "ansible-server" do |cfg|
+	  cfg.vm.box = "centos/7"
+	   cfg.vm.provider "virtualbox" do |vb|
+		vb.name = "Ansible-Server"
+	  end
+	  cfg.vm.host_name = "ansible-server"
+	  cfg.vm.network "public_network", ip: "192.168.1.10", bridge: "eth1"
+	  cfg.vm.network "forwarded_port", guest: 22, host: 60010, auto_correct: true, id: "ssh"
+	  cfg.vm.synced_folder "../data", "/vagrant", disabled: true
+	end
+  end
