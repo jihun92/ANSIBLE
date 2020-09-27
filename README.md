@@ -50,7 +50,7 @@
 # add line in .bashrc
 
 ```sh
-vi ~/.bashrc
+$ vi ~/.bashrc
 export ANSIBLE_CONFIG=~/ansible/cfg
 alias anp='ansible-playbook'
 ```
