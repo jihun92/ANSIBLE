@@ -46,11 +46,3 @@
     ```sh
     > vagrant up
     ```
-
-# add line in .bashrc
-
-```sh
-$ vi ~/.bashrc
-export ANSIBLE_CONFIG=~/ansible/cfg
-alias anp='ansible-playbook'
-```
