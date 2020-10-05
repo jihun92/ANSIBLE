@@ -2,78 +2,33 @@
 - Tartget OS is CentOS 7.x
 - Python version 2.7.5 to install
 
-# If not installed python
-- Download Python
+# installed python
+- install Python:
 ```sh
-$ wget "https://www.python.org/ftp/python/2.7.5/Python-2.7.5.tgz"
-```
-- Decompress tgz
-```sh
-$ cd ../ansible/install/python
-$ tar -xvf Python-2.7.5.tgz
-```
-- Python install in /home/$USER/local/python
-- you can python install path using --prefix optin
-```sh
-$ cd /ansible/install/python/Python-2.7.5
-$ ./configure --prefix=/home/$USER/local/python
+$ cd /home/$USER/ansible/install/python/python-2.7.5
+$ tar xvf Python-2.7.5.tgz
+$ cd Python-2.7.5
+$ ./configure --enable-unicode=ucs4 --prefix=/home/$USER/local/python
 $ make && make install
 ```
-
-- Set Environment (python path)
-- you must write this script in ~/.bashrc
+- Python install in /home/$USER/local/python
+- you can change path of python using --prefix option
+- Set Environment (python path) :
 ```sh
-export PATH=/home/$USER/local/python/bin:$PATH
+echo 'export PATH=/home/$USER/local/python/bin:$PATH' >> ~/.bashrc
 ```
 
 # Install pip and dependence whl
 install pip and pip dependence whl
 ```sh
-$ cd /ansible/install/python/whl/pip
-$ python pip-20.2.3-py2.py3-none-any.whl/pip install --user pip-20.2.3-py2.py3-none-any.whl
-$ . install_dependency.sh
-```
-
-in install_dependency.sh 
-```sh
-pip install --user --no-deps ./dependency_whl/certifi-2020.6.20-py2.py3-none-any.whl
-pip install --user --no-deps ./dependency_whl/chardet-3.0.4-py2.py3-none-any.whl
-pip install --user --no-deps ./dependency_whl/idna-2.10-py2.py3-none-any.whl
-pip install --user --no-deps ./dependency_whl/requests-2.24.0-py2.py3-none-any.whl
-pip install --user --no-deps ./dependency_whl/setuptools-44.1.1-py2.py3-none-any.whl
-pip install --user --no-deps ./dependency_whl/six-1.15.0-py2.py3-none-any.whl
-pip install --user --no-deps ./dependency_whl/tqdm-4.49.0-py2.py3-none-any.whl
-pip install --user --no-deps ./dependency_whl/urllib3-1.25.10-py2.py3-none-any.whl
-pip install --user --no-deps ./dependency_whl/wheel-0.35.1-py2.py3-none-any.whl
-pip install --user --no-deps ./dependency_whl/download-0.3.5.tar.gz
+$ cd /home/$USER/ansible/install/python/pip-20.2.3/whl
+$ sh install_pip.sh
 ```
 
 # Install ansible
 ```sh
-$ cd /ansible/install/ansible/ansible-2.7.11
-$ . install_ansible.sh
-```
-
-in install_ansible.sh 
-```sh
-pip install --user --no-deps ./dependency_whl/enum34-1.1.10-py2-none-any.whl
-pip install --user --no-deps ./dependency_whl/ipaddress-1.0.23-py2.py3-none-any.whl
-pip install --user --no-deps ./dependency_whl/Jinja2-2.11.2-py2.py3-none-any.whl
-pip install --user --no-deps ./dependency_whl/pycparser-2.20-py2.py3-none-any.whl
-pip install --user --no-deps ./dependency_whl/PyYAML-5.3.1.tar.gz
-pip install --user --no-deps ./dependency_whl/six-1.15.0-py2.py3-none-any.whl
-
-pip install --user --no-deps ./dependency_whl/mu/MarkupSafe-1.1.1-cp27-cp27mu-manylinux1_x86_64.whl
-pip install --user --no-deps ./dependency_whl/mu/PyNaCl-1.4.0-cp27-cp27mu-manylinux1_x86_64.whl
-pip install --user --no-deps ./dependency_whl/mu/bcrypt-3.1.7-cp27-cp27mu-manylinux1_x86_64.whl
-pip install --user --no-deps ./dependency_whl/mu/cffi-1.14.3-cp27-cp27mu-manylinux1_x86_64.whl
-pip install --user --no-deps ./dependency_whl/mu/cryptography-3.1-cp27-cp27mu-manylinux2010_x86_64.whl
-
-# pip install
-pip install --user --no-deps ./dependency_whl/paramiko-2.7.2-py2.py3-none-any.whl
-
-# ansible install
-pip install --user ansible-2.9.11.tar.gz
+$ cd /home/$USER/ansible/install/ansible/ansible-2.7.11
+$ sh install.sh
 ```
 
 # Result
@@ -146,4 +101,3 @@ drwxrwxr-x.  2 vagrant vagrant   4096 Sep 23 08:35 yaml
 
 # reference 
 https://hiseon.me/python/linux-python-install/
-
