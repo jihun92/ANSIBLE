@@ -1,28 +1,29 @@
 # README
 - Tartget OS is CentOS 7.x
-- Python version 2.7.x to install
+- Python version 2.7.5 to install
 
 # If not installed python
 - Download Python
 ```sh
-$ wget "https://www.python.org/ftp/python/2.7.15/Python-2.7.15.tgz"
+$ wget "https://www.python.org/ftp/python/2.7.5/Python-2.7.5.tgz"
 ```
 - Decompress tgz
 ```sh
-$ tar -xvf /ansible/install/python/Python-2.7.15.tgz
+$ cd ../ansible/install/python
+$ tar -xvf Python-2.7.5.tgz
 ```
-- Python install in /home/$USER/local
+- Python install in /home/$USER/local/python
 - you can python install path using --prefix optin
 ```sh
-$ cd /ansible/install/python/Python-2.7.15
-$ ./configure --prefix=/home/$USER/local
-$ make install
+$ cd /ansible/install/python/Python-2.7.5
+$ ./configure --prefix=/home/$USER/local/python
+$ make && make install
 ```
 
 - Set Environment (python path)
 - you must write this script in ~/.bashrc
 ```sh
-export PATH=/home/$USER/local/bin:$PATH
+export PATH=/home/$USER/local/python/bin:$PATH
 ```
 
 # Install pip and dependence whl
