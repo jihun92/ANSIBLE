@@ -38,6 +38,9 @@ $ sh install_pip.sh
 ```sh
 $ cd /home/$USER/ansible/install/ansible/ansible-2.7.8
 $ sh install.sh
+$ echo 'export ANSIBLE_CONFIG=/home/$USER/ansible/cfg' >> /home/$USER/.bashrc
+$ echo "alias anp='ansible-playbook'" >> /home/$USER/.bashrc
+$ source ~/.bashrc
 ```
 
 # Result
@@ -47,7 +50,7 @@ installation path of ansible
 ```sh
 $ ansible --version
 ansible 2.7.8
-  config file = None
+  config file = /home/ansible/ansible/cfg/ansible.cfg
   configured module search path = [u'/home/ansible/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
   ansible python module location = /home/ansible/local/python/lib/python2.7/site-packages/ansible
   executable location = /home/ansible/local/python/bin/ansible
