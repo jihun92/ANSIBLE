@@ -6,7 +6,7 @@ pip install --prefix $PYTHON --no-deps ./dependency/bcrypt-3.1.7-cp27-cp27mu-man
 pip install --prefix $PYTHON --no-deps ./dependency/certifi-2020.6.20-py2.py3-none-any.whl
 pip install --prefix $PYTHON --no-deps ./dependency/cffi-1.14.3-cp27-cp27mu-manylinux1_x86_64.whl
 pip install --prefix $PYTHON --no-deps ./dependency/chardet-3.0.4-py2.py3-none-any.whl
-pip install --prefix $PYTHON --no-deps ./dependency/cryptography-3.1.1-cp27-cp27mu-manylinux2010_x86_64.whl
+pip install --prefix $PYTHON --no-deps ./dependency/cryptography-1.7.2.tar.gz
 pip install --prefix $PYTHON --no-deps ./dependency/enum34-1.1.10-py2-none-any.whl
 pip install --prefix $PYTHON --no-deps ./dependency/idna-2.10-py2.py3-none-any.whl
 pip install --prefix $PYTHON --no-deps ./dependency/ipaddress-1.0.23-py2.py3-none-any.whl
@@ -28,7 +28,7 @@ echo '########### install pywinrm in' $PYTHON '##########'
 pip install --prefix $PYTHON ./pywinrm/pywinrm-0.4.1.tar.gz
 
 echo '########### install paramiko in' $PYTHON '##########'
-pip install --prefix $PYTHON ./paramiko/paramiko-2.7.2-py2.py3-none-any.whl
+pip install --prefix $PYTHON ./paramiko/paramiko-2.1.1-py2.py3-none-any.whl
 
 echo '########### install sshpass.rpm ###########'
 sudo yum install -y ./sshpass/sshpass-1.06-2.el7.x86_64.rpm
