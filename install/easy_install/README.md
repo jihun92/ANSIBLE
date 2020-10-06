@@ -19,6 +19,6 @@ $ sudo yum install python2-pip-8.1.2-14.el7.noarch.rpm
 
 ```sh
 $ ../ansible/install/easy_install/pywinrm
-$ pip install --user pywinrm-0.4.1.tar.gz
+$ pip install pywinrm-0.4.1.tar.gz
 ```
 
