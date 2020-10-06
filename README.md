@@ -31,26 +31,20 @@
 
 - Create VM Server (ansible server and remote server)
 
-  1. execute CMD or Powershell
-  2. Change dir to "C:\HashiCorp"
-  3. vagrant Initialization
+1. execute CMD or Powershell
+
+2. Change dir to "C:\HashiCorp"
+
+3. vagrant Initialization
 
     ```sh 
     > vagrant init
     ```
 
-  4. overwrite to ""/ansible/vagrant/Vagrantfile" form C:\HashiCorp\Vagrantfile"
-
-  5. vagrant up
+4. overwrite to ""/ansible/vagrant/Vagrantfile" form C:\HashiCorp\Vagrantfile"
+5. vagrant up
 
     ```sh
     > vagrant up
     ```
 
-# add line in .bashrc
-
-```sh
-$ vi ~/.bashrc
-export ANSIBLE_CONFIG=~/ansible/cfg
-alias anp='ansible-playbook'
-```
