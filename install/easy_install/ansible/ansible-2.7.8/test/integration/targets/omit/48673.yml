@@ -1,4 +1,0 @@
-- hosts: localhost
-  serial: "{{ testing_omitted_variable | default(omit) }}"
-  tasks:
-    - debug:

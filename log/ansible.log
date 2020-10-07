@@ -954,3 +954,4 @@ UnicodeDecodeError: 'ascii' codec can't decode byte 0xe2 in position 60: ordinal
 2020-10-07 08:19:24,742 p=25409 u=vagrant |  PLAY RECAP *************************************************************************************************************
 2020-10-07 08:19:24,742 p=25409 u=vagrant |  centOS                     : ok=3    changed=0    unreachable=0    failed=0   
 2020-10-07 08:20:27,488 p=25467 u=vagrant |  ERROR! input is not vault encrypted datawin_passwd is not a vault encrypted file for win_passwd
+2020-10-07 08:23:05,196 p=25508 u=vagrant |  ERROR! Missing target hosts
