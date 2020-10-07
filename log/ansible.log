@@ -1,0 +1,956 @@
+2020-10-07 02:41:23,457 p=2125 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 02:41:23,483 p=2125 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 02:41:26,160 p=2125 u=vagrant |  fatal: [192.168.1.11]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '192.168.1.11' (ECDSA) to the list of known hosts.\r\nPermission denied (publickey,gssapi-keyex,gssapi-with-mic).", "unreachable": true}
+2020-10-07 02:41:26,161 p=2125 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 02:41:26,161 p=2125 u=vagrant |  192.168.1.11               : ok=0    changed=0    unreachable=1    failed=0   
+2020-10-07 02:44:03,353 p=2161 u=vagrant |  ERROR! You must specify a playbook file to run
+2020-10-07 02:44:06,450 p=2170 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 02:44:06,459 p=2170 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 02:44:07,769 p=2170 u=vagrant |  ok: [192.168.1.11]
+2020-10-07 02:44:07,789 p=2170 u=vagrant |  TASK [set_fact] ********************************************************************************************************
+2020-10-07 02:44:07,829 p=2170 u=vagrant |  ok: [192.168.1.11] => (item={u'block_used': 795285, u'uuid': u'1c419d6c-5064-4a2b-953c-05b2c67edb15', u'size_total': 42927656960, u'block_total': 10480385, u'mount': u'/', u'block_available': 9685100, u'size_available': 39670169600, u'fstype': u'xfs', u'inode_total': 20971008, u'inode_available': 20943210, u'device': u'/dev/sda1', u'inode_used': 27798, u'block_size': 4096, u'options': u'rw,seclabel,relatime,attr2,inode64,noquota'})
+2020-10-07 02:44:07,851 p=2170 u=vagrant |  TASK [debug] ***********************************************************************************************************
+2020-10-07 02:44:07,887 p=2170 u=vagrant |  ok: [192.168.1.11] => {
+    "dk_info": [
+        {
+            "disk_usage": "3257487360", 
+            "disk_usage_ratio": "7"
+        }
+    ]
+}
+2020-10-07 02:44:07,889 p=2170 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 02:44:07,889 p=2170 u=vagrant |  192.168.1.11               : ok=3    changed=0    unreachable=0    failed=0   
+2020-10-07 02:45:45,728 p=2220 u=vagrant |  Encryption successful
+2020-10-07 02:45:56,127 p=2235 u=vagrant |   [WARNING]:  * Failed to parse /home/vagrant/ansible/hosts/hosts with yaml plugin: Attempting to decrypt but no vault
+secrets found
+
+2020-10-07 02:45:56,128 p=2235 u=vagrant |   [WARNING]:  * Failed to parse /home/vagrant/ansible/hosts/hosts with ini plugin: Attempting to decrypt but no vault
+secrets found
+
+2020-10-07 02:45:56,128 p=2235 u=vagrant |   [WARNING]: Unable to parse /home/vagrant/ansible/hosts/hosts as an inventory source
+
+2020-10-07 02:45:56,128 p=2235 u=vagrant |   [WARNING]: Unable to parse /home/vagrant/ansible/hosts as an inventory source
+
+2020-10-07 02:45:56,128 p=2235 u=vagrant |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2020-10-07 02:45:56,132 p=2235 u=vagrant |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match
+'all'
+
+2020-10-07 02:45:56,430 p=2235 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 02:45:56,431 p=2235 u=vagrant |  skipping: no hosts matched
+2020-10-07 02:45:56,431 p=2235 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 02:46:38,817 p=2250 u=vagrant |  ERROR! the playbook: 1 could not be found
+2020-10-07 02:46:41,878 p=2257 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 02:46:41,887 p=2257 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 02:46:42,899 p=2257 u=vagrant |  ok: [192.168.1.11]
+2020-10-07 02:46:42,918 p=2257 u=vagrant |  TASK [set_fact] ********************************************************************************************************
+2020-10-07 02:46:42,962 p=2257 u=vagrant |  ok: [192.168.1.11] => (item={u'block_used': 795280, u'uuid': u'1c419d6c-5064-4a2b-953c-05b2c67edb15', u'size_total': 42927656960, u'block_total': 10480385, u'mount': u'/', u'block_available': 9685105, u'size_available': 39670190080, u'fstype': u'xfs', u'inode_total': 20971008, u'inode_available': 20943210, u'device': u'/dev/sda1', u'inode_used': 27798, u'block_size': 4096, u'options': u'rw,seclabel,relatime,attr2,inode64,noquota'})
+2020-10-07 02:46:42,982 p=2257 u=vagrant |  TASK [debug] ***********************************************************************************************************
+2020-10-07 02:46:43,018 p=2257 u=vagrant |  ok: [192.168.1.11] => {
+    "dk_info": [
+        {
+            "disk_usage": "3257466880", 
+            "disk_usage_ratio": "7"
+        }
+    ]
+}
+2020-10-07 02:46:43,020 p=2257 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 02:46:43,020 p=2257 u=vagrant |  192.168.1.11               : ok=3    changed=0    unreachable=0    failed=0   
+2020-10-07 02:46:49,492 p=2283 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 02:46:49,502 p=2283 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 02:46:50,234 p=2283 u=vagrant |  ok: [192.168.1.11]
+2020-10-07 02:46:50,257 p=2283 u=vagrant |  TASK [set_fact] ********************************************************************************************************
+2020-10-07 02:46:50,305 p=2283 u=vagrant |  ok: [192.168.1.11] => (item={u'block_used': 795280, u'uuid': u'1c419d6c-5064-4a2b-953c-05b2c67edb15', u'size_total': 42927656960, u'block_total': 10480385, u'mount': u'/', u'block_available': 9685105, u'size_available': 39670190080, u'fstype': u'xfs', u'inode_total': 20971008, u'inode_available': 20943210, u'device': u'/dev/sda1', u'inode_used': 27798, u'block_size': 4096, u'options': u'rw,seclabel,relatime,attr2,inode64,noquota'})
+2020-10-07 02:46:50,323 p=2283 u=vagrant |  TASK [debug] ***********************************************************************************************************
+2020-10-07 02:46:50,364 p=2283 u=vagrant |  ok: [192.168.1.11] => {
+    "dk_info": [
+        {
+            "disk_usage": "3257466880", 
+            "disk_usage_ratio": "7"
+        }
+    ]
+}
+2020-10-07 02:46:50,366 p=2283 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 02:46:50,366 p=2283 u=vagrant |  192.168.1.11               : ok=3    changed=0    unreachable=0    failed=0   
+2020-10-07 05:55:36,329 p=23877 u=vagrant |  Decryption successful
+2020-10-07 05:56:02,864 p=23904 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 05:56:02,873 p=23904 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 05:56:03,015 p=23904 u=vagrant |  fatal: [192.168.1.11]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).", "unreachable": true}
+2020-10-07 05:56:03,017 p=23904 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 05:56:03,017 p=23904 u=vagrant |  192.168.1.11               : ok=0    changed=0    unreachable=1    failed=0   
+2020-10-07 05:56:09,985 p=23919 u=vagrant |  ansible-playbook 2.7.8
+  config file = /home/vagrant/ansible/cfg/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible
+  executable location = /home/vagrant/.local/bin/ansible-playbook
+  python version = 2.7.5 (default, Apr  2 2020, 13:16:51) [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+2020-10-07 05:56:09,985 p=23919 u=vagrant |  Using /home/vagrant/ansible/cfg/ansible.cfg as config file
+2020-10-07 05:56:11,941 p=23919 u=vagrant |  /home/vagrant/ansible/hosts/hosts did not meet host_list requirements, check plugin documentation if this is unexpected
+2020-10-07 05:56:11,941 p=23919 u=vagrant |  /home/vagrant/ansible/hosts/hosts did not meet script requirements, check plugin documentation if this is unexpected
+2020-10-07 05:56:11,945 p=23919 u=vagrant |  Parsed /home/vagrant/ansible/hosts/hosts inventory source with ini plugin
+2020-10-07 05:56:12,210 p=23919 u=vagrant |  PLAYBOOK: disk_chk.yml *************************************************************************************************
+2020-10-07 05:56:12,210 p=23919 u=vagrant |  1 plays in disk_chk.yml
+2020-10-07 05:56:12,235 p=23919 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 05:56:12,245 p=23919 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 05:56:12,246 p=23919 u=vagrant |  task path: /home/vagrant/ansible/yaml/disk_chk.yml:2
+2020-10-07 05:56:12,372 p=23919 u=vagrant |  fatal: [192.168.1.11]: UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).", 
+    "unreachable": true
+}
+2020-10-07 05:56:12,373 p=23919 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 05:56:12,373 p=23919 u=vagrant |  192.168.1.11               : ok=0    changed=0    unreachable=1    failed=0   
+2020-10-07 05:57:56,284 p=23935 u=vagrant |  ansible-playbook 2.7.8
+  config file = /home/vagrant/ansible/cfg/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible
+  executable location = /home/vagrant/.local/bin/ansible-playbook
+  python version = 2.7.5 (default, Apr  2 2020, 13:16:51) [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+2020-10-07 05:57:56,284 p=23935 u=vagrant |  Using /home/vagrant/ansible/cfg/ansible.cfg as config file
+2020-10-07 05:57:56,841 p=23935 u=vagrant |  /home/vagrant/ansible/hosts/hosts did not meet host_list requirements, check plugin documentation if this is unexpected
+2020-10-07 05:57:56,842 p=23935 u=vagrant |  /home/vagrant/ansible/hosts/hosts did not meet script requirements, check plugin documentation if this is unexpected
+2020-10-07 05:57:56,845 p=23935 u=vagrant |  Parsed /home/vagrant/ansible/hosts/hosts inventory source with ini plugin
+2020-10-07 05:57:57,095 p=23935 u=vagrant |  PLAYBOOK: disk_chk.yml *************************************************************************************************
+2020-10-07 05:57:57,096 p=23935 u=vagrant |  1 plays in disk_chk.yml
+2020-10-07 05:57:57,119 p=23935 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 05:57:57,129 p=23935 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 05:57:57,130 p=23935 u=vagrant |  task path: /home/vagrant/ansible/yaml/disk_chk.yml:2
+2020-10-07 05:57:57,817 p=23935 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/system/setup.py
+2020-10-07 05:57:58,228 p=23935 u=vagrant |  ok: [192.168.1.11]
+2020-10-07 05:57:58,229 p=23935 u=vagrant |  META: ran handlers
+2020-10-07 05:57:58,249 p=23935 u=vagrant |  TASK [set_fact] ********************************************************************************************************
+2020-10-07 05:57:58,249 p=23935 u=vagrant |  task path: /home/vagrant/ansible/yaml/disk_chk.yml:6
+2020-10-07 05:57:58,301 p=23935 u=vagrant |  ok: [192.168.1.11] => (item={u'block_used': 795304, u'uuid': u'1c419d6c-5064-4a2b-953c-05b2c67edb15', u'size_total': 42927656960, u'block_total': 10480385, u'mount': u'/', u'block_available': 9685081, u'size_available': 39670091776, u'fstype': u'xfs', u'inode_total': 20971008, u'inode_available': 20943207, u'device': u'/dev/sda1', u'inode_used': 27801, u'block_size': 4096, u'options': u'rw,seclabel,relatime,attr2,inode64,noquota'}) => {
+    "ansible_facts": {
+        "dk_info": [
+            {
+                "disk_usage": "3257565184", 
+                "disk_usage_ratio": "7"
+            }
+        ]
+    }, 
+    "changed": false, 
+    "item": {
+        "block_available": 9685081, 
+        "block_size": 4096, 
+        "block_total": 10480385, 
+        "block_used": 795304, 
+        "device": "/dev/sda1", 
+        "fstype": "xfs", 
+        "inode_available": 20943207, 
+        "inode_total": 20971008, 
+        "inode_used": 27801, 
+        "mount": "/", 
+        "options": "rw,seclabel,relatime,attr2,inode64,noquota", 
+        "size_available": 39670091776, 
+        "size_total": 42927656960, 
+        "uuid": "1c419d6c-5064-4a2b-953c-05b2c67edb15"
+    }
+}
+2020-10-07 05:57:58,318 p=23935 u=vagrant |  TASK [debug] ***********************************************************************************************************
+2020-10-07 05:57:58,319 p=23935 u=vagrant |  task path: /home/vagrant/ansible/yaml/disk_chk.yml:14
+2020-10-07 05:57:58,354 p=23935 u=vagrant |  ok: [192.168.1.11] => {
+    "dk_info": [
+        {
+            "disk_usage": "3257565184", 
+            "disk_usage_ratio": "7"
+        }
+    ]
+}
+2020-10-07 05:57:58,355 p=23935 u=vagrant |  META: ran handlers
+2020-10-07 05:57:58,355 p=23935 u=vagrant |  META: ran handlers
+2020-10-07 05:57:58,356 p=23935 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 05:57:58,357 p=23935 u=vagrant |  192.168.1.11               : ok=3    changed=0    unreachable=0    failed=0   
+2020-10-07 06:00:25,208 p=23999 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 06:00:25,219 p=23999 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 06:00:25,357 p=23999 u=vagrant |  fatal: [192.168.1.11]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2020-10-07 06:00:25,359 p=23999 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 06:00:25,359 p=23999 u=vagrant |  192.168.1.11               : ok=0    changed=0    unreachable=1    failed=0   
+2020-10-07 06:00:29,742 p=24012 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 06:00:29,751 p=24012 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 06:00:30,785 p=24012 u=vagrant |  ok: [192.168.1.11]
+2020-10-07 06:00:30,815 p=24012 u=vagrant |  TASK [shell] ***********************************************************************************************************
+2020-10-07 06:00:42,460 p=24012 u=vagrant |   [ERROR]: User interrupted execution
+
+2020-10-07 06:00:44,770 p=24053 u=vagrant |  ansible-playbook 2.7.8
+  config file = /home/vagrant/ansible/cfg/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible
+  executable location = /home/vagrant/.local/bin/ansible-playbook
+  python version = 2.7.5 (default, Apr  2 2020, 13:16:51) [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+2020-10-07 06:00:44,770 p=24053 u=vagrant |  Using /home/vagrant/ansible/cfg/ansible.cfg as config file
+2020-10-07 06:00:46,281 p=24053 u=vagrant |  /home/vagrant/ansible/hosts/hosts did not meet host_list requirements, check plugin documentation if this is unexpected
+2020-10-07 06:00:46,281 p=24053 u=vagrant |  /home/vagrant/ansible/hosts/hosts did not meet script requirements, check plugin documentation if this is unexpected
+2020-10-07 06:00:46,285 p=24053 u=vagrant |  Parsed /home/vagrant/ansible/hosts/hosts inventory source with ini plugin
+2020-10-07 06:00:46,545 p=24053 u=vagrant |  PLAYBOOK: set_yum_instal.yml *******************************************************************************************
+2020-10-07 06:00:46,546 p=24053 u=vagrant |  1 plays in set_yum_instal.yml
+2020-10-07 06:00:46,574 p=24053 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 06:00:46,583 p=24053 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 06:00:46,583 p=24053 u=vagrant |  task path: /home/vagrant/ansible/yaml/set_yum_instal.yml:2
+2020-10-07 06:00:46,987 p=24053 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/system/setup.py
+2020-10-07 06:00:47,393 p=24053 u=vagrant |  ok: [192.168.1.11]
+2020-10-07 06:00:47,393 p=24053 u=vagrant |  META: ran handlers
+2020-10-07 06:00:47,414 p=24053 u=vagrant |  TASK [shell] ***********************************************************************************************************
+2020-10-07 06:00:47,414 p=24053 u=vagrant |  task path: /home/vagrant/ansible/yaml/set_yum_instal.yml:5
+2020-10-07 06:00:47,661 p=24053 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-07 06:00:56,047 p=24053 u=vagrant |   [ERROR]: User interrupted execution
+
+2020-10-07 06:01:05,325 p=24105 u=vagrant |  ansible-playbook 2.7.8
+  config file = /home/vagrant/ansible/cfg/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible
+  executable location = /home/vagrant/.local/bin/ansible-playbook
+  python version = 2.7.5 (default, Apr  2 2020, 13:16:51) [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+2020-10-07 06:01:05,325 p=24105 u=vagrant |  Using /home/vagrant/ansible/cfg/ansible.cfg as config file
+2020-10-07 06:01:06,860 p=24105 u=vagrant |  /home/vagrant/ansible/hosts/hosts did not meet host_list requirements, check plugin documentation if this is unexpected
+2020-10-07 06:01:06,860 p=24105 u=vagrant |  /home/vagrant/ansible/hosts/hosts did not meet script requirements, check plugin documentation if this is unexpected
+2020-10-07 06:01:06,864 p=24105 u=vagrant |  Parsed /home/vagrant/ansible/hosts/hosts inventory source with ini plugin
+2020-10-07 06:01:07,155 p=24105 u=vagrant |  PLAYBOOK: set_yum_instal.yml *******************************************************************************************
+2020-10-07 06:01:07,155 p=24105 u=vagrant |  1 plays in set_yum_instal.yml
+2020-10-07 06:01:07,180 p=24105 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 06:01:07,189 p=24105 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 06:01:07,190 p=24105 u=vagrant |  task path: /home/vagrant/ansible/yaml/set_yum_instal.yml:2
+2020-10-07 06:01:07,611 p=24105 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/system/setup.py
+2020-10-07 06:01:08,007 p=24105 u=vagrant |  ok: [192.168.1.11]
+2020-10-07 06:01:08,008 p=24105 u=vagrant |  META: ran handlers
+2020-10-07 06:01:08,026 p=24105 u=vagrant |  TASK [shell] ***********************************************************************************************************
+2020-10-07 06:01:08,026 p=24105 u=vagrant |  task path: /home/vagrant/ansible/yaml/set_yum_instal.yml:5
+2020-10-07 06:01:08,260 p=24105 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-07 06:01:29,676 p=24105 u=vagrant |   [ERROR]: User interrupted execution
+
+2020-10-07 06:02:43,316 p=24146 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 06:02:43,326 p=24146 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 06:02:43,448 p=24146 u=vagrant |  fatal: [192.168.1.11]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2020-10-07 06:02:43,449 p=24146 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 06:02:43,449 p=24146 u=vagrant |  192.168.1.11               : ok=0    changed=0    unreachable=1    failed=0   
+2020-10-07 06:02:49,049 p=24159 u=vagrant |  ansible-playbook 2.7.8
+  config file = /home/vagrant/ansible/cfg/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible
+  executable location = /home/vagrant/.local/bin/ansible-playbook
+  python version = 2.7.5 (default, Apr  2 2020, 13:16:51) [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+2020-10-07 06:02:49,049 p=24159 u=vagrant |  Using /home/vagrant/ansible/cfg/ansible.cfg as config file
+2020-10-07 06:02:49,811 p=24159 u=vagrant |  /home/vagrant/ansible/hosts/hosts did not meet host_list requirements, check plugin documentation if this is unexpected
+2020-10-07 06:02:49,811 p=24159 u=vagrant |  /home/vagrant/ansible/hosts/hosts did not meet script requirements, check plugin documentation if this is unexpected
+2020-10-07 06:02:49,814 p=24159 u=vagrant |  Parsed /home/vagrant/ansible/hosts/hosts inventory source with ini plugin
+2020-10-07 06:02:50,085 p=24159 u=vagrant |  PLAYBOOK: set_yum_instal.yml *******************************************************************************************
+2020-10-07 06:02:50,085 p=24159 u=vagrant |  1 plays in set_yum_instal.yml
+2020-10-07 06:02:50,109 p=24159 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 06:02:50,119 p=24159 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 06:02:50,119 p=24159 u=vagrant |  task path: /home/vagrant/ansible/yaml/set_yum_instal.yml:2
+2020-10-07 06:02:50,795 p=24159 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/system/setup.py
+2020-10-07 06:02:51,153 p=24159 u=vagrant |  ok: [192.168.1.11]
+2020-10-07 06:02:51,153 p=24159 u=vagrant |  META: ran handlers
+2020-10-07 06:02:51,179 p=24159 u=vagrant |  TASK [yum] *************************************************************************************************************
+2020-10-07 06:02:51,179 p=24159 u=vagrant |  task path: /home/vagrant/ansible/yaml/set_yum_instal.yml:5
+2020-10-07 06:02:51,541 p=24159 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/packaging/os/yum.py
+2020-10-07 06:02:56,487 p=24159 u=vagrant |  fatal: [192.168.1.11]: FAILED! => {
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "allow_downgrade": false, 
+            "autoremove": false, 
+            "bugfix": false, 
+            "conf_file": null, 
+            "disable_excludes": null, 
+            "disable_gpg_check": false, 
+            "disable_plugin": [], 
+            "disablerepo": [], 
+            "download_only": false, 
+            "enable_plugin": [], 
+            "enablerepo": [], 
+            "exclude": [], 
+            "install_repoquery": true, 
+            "installroot": "/", 
+            "list": null, 
+            "name": [
+                "vim"
+            ], 
+            "releasever": null, 
+            "security": false, 
+            "skip_broken": false, 
+            "state": "present", 
+            "update_cache": false, 
+            "update_only": false, 
+            "use_backend": "auto", 
+            "validate_certs": true
+        }
+    }, 
+    "msg": "You need to be root to perform this command.\n", 
+    "rc": 1, 
+    "results": [
+        "Loaded plugins: fastestmirror\n"
+    ]
+}
+2020-10-07 06:02:56,488 p=24159 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 06:02:56,489 p=24159 u=vagrant |  192.168.1.11               : ok=1    changed=0    unreachable=0    failed=1   
+2020-10-07 06:10:11,753 p=24204 u=vagrant |  ansible-playbook 2.7.8
+  config file = /home/vagrant/ansible/cfg/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible
+  executable location = /home/vagrant/.local/bin/ansible-playbook
+  python version = 2.7.5 (default, Apr  2 2020, 13:16:51) [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+2020-10-07 06:10:11,754 p=24204 u=vagrant |  Using /home/vagrant/ansible/cfg/ansible.cfg as config file
+2020-10-07 06:10:13,285 p=24204 u=vagrant |  /home/vagrant/ansible/hosts/hosts did not meet host_list requirements, check plugin documentation if this is unexpected
+2020-10-07 06:10:13,285 p=24204 u=vagrant |  /home/vagrant/ansible/hosts/hosts did not meet script requirements, check plugin documentation if this is unexpected
+2020-10-07 06:10:13,289 p=24204 u=vagrant |  Parsed /home/vagrant/ansible/hosts/hosts inventory source with ini plugin
+2020-10-07 06:10:13,547 p=24204 u=vagrant |  PLAYBOOK: set_yum_instal.yml *******************************************************************************************
+2020-10-07 06:10:13,547 p=24204 u=vagrant |  1 plays in set_yum_instal.yml
+2020-10-07 06:10:13,575 p=24204 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 06:10:13,584 p=24204 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 06:10:13,585 p=24204 u=vagrant |  task path: /home/vagrant/ansible/yaml/set_yum_instal.yml:2
+2020-10-07 06:10:14,271 p=24204 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/system/setup.py
+2020-10-07 06:10:14,645 p=24204 u=vagrant |  ok: [192.168.1.11]
+2020-10-07 06:10:14,646 p=24204 u=vagrant |  META: ran handlers
+2020-10-07 06:10:14,666 p=24204 u=vagrant |  TASK [yum] *************************************************************************************************************
+2020-10-07 06:10:14,666 p=24204 u=vagrant |  task path: /home/vagrant/ansible/yaml/set_yum_instal.yml:5
+2020-10-07 06:10:14,961 p=24204 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/packaging/os/yum.py
+2020-10-07 06:10:16,680 p=24204 u=vagrant |  fatal: [192.168.1.11]: FAILED! => {
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "allow_downgrade": false, 
+            "autoremove": false, 
+            "bugfix": false, 
+            "conf_file": null, 
+            "disable_excludes": null, 
+            "disable_gpg_check": false, 
+            "disable_plugin": [], 
+            "disablerepo": [], 
+            "download_only": false, 
+            "enable_plugin": [], 
+            "enablerepo": [], 
+            "exclude": [], 
+            "install_repoquery": true, 
+            "installroot": "/", 
+            "list": null, 
+            "name": [
+                "vim"
+            ], 
+            "releasever": null, 
+            "security": false, 
+            "skip_broken": false, 
+            "state": "present", 
+            "update_cache": false, 
+            "update_only": false, 
+            "use_backend": "auto", 
+            "validate_certs": true
+        }
+    }, 
+    "msg": "You need to be root to perform this command.\n", 
+    "rc": 1, 
+    "results": [
+        "Loaded plugins: fastestmirror\n"
+    ]
+}
+2020-10-07 06:10:16,681 p=24204 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 06:10:16,682 p=24204 u=vagrant |  192.168.1.11               : ok=1    changed=0    unreachable=0    failed=1   
+2020-10-07 06:11:49,762 p=24251 u=vagrant |  ansible-playbook 2.7.8
+  config file = /home/vagrant/ansible/cfg/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible
+  executable location = /home/vagrant/.local/bin/ansible-playbook
+  python version = 2.7.5 (default, Apr  2 2020, 13:16:51) [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+2020-10-07 06:11:49,762 p=24251 u=vagrant |  Using /home/vagrant/ansible/cfg/ansible.cfg as config file
+2020-10-07 06:11:50,386 p=24251 u=vagrant |  /home/vagrant/ansible/hosts/hosts did not meet host_list requirements, check plugin documentation if this is unexpected
+2020-10-07 06:11:50,386 p=24251 u=vagrant |  /home/vagrant/ansible/hosts/hosts did not meet script requirements, check plugin documentation if this is unexpected
+2020-10-07 06:11:50,390 p=24251 u=vagrant |  Parsed /home/vagrant/ansible/hosts/hosts inventory source with ini plugin
+2020-10-07 06:11:50,642 p=24251 u=vagrant |  PLAYBOOK: set_yum_instal.yml *******************************************************************************************
+2020-10-07 06:11:50,642 p=24251 u=vagrant |  1 plays in set_yum_instal.yml
+2020-10-07 06:11:50,665 p=24251 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 06:11:50,675 p=24251 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 06:11:50,675 p=24251 u=vagrant |  task path: /home/vagrant/ansible/yaml/set_yum_instal.yml:2
+2020-10-07 06:11:51,357 p=24251 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/system/setup.py
+2020-10-07 06:11:51,505 p=24251 u=vagrant |  The full traceback is:
+Traceback (most recent call last):
+  File "/home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/executor/task_executor.py", line 140, in run
+    res = self._execute()
+  File "/home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/executor/task_executor.py", line 612, in _execute
+    result = self._handler.run(task_vars=variables)
+  File "/home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/plugins/action/normal.py", line 46, in run
+    result = merge_hash(result, self._execute_module(task_vars=task_vars, wrap_async=wrap_async))
+  File "/home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/plugins/action/__init__.py", line 840, in _execute_module
+    self._fixup_perms2(remote_files, self._play_context.remote_user)
+  File "/home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/plugins/action/__init__.py", line 448, in _fixup_perms2
+    res = self._remote_chown(remote_paths, self._play_context.become_user)
+  File "/home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/plugins/action/__init__.py", line 490, in _remote_chown
+    res = self._low_level_execute_command(cmd, sudoable=sudoable)
+  File "/home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/plugins/action/__init__.py", line 962, in _low_level_execute_command
+    rc, stdout, stderr = self._connection.exec_command(cmd, in_data=in_data, sudoable=sudoable)
+  File "/home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/plugins/connection/ssh.py", line 1137, in exec_command
+    (returncode, stdout, stderr) = self._run(cmd, in_data, sudoable=sudoable)
+  File "/home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/plugins/connection/ssh.py", line 411, in wrapped
+    _handle_error(remaining_retries, cmd[0], return_tuple, self._play_context.no_log, self.host)
+  File "/home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/plugins/connection/ssh.py", line 364, in _handle_error
+    display.vvv(msg, host=host)
+  File "/home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/utils/display.py", line 183, in vvv
+    return self.verbose(msg, host=host, caplevel=2)
+  File "/home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/utils/display.py", line 206, in verbose
+    self.display("<%s> %s" % (host, msg), color=C.COLOR_VERBOSE, screen_only=True)
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe2 in position 60: ordinal not in range(128)
+
+2020-10-07 06:11:51,505 p=24251 u=vagrant |  fatal: [192.168.1.11]: FAILED! => {
+    "msg": "Unexpected failure during module execution.", 
+    "stdout": ""
+}
+2020-10-07 06:11:51,507 p=24251 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 06:11:51,507 p=24251 u=vagrant |  192.168.1.11               : ok=0    changed=0    unreachable=0    failed=1   
+2020-10-07 06:13:25,657 p=24281 u=vagrant |  ansible-playbook 2.7.8
+  config file = /home/vagrant/ansible/cfg/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible
+  executable location = /home/vagrant/.local/bin/ansible-playbook
+  python version = 2.7.5 (default, Apr  2 2020, 13:16:51) [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+2020-10-07 06:13:25,657 p=24281 u=vagrant |  Using /home/vagrant/ansible/cfg/ansible.cfg as config file
+2020-10-07 06:13:26,380 p=24281 u=vagrant |  /home/vagrant/ansible/hosts/hosts did not meet host_list requirements, check plugin documentation if this is unexpected
+2020-10-07 06:13:26,380 p=24281 u=vagrant |  /home/vagrant/ansible/hosts/hosts did not meet script requirements, check plugin documentation if this is unexpected
+2020-10-07 06:13:26,383 p=24281 u=vagrant |  Parsed /home/vagrant/ansible/hosts/hosts inventory source with ini plugin
+2020-10-07 06:13:26,663 p=24281 u=vagrant |  PLAYBOOK: set_yum_instal.yml *******************************************************************************************
+2020-10-07 06:13:26,664 p=24281 u=vagrant |  1 plays in set_yum_instal.yml
+2020-10-07 06:13:26,687 p=24281 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 06:13:26,696 p=24281 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 06:13:26,697 p=24281 u=vagrant |  task path: /home/vagrant/ansible/yaml/set_yum_instal.yml:2
+2020-10-07 06:13:27,382 p=24281 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/system/setup.py
+2020-10-07 06:13:27,753 p=24281 u=vagrant |  ok: [192.168.1.11]
+2020-10-07 06:13:27,754 p=24281 u=vagrant |  META: ran handlers
+2020-10-07 06:13:27,775 p=24281 u=vagrant |  TASK [yum] *************************************************************************************************************
+2020-10-07 06:13:27,775 p=24281 u=vagrant |  task path: /home/vagrant/ansible/yaml/set_yum_instal.yml:5
+2020-10-07 06:13:28,066 p=24281 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/packaging/os/yum.py
+2020-10-07 06:13:28,213 p=24281 u=vagrant |  fatal: [192.168.1.11]: FAILED! => {
+    "changed": false, 
+    "module_stderr": "Shared connection to 192.168.1.11 closed.\r\n", 
+    "module_stdout": "sudo: a password is required\r\n", 
+    "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", 
+    "rc": 1
+}
+2020-10-07 06:13:28,215 p=24281 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 06:13:28,215 p=24281 u=vagrant |  192.168.1.11               : ok=1    changed=0    unreachable=0    failed=1   
+2020-10-07 06:14:09,991 p=24327 u=vagrant |  ansible-playbook 2.7.8
+  config file = /home/vagrant/ansible/cfg/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible
+  executable location = /home/vagrant/.local/bin/ansible-playbook
+  python version = 2.7.5 (default, Apr  2 2020, 13:16:51) [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+2020-10-07 06:14:09,991 p=24327 u=vagrant |  Using /home/vagrant/ansible/cfg/ansible.cfg as config file
+2020-10-07 06:14:10,436 p=24327 u=vagrant |  /home/vagrant/ansible/hosts/hosts did not meet host_list requirements, check plugin documentation if this is unexpected
+2020-10-07 06:14:10,436 p=24327 u=vagrant |  /home/vagrant/ansible/hosts/hosts did not meet script requirements, check plugin documentation if this is unexpected
+2020-10-07 06:14:10,440 p=24327 u=vagrant |  Parsed /home/vagrant/ansible/hosts/hosts inventory source with ini plugin
+2020-10-07 06:14:10,739 p=24327 u=vagrant |  PLAYBOOK: set_yum_instal.yml *******************************************************************************************
+2020-10-07 06:14:10,740 p=24327 u=vagrant |  1 plays in set_yum_instal.yml
+2020-10-07 06:14:10,763 p=24327 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 06:14:10,773 p=24327 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 06:14:10,774 p=24327 u=vagrant |  task path: /home/vagrant/ansible/yaml/set_yum_instal.yml:2
+2020-10-07 06:14:11,183 p=24327 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/system/setup.py
+2020-10-07 06:14:11,543 p=24327 u=vagrant |  ok: [192.168.1.11]
+2020-10-07 06:14:11,544 p=24327 u=vagrant |  META: ran handlers
+2020-10-07 06:14:11,562 p=24327 u=vagrant |  TASK [shell] ***********************************************************************************************************
+2020-10-07 06:14:11,562 p=24327 u=vagrant |  task path: /home/vagrant/ansible/yaml/set_yum_instal.yml:5
+2020-10-07 06:14:11,787 p=24327 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-07 06:14:11,991 p=24327 u=vagrant |  changed: [192.168.1.11] => {
+    "changed": true, 
+    "cmd": "id", 
+    "delta": "0:00:00.003793", 
+    "end": "2020-10-07 06:14:11.954493", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "id", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2020-10-07 06:14:11.950700", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "uid=1001(anagent) gid=1001(anagent) groups=1001(anagent) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023", 
+    "stdout_lines": [
+        "uid=1001(anagent) gid=1001(anagent) groups=1001(anagent) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023"
+    ]
+}
+2020-10-07 06:14:12,014 p=24327 u=vagrant |  TASK [yum] *************************************************************************************************************
+2020-10-07 06:14:12,014 p=24327 u=vagrant |  task path: /home/vagrant/ansible/yaml/set_yum_instal.yml:7
+2020-10-07 06:14:12,318 p=24327 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/packaging/os/yum.py
+2020-10-07 06:14:12,465 p=24327 u=vagrant |  fatal: [192.168.1.11]: FAILED! => {
+    "changed": false, 
+    "module_stderr": "Shared connection to 192.168.1.11 closed.\r\n", 
+    "module_stdout": "sudo: a password is required\r\n", 
+    "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", 
+    "rc": 1
+}
+2020-10-07 06:14:12,467 p=24327 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 06:14:12,467 p=24327 u=vagrant |  192.168.1.11               : ok=2    changed=1    unreachable=0    failed=1   
+2020-10-07 06:14:59,070 p=24386 u=vagrant |  ansible-playbook 2.7.8
+  config file = /home/vagrant/ansible/cfg/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible
+  executable location = /home/vagrant/.local/bin/ansible-playbook
+  python version = 2.7.5 (default, Apr  2 2020, 13:16:51) [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+2020-10-07 06:14:59,070 p=24386 u=vagrant |  Using /home/vagrant/ansible/cfg/ansible.cfg as config file
+2020-10-07 06:14:59,244 p=24386 u=vagrant |  /home/vagrant/ansible/hosts/hosts did not meet host_list requirements, check plugin documentation if this is unexpected
+2020-10-07 06:14:59,245 p=24386 u=vagrant |  /home/vagrant/ansible/hosts/hosts did not meet script requirements, check plugin documentation if this is unexpected
+2020-10-07 06:14:59,248 p=24386 u=vagrant |  Parsed /home/vagrant/ansible/hosts/hosts inventory source with ini plugin
+2020-10-07 06:14:59,460 p=24386 u=vagrant |  PLAYBOOK: set_yum_instal.yml *******************************************************************************************
+2020-10-07 06:14:59,460 p=24386 u=vagrant |  1 plays in set_yum_instal.yml
+2020-10-07 06:14:59,485 p=24386 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 06:14:59,494 p=24386 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 06:14:59,495 p=24386 u=vagrant |  task path: /home/vagrant/ansible/yaml/set_yum_instal.yml:2
+2020-10-07 06:14:59,944 p=24386 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/system/setup.py
+2020-10-07 06:15:00,288 p=24386 u=vagrant |  ok: [192.168.1.11]
+2020-10-07 06:15:00,288 p=24386 u=vagrant |  META: ran handlers
+2020-10-07 06:15:00,310 p=24386 u=vagrant |  TASK [shell] ***********************************************************************************************************
+2020-10-07 06:15:00,311 p=24386 u=vagrant |  task path: /home/vagrant/ansible/yaml/set_yum_instal.yml:5
+2020-10-07 06:15:00,578 p=24386 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-07 06:15:00,785 p=24386 u=vagrant |  changed: [192.168.1.11] => {
+    "changed": true, 
+    "cmd": "id", 
+    "delta": "0:00:00.003563", 
+    "end": "2020-10-07 06:15:00.750714", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "id", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2020-10-07 06:15:00.747151", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "uid=1001(anagent) gid=1001(anagent) groups=1001(anagent) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023", 
+    "stdout_lines": [
+        "uid=1001(anagent) gid=1001(anagent) groups=1001(anagent) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023"
+    ]
+}
+2020-10-07 06:15:00,802 p=24386 u=vagrant |  TASK [shell] ***********************************************************************************************************
+2020-10-07 06:15:00,802 p=24386 u=vagrant |  task path: /home/vagrant/ansible/yaml/set_yum_instal.yml:6
+2020-10-07 06:15:00,923 p=24386 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-07 06:15:10,589 p=24386 u=vagrant |   [WARNING]: Consider using 'become', 'become_method', and 'become_user' rather than running sudo
+
+2020-10-07 06:15:10,595 p=24386 u=vagrant |  changed: [192.168.1.11] => {
+    "changed": true, 
+    "cmd": "sudo yum install vim -y", 
+    "delta": "0:00:09.443338", 
+    "end": "2020-10-07 06:15:10.530596", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "sudo yum install vim -y", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2020-10-07 06:15:01.087258", 
+    "stderr": "warning: /var/cache/yum/x86_64/7/base/packages/perl-Carp-1.26-244.el7.noarch.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY\nImporting GPG key 0xF4A80EB5:\n Userid     : \"CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>\"\n Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5\n Package    : centos-release-7-8.2003.0.el7.centos.x86_64 (@anaconda)\n From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7", 
+    "stderr_lines": [
+        "warning: /var/cache/yum/x86_64/7/base/packages/perl-Carp-1.26-244.el7.noarch.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY", 
+        "Importing GPG key 0xF4A80EB5:", 
+        " Userid     : \"CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>\"", 
+        " Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5", 
+        " Package    : centos-release-7-8.2003.0.el7.centos.x86_64 (@anaconda)", 
+        " From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7"
+    ], 
+    "stdout": "Loaded plugins: fastestmirror\nLoading mirror speeds from cached hostfile\n * base: mirror.kakao.com\n * extras: mirror.kakao.com\n * updates: mirror.kakao.com\nResolving Dependencies\n--> Running transaction check\n---> Package vim-enhanced.x86_64 2:7.4.629-6.el7 will be installed\n--> Processing Dependency: vim-common = 2:7.4.629-6.el7 for package: 2:vim-enhanced-7.4.629-6.el7.x86_64\n--> Processing Dependency: perl(:MODULE_COMPAT_5.16.3) for package: 2:vim-enhanced-7.4.629-6.el7.x86_64\n--> Processing Dependency: libperl.so()(64bit) for package: 2:vim-enhanced-7.4.629-6.el7.x86_64\n--> Processing Dependency: libgpm.so.2()(64bit) for package: 2:vim-enhanced-7.4.629-6.el7.x86_64\n--> Running transaction check\n---> Package gpm-libs.x86_64 0:1.20.7-6.el7 will be installed\n---> Package perl.x86_64 4:5.16.3-295.el7 will be installed\n--> Processing Dependency: perl(Socket) >= 1.3 for package: 4:perl-5.16.3-295.el7.x86_64\n--> Processing Dependency: perl(Scalar::Util) >= 1.10 for package: 4:perl-5.16.3-295.el7.x86_64\n--> Processing Dependency: perl-macros for package: 4:perl-5.16.3-295.el7.x86_64\n--> Processing Dependency: perl(threads::shared) for package: 4:perl-5.16.3-295.el7.x86_64\n--> Processing Dependency: perl(threads) for package: 4:perl-5.16.3-295.el7.x86_64\n--> Processing Dependency: perl(constant) for package: 4:perl-5.16.3-295.el7.x86_64\n--> Processing Dependency: perl(Time::Local) for package: 4:perl-5.16.3-295.el7.x86_64\n--> Processing Dependency: perl(Time::HiRes) for package: 4:perl-5.16.3-295.el7.x86_64\n--> Processing Dependency: perl(Storable) for package: 4:perl-5.16.3-295.el7.x86_64\n--> Processing Dependency: perl(Socket) for package: 4:perl-5.16.3-295.el7.x86_64\n--> Processing Dependency: perl(Scalar::Util) for package: 4:perl-5.16.3-295.el7.x86_64\n--> Processing Dependency: perl(Pod::Simple::XHTML) for package: 4:perl-5.16.3-295.el7.x86_64\n--> Processing Dependency: perl(Pod::Simple::Search) for package: 4:perl-5.16.3-295.el7.x86_64\n--> Processing Dependency: perl(Getopt::Long) for package: 4:perl-5.16.3-295.el7.x86_64\n--> Processing Dependency: perl(Filter::Util::Call) for package: 4:perl-5.16.3-295.el7.x86_64\n--> Processing Dependency: perl(File::Temp) for package: 4:perl-5.16.3-295.el7.x86_64\n--> Processing Dependency: perl(File::Spec::Unix) for package: 4:perl-5.16.3-295.el7.x86_64\n--> Processing Dependency: perl(File::Spec::Functions) for package: 4:perl-5.16.3-295.el7.x86_64\n--> Processing Dependency: perl(File::Spec) for package: 4:perl-5.16.3-295.el7.x86_64\n--> Processing Dependency: perl(File::Path) for package: 4:perl-5.16.3-295.el7.x86_64\n--> Processing Dependency: perl(Exporter) for package: 4:perl-5.16.3-295.el7.x86_64\n--> Processing Dependency: perl(Cwd) for package: 4:perl-5.16.3-295.el7.x86_64\n--> Processing Dependency: perl(Carp) for package: 4:perl-5.16.3-295.el7.x86_64\n---> Package perl-libs.x86_64 4:5.16.3-295.el7 will be installed\n---> Package vim-common.x86_64 2:7.4.629-6.el7 will be installed\n--> Processing Dependency: vim-filesystem for package: 2:vim-common-7.4.629-6.el7.x86_64\n--> Running transaction check\n---> Package perl-Carp.noarch 0:1.26-244.el7 will be installed\n---> Package perl-Exporter.noarch 0:5.68-3.el7 will be installed\n---> Package perl-File-Path.noarch 0:2.09-2.el7 will be installed\n---> Package perl-File-Temp.noarch 0:0.23.01-3.el7 will be installed\n---> Package perl-Filter.x86_64 0:1.49-3.el7 will be installed\n---> Package perl-Getopt-Long.noarch 0:2.40-3.el7 will be installed\n--> Processing Dependency: perl(Pod::Usage) >= 1.14 for package: perl-Getopt-Long-2.40-3.el7.noarch\n--> Processing Dependency: perl(Text::ParseWords) for package: perl-Getopt-Long-2.40-3.el7.noarch\n---> Package perl-PathTools.x86_64 0:3.40-5.el7 will be installed\n---> Package perl-Pod-Simple.noarch 1:3.28-4.el7 will be installed\n--> Processing Dependency: perl(Pod::Escapes) >= 1.04 for package: 1:perl-Pod-Simple-3.28-4.el7.noarch\n--> Processing Dependency: perl(Encode) for package: 1:perl-Pod-Simple-3.28-4.el7.noarch\n---> Package perl-Scalar-List-Utils.x86_64 0:1.27-248.el7 will be installed\n---> Package perl-Socket.x86_64 0:2.010-5.el7 will be installed\n---> Package perl-Storable.x86_64 0:2.45-3.el7 will be installed\n---> Package perl-Time-HiRes.x86_64 4:1.9725-3.el7 will be installed\n---> Package perl-Time-Local.noarch 0:1.2300-2.el7 will be installed\n---> Package perl-constant.noarch 0:1.27-2.el7 will be installed\n---> Package perl-macros.x86_64 4:5.16.3-295.el7 will be installed\n---> Package perl-threads.x86_64 0:1.87-4.el7 will be installed\n---> Package perl-threads-shared.x86_64 0:1.43-6.el7 will be installed\n---> Package vim-filesystem.x86_64 2:7.4.629-6.el7 will be installed\n--> Running transaction check\n---> Package perl-Encode.x86_64 0:2.51-7.el7 will be installed\n---> Package perl-Pod-Escapes.noarch 1:1.04-295.el7 will be installed\n---> Package perl-Pod-Usage.noarch 0:1.63-3.el7 will be installed\n--> Processing Dependency: perl(Pod::Text) >= 3.15 for package: perl-Pod-Usage-1.63-3.el7.noarch\n--> Processing Dependency: perl-Pod-Perldoc for package: perl-Pod-Usage-1.63-3.el7.noarch\n---> Package perl-Text-ParseWords.noarch 0:3.29-4.el7 will be installed\n--> Running transaction check\n---> Package perl-Pod-Perldoc.noarch 0:3.20-4.el7 will be installed\n--> Processing Dependency: perl(parent) for package: perl-Pod-Perldoc-3.20-4.el7.noarch\n--> Processing Dependency: perl(HTTP::Tiny) for package: perl-Pod-Perldoc-3.20-4.el7.noarch\n---> Package perl-podlators.noarch 0:2.5.1-3.el7 will be installed\n--> Running transaction check\n---> Package perl-HTTP-Tiny.noarch 0:0.033-3.el7 will be installed\n---> Package perl-parent.noarch 1:0.225-244.el7 will be installed\n--> Finished Dependency Resolution\n\nDependencies Resolved\n\n================================================================================\n Package                     Arch        Version                Repository\n                                                                           Size\n================================================================================\nInstalling:\n vim-enhanced                x86_64      2:7.4.629-6.el7        base      1.1 M\nInstalling for dependencies:\n gpm-libs                    x86_64      1.20.7-6.el7           base       32 k\n perl                        x86_64      4:5.16.3-295.el7       base      8.0 M\n perl-Carp                   noarch      1.26-244.el7           base       19 k\n perl-Encode                 x86_64      2.51-7.el7             base      1.5 M\n perl-Exporter               noarch      5.68-3.el7             base       28 k\n perl-File-Path              noarch      2.09-2.el7             base       26 k\n perl-File-Temp              noarch      0.23.01-3.el7          base       56 k\n perl-Filter                 x86_64      1.49-3.el7             base       76 k\n perl-Getopt-Long            noarch      2.40-3.el7             base       56 k\n perl-HTTP-Tiny              noarch      0.033-3.el7            base       38 k\n perl-PathTools              x86_64      3.40-5.el7             base       82 k\n perl-Pod-Escapes            noarch      1:1.04-295.el7         base       51 k\n perl-Pod-Perldoc            noarch      3.20-4.el7             base       87 k\n perl-Pod-Simple             noarch      1:3.28-4.el7           base      216 k\n perl-Pod-Usage              noarch      1.63-3.el7             base       27 k\n perl-Scalar-List-Utils      x86_64      1.27-248.el7           base       36 k\n perl-Socket                 x86_64      2.010-5.el7            base       49 k\n perl-Storable               x86_64      2.45-3.el7             base       77 k\n perl-Text-ParseWords        noarch      3.29-4.el7             base       14 k\n perl-Time-HiRes             x86_64      4:1.9725-3.el7         base       45 k\n perl-Time-Local             noarch      1.2300-2.el7           base       24 k\n perl-constant               noarch      1.27-2.el7             base       19 k\n perl-libs                   x86_64      4:5.16.3-295.el7       base      689 k\n perl-macros                 x86_64      4:5.16.3-295.el7       base       44 k\n perl-parent                 noarch      1:0.225-244.el7        base       12 k\n perl-podlators              noarch      2.5.1-3.el7            base      112 k\n perl-threads                x86_64      1.87-4.el7             base       49 k\n perl-threads-shared         x86_64      1.43-6.el7             base       39 k\n vim-common                  x86_64      2:7.4.629-6.el7        base      5.9 M\n vim-filesystem              x86_64      2:7.4.629-6.el7        base       11 k\n\nTransaction Summary\n================================================================================\nInstall  1 Package (+30 Dependent packages)\n\nTotal download size: 18 M\nInstalled size: 60 M\nDownloading packages:\nPublic key for perl-Carp-1.26-244.el7.noarch.rpm is not installed\n--------------------------------------------------------------------------------\nTotal                                              6.8 MB/s |  18 MB  00:02     \nRetrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7\nRunning transaction check\nRunning transaction test\nTransaction test succeeded\nRunning transaction\n  Installing : 1:perl-parent-0.225-244.el7.noarch                          1/31 \n  Installing : perl-HTTP-Tiny-0.033-3.el7.noarch                           2/31 \n  Installing : perl-podlators-2.5.1-3.el7.noarch                           3/31 \n  Installing : perl-Pod-Perldoc-3.20-4.el7.noarch                          4/31 \n  Installing : 1:perl-Pod-Escapes-1.04-295.el7.noarch                      5/31 \n  Installing : perl-Text-ParseWords-3.29-4.el7.noarch                      6/31 \n  Installing : perl-Encode-2.51-7.el7.x86_64                               7/31 \n  Installing : perl-Pod-Usage-1.63-3.el7.noarch                            8/31 \n  Installing : 4:perl-libs-5.16.3-295.el7.x86_64                           9/31 \n  Installing : 4:perl-macros-5.16.3-295.el7.x86_64                        10/31 \n  Installing : perl-Storable-2.45-3.el7.x86_64                            11/31 \n  Installing : perl-Exporter-5.68-3.el7.noarch                            12/31 \n  Installing : perl-constant-1.27-2.el7.noarch                            13/31 \n  Installing : perl-Socket-2.010-5.el7.x86_64                             14/31 \n  Installing : perl-Time-Local-1.2300-2.el7.noarch                        15/31 \n  Installing : perl-Carp-1.26-244.el7.noarch                              16/31 \n  Installing : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                      17/31 \n  Installing : perl-PathTools-3.40-5.el7.x86_64                           18/31 \n  Installing : perl-Scalar-List-Utils-1.27-248.el7.x86_64                 19/31 \n  Installing : perl-File-Temp-0.23.01-3.el7.noarch                        20/31 \n  Installing : perl-File-Path-2.09-2.el7.noarch                           21/31 \n  Installing : perl-threads-shared-1.43-6.el7.x86_64                      22/31 \n  Installing : perl-threads-1.87-4.el7.x86_64                             23/31 \n  Installing : perl-Filter-1.49-3.el7.x86_64                              24/31 \n  Installing : 1:perl-Pod-Simple-3.28-4.el7.noarch                        25/31 \n  Installing : perl-Getopt-Long-2.40-3.el7.noarch                         26/31 \n  Installing : 4:perl-5.16.3-295.el7.x86_64                               27/31 \n  Installing : gpm-libs-1.20.7-6.el7.x86_64                               28/31 \n  Installing : 2:vim-filesystem-7.4.629-6.el7.x86_64                      29/31 \n  Installing : 2:vim-common-7.4.629-6.el7.x86_64                          30/31 \n  Installing : 2:vim-enhanced-7.4.629-6.el7.x86_64                        31/31 \n  Verifying  : perl-HTTP-Tiny-0.033-3.el7.noarch                           1/31 \n  Verifying  : perl-threads-shared-1.43-6.el7.x86_64                       2/31 \n  Verifying  : perl-Storable-2.45-3.el7.x86_64                             3/31 \n  Verifying  : 1:perl-Pod-Escapes-1.04-295.el7.noarch                      4/31 \n  Verifying  : perl-Exporter-5.68-3.el7.noarch                             5/31 \n  Verifying  : perl-constant-1.27-2.el7.noarch                             6/31 \n  Verifying  : perl-PathTools-3.40-5.el7.x86_64                            7/31 \n  Verifying  : perl-Socket-2.010-5.el7.x86_64                              8/31 \n  Verifying  : 1:perl-parent-0.225-244.el7.noarch                          9/31 \n  Verifying  : 4:perl-libs-5.16.3-295.el7.x86_64                          10/31 \n  Verifying  : perl-File-Temp-0.23.01-3.el7.noarch                        11/31 \n  Verifying  : 1:perl-Pod-Simple-3.28-4.el7.noarch                        12/31 \n  Verifying  : perl-Time-Local-1.2300-2.el7.noarch                        13/31 \n  Verifying  : 4:perl-macros-5.16.3-295.el7.x86_64                        14/31 \n  Verifying  : 4:perl-5.16.3-295.el7.x86_64                               15/31 \n  Verifying  : 2:vim-enhanced-7.4.629-6.el7.x86_64                        16/31 \n  Verifying  : perl-Carp-1.26-244.el7.noarch                              17/31 \n  Verifying  : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                      18/31 \n  Verifying  : perl-Scalar-List-Utils-1.27-248.el7.x86_64                 19/31 \n  Verifying  : perl-Pod-Usage-1.63-3.el7.noarch                           20/31 \n  Verifying  : 2:vim-common-7.4.629-6.el7.x86_64                          21/31 \n  Verifying  : 2:vim-filesystem-7.4.629-6.el7.x86_64                      22/31 \n  Verifying  : perl-Encode-2.51-7.el7.x86_64                              23/31 \n  Verifying  : perl-Pod-Perldoc-3.20-4.el7.noarch                         24/31 \n  Verifying  : perl-podlators-2.5.1-3.el7.noarch                          25/31 \n  Verifying  : perl-File-Path-2.09-2.el7.noarch                           26/31 \n  Verifying  : perl-threads-1.87-4.el7.x86_64                             27/31 \n  Verifying  : gpm-libs-1.20.7-6.el7.x86_64                               28/31 \n  Verifying  : perl-Filter-1.49-3.el7.x86_64                              29/31 \n  Verifying  : perl-Getopt-Long-2.40-3.el7.noarch                         30/31 \n  Verifying  : perl-Text-ParseWords-3.29-4.el7.noarch                     31/31 \n\nInstalled:\n  vim-enhanced.x86_64 2:7.4.629-6.el7                                           \n\nDependency Installed:\n  gpm-libs.x86_64 0:1.20.7-6.el7                                                \n  perl.x86_64 4:5.16.3-295.el7                                                  \n  perl-Carp.noarch 0:1.26-244.el7                                               \n  perl-Encode.x86_64 0:2.51-7.el7                                               \n  perl-Exporter.noarch 0:5.68-3.el7                                             \n  perl-File-Path.noarch 0:2.09-2.el7                                            \n  perl-File-Temp.noarch 0:0.23.01-3.el7                                         \n  perl-Filter.x86_64 0:1.49-3.el7                                               \n  perl-Getopt-Long.noarch 0:2.40-3.el7                                          \n  perl-HTTP-Tiny.noarch 0:0.033-3.el7                                           \n  perl-PathTools.x86_64 0:3.40-5.el7                                            \n  perl-Pod-Escapes.noarch 1:1.04-295.el7                                        \n  perl-Pod-Perldoc.noarch 0:3.20-4.el7                                          \n  perl-Pod-Simple.noarch 1:3.28-4.el7                                           \n  perl-Pod-Usage.noarch 0:1.63-3.el7                                            \n  perl-Scalar-List-Utils.x86_64 0:1.27-248.el7                                  \n  perl-Socket.x86_64 0:2.010-5.el7                                              \n  perl-Storable.x86_64 0:2.45-3.el7                                             \n  perl-Text-ParseWords.noarch 0:3.29-4.el7                                      \n  perl-Time-HiRes.x86_64 4:1.9725-3.el7                                         \n  perl-Time-Local.noarch 0:1.2300-2.el7                                         \n  perl-constant.noarch 0:1.27-2.el7                                             \n  perl-libs.x86_64 4:5.16.3-295.el7                                             \n  perl-macros.x86_64 4:5.16.3-295.el7                                           \n  perl-parent.noarch 1:0.225-244.el7                                            \n  perl-podlators.noarch 0:2.5.1-3.el7                                           \n  perl-threads.x86_64 0:1.87-4.el7                                              \n  perl-threads-shared.x86_64 0:1.43-6.el7                                       \n  vim-common.x86_64 2:7.4.629-6.el7                                             \n  vim-filesystem.x86_64 2:7.4.629-6.el7                                         \n\nComplete!", 
+    "stdout_lines": [
+        "Loaded plugins: fastestmirror", 
+        "Loading mirror speeds from cached hostfile", 
+        " * base: mirror.kakao.com", 
+        " * extras: mirror.kakao.com", 
+        " * updates: mirror.kakao.com", 
+        "Resolving Dependencies", 
+        "--> Running transaction check", 
+        "---> Package vim-enhanced.x86_64 2:7.4.629-6.el7 will be installed", 
+        "--> Processing Dependency: vim-common = 2:7.4.629-6.el7 for package: 2:vim-enhanced-7.4.629-6.el7.x86_64", 
+        "--> Processing Dependency: perl(:MODULE_COMPAT_5.16.3) for package: 2:vim-enhanced-7.4.629-6.el7.x86_64", 
+        "--> Processing Dependency: libperl.so()(64bit) for package: 2:vim-enhanced-7.4.629-6.el7.x86_64", 
+        "--> Processing Dependency: libgpm.so.2()(64bit) for package: 2:vim-enhanced-7.4.629-6.el7.x86_64", 
+        "--> Running transaction check", 
+        "---> Package gpm-libs.x86_64 0:1.20.7-6.el7 will be installed", 
+        "---> Package perl.x86_64 4:5.16.3-295.el7 will be installed", 
+        "--> Processing Dependency: perl(Socket) >= 1.3 for package: 4:perl-5.16.3-295.el7.x86_64", 
+        "--> Processing Dependency: perl(Scalar::Util) >= 1.10 for package: 4:perl-5.16.3-295.el7.x86_64", 
+        "--> Processing Dependency: perl-macros for package: 4:perl-5.16.3-295.el7.x86_64", 
+        "--> Processing Dependency: perl(threads::shared) for package: 4:perl-5.16.3-295.el7.x86_64", 
+        "--> Processing Dependency: perl(threads) for package: 4:perl-5.16.3-295.el7.x86_64", 
+        "--> Processing Dependency: perl(constant) for package: 4:perl-5.16.3-295.el7.x86_64", 
+        "--> Processing Dependency: perl(Time::Local) for package: 4:perl-5.16.3-295.el7.x86_64", 
+        "--> Processing Dependency: perl(Time::HiRes) for package: 4:perl-5.16.3-295.el7.x86_64", 
+        "--> Processing Dependency: perl(Storable) for package: 4:perl-5.16.3-295.el7.x86_64", 
+        "--> Processing Dependency: perl(Socket) for package: 4:perl-5.16.3-295.el7.x86_64", 
+        "--> Processing Dependency: perl(Scalar::Util) for package: 4:perl-5.16.3-295.el7.x86_64", 
+        "--> Processing Dependency: perl(Pod::Simple::XHTML) for package: 4:perl-5.16.3-295.el7.x86_64", 
+        "--> Processing Dependency: perl(Pod::Simple::Search) for package: 4:perl-5.16.3-295.el7.x86_64", 
+        "--> Processing Dependency: perl(Getopt::Long) for package: 4:perl-5.16.3-295.el7.x86_64", 
+        "--> Processing Dependency: perl(Filter::Util::Call) for package: 4:perl-5.16.3-295.el7.x86_64", 
+        "--> Processing Dependency: perl(File::Temp) for package: 4:perl-5.16.3-295.el7.x86_64", 
+        "--> Processing Dependency: perl(File::Spec::Unix) for package: 4:perl-5.16.3-295.el7.x86_64", 
+        "--> Processing Dependency: perl(File::Spec::Functions) for package: 4:perl-5.16.3-295.el7.x86_64", 
+        "--> Processing Dependency: perl(File::Spec) for package: 4:perl-5.16.3-295.el7.x86_64", 
+        "--> Processing Dependency: perl(File::Path) for package: 4:perl-5.16.3-295.el7.x86_64", 
+        "--> Processing Dependency: perl(Exporter) for package: 4:perl-5.16.3-295.el7.x86_64", 
+        "--> Processing Dependency: perl(Cwd) for package: 4:perl-5.16.3-295.el7.x86_64", 
+        "--> Processing Dependency: perl(Carp) for package: 4:perl-5.16.3-295.el7.x86_64", 
+        "---> Package perl-libs.x86_64 4:5.16.3-295.el7 will be installed", 
+        "---> Package vim-common.x86_64 2:7.4.629-6.el7 will be installed", 
+        "--> Processing Dependency: vim-filesystem for package: 2:vim-common-7.4.629-6.el7.x86_64", 
+        "--> Running transaction check", 
+        "---> Package perl-Carp.noarch 0:1.26-244.el7 will be installed", 
+        "---> Package perl-Exporter.noarch 0:5.68-3.el7 will be installed", 
+        "---> Package perl-File-Path.noarch 0:2.09-2.el7 will be installed", 
+        "---> Package perl-File-Temp.noarch 0:0.23.01-3.el7 will be installed", 
+        "---> Package perl-Filter.x86_64 0:1.49-3.el7 will be installed", 
+        "---> Package perl-Getopt-Long.noarch 0:2.40-3.el7 will be installed", 
+        "--> Processing Dependency: perl(Pod::Usage) >= 1.14 for package: perl-Getopt-Long-2.40-3.el7.noarch", 
+        "--> Processing Dependency: perl(Text::ParseWords) for package: perl-Getopt-Long-2.40-3.el7.noarch", 
+        "---> Package perl-PathTools.x86_64 0:3.40-5.el7 will be installed", 
+        "---> Package perl-Pod-Simple.noarch 1:3.28-4.el7 will be installed", 
+        "--> Processing Dependency: perl(Pod::Escapes) >= 1.04 for package: 1:perl-Pod-Simple-3.28-4.el7.noarch", 
+        "--> Processing Dependency: perl(Encode) for package: 1:perl-Pod-Simple-3.28-4.el7.noarch", 
+        "---> Package perl-Scalar-List-Utils.x86_64 0:1.27-248.el7 will be installed", 
+        "---> Package perl-Socket.x86_64 0:2.010-5.el7 will be installed", 
+        "---> Package perl-Storable.x86_64 0:2.45-3.el7 will be installed", 
+        "---> Package perl-Time-HiRes.x86_64 4:1.9725-3.el7 will be installed", 
+        "---> Package perl-Time-Local.noarch 0:1.2300-2.el7 will be installed", 
+        "---> Package perl-constant.noarch 0:1.27-2.el7 will be installed", 
+        "---> Package perl-macros.x86_64 4:5.16.3-295.el7 will be installed", 
+        "---> Package perl-threads.x86_64 0:1.87-4.el7 will be installed", 
+        "---> Package perl-threads-shared.x86_64 0:1.43-6.el7 will be installed", 
+        "---> Package vim-filesystem.x86_64 2:7.4.629-6.el7 will be installed", 
+        "--> Running transaction check", 
+        "---> Package perl-Encode.x86_64 0:2.51-7.el7 will be installed", 
+        "---> Package perl-Pod-Escapes.noarch 1:1.04-295.el7 will be installed", 
+        "---> Package perl-Pod-Usage.noarch 0:1.63-3.el7 will be installed", 
+        "--> Processing Dependency: perl(Pod::Text) >= 3.15 for package: perl-Pod-Usage-1.63-3.el7.noarch", 
+        "--> Processing Dependency: perl-Pod-Perldoc for package: perl-Pod-Usage-1.63-3.el7.noarch", 
+        "---> Package perl-Text-ParseWords.noarch 0:3.29-4.el7 will be installed", 
+        "--> Running transaction check", 
+        "---> Package perl-Pod-Perldoc.noarch 0:3.20-4.el7 will be installed", 
+        "--> Processing Dependency: perl(parent) for package: perl-Pod-Perldoc-3.20-4.el7.noarch", 
+        "--> Processing Dependency: perl(HTTP::Tiny) for package: perl-Pod-Perldoc-3.20-4.el7.noarch", 
+        "---> Package perl-podlators.noarch 0:2.5.1-3.el7 will be installed", 
+        "--> Running transaction check", 
+        "---> Package perl-HTTP-Tiny.noarch 0:0.033-3.el7 will be installed", 
+        "---> Package perl-parent.noarch 1:0.225-244.el7 will be installed", 
+        "--> Finished Dependency Resolution", 
+        "", 
+        "Dependencies Resolved", 
+        "", 
+        "================================================================================", 
+        " Package                     Arch        Version                Repository", 
+        "                                                                           Size", 
+        "================================================================================", 
+        "Installing:", 
+        " vim-enhanced                x86_64      2:7.4.629-6.el7        base      1.1 M", 
+        "Installing for dependencies:", 
+        " gpm-libs                    x86_64      1.20.7-6.el7           base       32 k", 
+        " perl                        x86_64      4:5.16.3-295.el7       base      8.0 M", 
+        " perl-Carp                   noarch      1.26-244.el7           base       19 k", 
+        " perl-Encode                 x86_64      2.51-7.el7             base      1.5 M", 
+        " perl-Exporter               noarch      5.68-3.el7             base       28 k", 
+        " perl-File-Path              noarch      2.09-2.el7             base       26 k", 
+        " perl-File-Temp              noarch      0.23.01-3.el7          base       56 k", 
+        " perl-Filter                 x86_64      1.49-3.el7             base       76 k", 
+        " perl-Getopt-Long            noarch      2.40-3.el7             base       56 k", 
+        " perl-HTTP-Tiny              noarch      0.033-3.el7            base       38 k", 
+        " perl-PathTools              x86_64      3.40-5.el7             base       82 k", 
+        " perl-Pod-Escapes            noarch      1:1.04-295.el7         base       51 k", 
+        " perl-Pod-Perldoc            noarch      3.20-4.el7             base       87 k", 
+        " perl-Pod-Simple             noarch      1:3.28-4.el7           base      216 k", 
+        " perl-Pod-Usage              noarch      1.63-3.el7             base       27 k", 
+        " perl-Scalar-List-Utils      x86_64      1.27-248.el7           base       36 k", 
+        " perl-Socket                 x86_64      2.010-5.el7            base       49 k", 
+        " perl-Storable               x86_64      2.45-3.el7             base       77 k", 
+        " perl-Text-ParseWords        noarch      3.29-4.el7             base       14 k", 
+        " perl-Time-HiRes             x86_64      4:1.9725-3.el7         base       45 k", 
+        " perl-Time-Local             noarch      1.2300-2.el7           base       24 k", 
+        " perl-constant               noarch      1.27-2.el7             base       19 k", 
+        " perl-libs                   x86_64      4:5.16.3-295.el7       base      689 k", 
+        " perl-macros                 x86_64      4:5.16.3-295.el7       base       44 k", 
+        " perl-parent                 noarch      1:0.225-244.el7        base       12 k", 
+        " perl-podlators              noarch      2.5.1-3.el7            base      112 k", 
+        " perl-threads                x86_64      1.87-4.el7             base       49 k", 
+        " perl-threads-shared         x86_64      1.43-6.el7             base       39 k", 
+        " vim-common                  x86_64      2:7.4.629-6.el7        base      5.9 M", 
+        " vim-filesystem              x86_64      2:7.4.629-6.el7        base       11 k", 
+        "", 
+        "Transaction Summary", 
+        "================================================================================", 
+        "Install  1 Package (+30 Dependent packages)", 
+        "", 
+        "Total download size: 18 M", 
+        "Installed size: 60 M", 
+        "Downloading packages:", 
+        "Public key for perl-Carp-1.26-244.el7.noarch.rpm is not installed", 
+        "--------------------------------------------------------------------------------", 
+        "Total                                              6.8 MB/s |  18 MB  00:02     ", 
+        "Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7", 
+        "Running transaction check", 
+        "Running transaction test", 
+        "Transaction test succeeded", 
+        "Running transaction", 
+        "  Installing : 1:perl-parent-0.225-244.el7.noarch                          1/31 ", 
+        "  Installing : perl-HTTP-Tiny-0.033-3.el7.noarch                           2/31 ", 
+        "  Installing : perl-podlators-2.5.1-3.el7.noarch                           3/31 ", 
+        "  Installing : perl-Pod-Perldoc-3.20-4.el7.noarch                          4/31 ", 
+        "  Installing : 1:perl-Pod-Escapes-1.04-295.el7.noarch                      5/31 ", 
+        "  Installing : perl-Text-ParseWords-3.29-4.el7.noarch                      6/31 ", 
+        "  Installing : perl-Encode-2.51-7.el7.x86_64                               7/31 ", 
+        "  Installing : perl-Pod-Usage-1.63-3.el7.noarch                            8/31 ", 
+        "  Installing : 4:perl-libs-5.16.3-295.el7.x86_64                           9/31 ", 
+        "  Installing : 4:perl-macros-5.16.3-295.el7.x86_64                        10/31 ", 
+        "  Installing : perl-Storable-2.45-3.el7.x86_64                            11/31 ", 
+        "  Installing : perl-Exporter-5.68-3.el7.noarch                            12/31 ", 
+        "  Installing : perl-constant-1.27-2.el7.noarch                            13/31 ", 
+        "  Installing : perl-Socket-2.010-5.el7.x86_64                             14/31 ", 
+        "  Installing : perl-Time-Local-1.2300-2.el7.noarch                        15/31 ", 
+        "  Installing : perl-Carp-1.26-244.el7.noarch                              16/31 ", 
+        "  Installing : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                      17/31 ", 
+        "  Installing : perl-PathTools-3.40-5.el7.x86_64                           18/31 ", 
+        "  Installing : perl-Scalar-List-Utils-1.27-248.el7.x86_64                 19/31 ", 
+        "  Installing : perl-File-Temp-0.23.01-3.el7.noarch                        20/31 ", 
+        "  Installing : perl-File-Path-2.09-2.el7.noarch                           21/31 ", 
+        "  Installing : perl-threads-shared-1.43-6.el7.x86_64                      22/31 ", 
+        "  Installing : perl-threads-1.87-4.el7.x86_64                             23/31 ", 
+        "  Installing : perl-Filter-1.49-3.el7.x86_64                              24/31 ", 
+        "  Installing : 1:perl-Pod-Simple-3.28-4.el7.noarch                        25/31 ", 
+        "  Installing : perl-Getopt-Long-2.40-3.el7.noarch                         26/31 ", 
+        "  Installing : 4:perl-5.16.3-295.el7.x86_64                               27/31 ", 
+        "  Installing : gpm-libs-1.20.7-6.el7.x86_64                               28/31 ", 
+        "  Installing : 2:vim-filesystem-7.4.629-6.el7.x86_64                      29/31 ", 
+        "  Installing : 2:vim-common-7.4.629-6.el7.x86_64                          30/31 ", 
+        "  Installing : 2:vim-enhanced-7.4.629-6.el7.x86_64                        31/31 ", 
+        "  Verifying  : perl-HTTP-Tiny-0.033-3.el7.noarch                           1/31 ", 
+        "  Verifying  : perl-threads-shared-1.43-6.el7.x86_64                       2/31 ", 
+        "  Verifying  : perl-Storable-2.45-3.el7.x86_64                             3/31 ", 
+        "  Verifying  : 1:perl-Pod-Escapes-1.04-295.el7.noarch                      4/31 ", 
+        "  Verifying  : perl-Exporter-5.68-3.el7.noarch                             5/31 ", 
+        "  Verifying  : perl-constant-1.27-2.el7.noarch                             6/31 ", 
+        "  Verifying  : perl-PathTools-3.40-5.el7.x86_64                            7/31 ", 
+        "  Verifying  : perl-Socket-2.010-5.el7.x86_64                              8/31 ", 
+        "  Verifying  : 1:perl-parent-0.225-244.el7.noarch                          9/31 ", 
+        "  Verifying  : 4:perl-libs-5.16.3-295.el7.x86_64                          10/31 ", 
+        "  Verifying  : perl-File-Temp-0.23.01-3.el7.noarch                        11/31 ", 
+        "  Verifying  : 1:perl-Pod-Simple-3.28-4.el7.noarch                        12/31 ", 
+        "  Verifying  : perl-Time-Local-1.2300-2.el7.noarch                        13/31 ", 
+        "  Verifying  : 4:perl-macros-5.16.3-295.el7.x86_64                        14/31 ", 
+        "  Verifying  : 4:perl-5.16.3-295.el7.x86_64                               15/31 ", 
+        "  Verifying  : 2:vim-enhanced-7.4.629-6.el7.x86_64                        16/31 ", 
+        "  Verifying  : perl-Carp-1.26-244.el7.noarch                              17/31 ", 
+        "  Verifying  : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                      18/31 ", 
+        "  Verifying  : perl-Scalar-List-Utils-1.27-248.el7.x86_64                 19/31 ", 
+        "  Verifying  : perl-Pod-Usage-1.63-3.el7.noarch                           20/31 ", 
+        "  Verifying  : 2:vim-common-7.4.629-6.el7.x86_64                          21/31 ", 
+        "  Verifying  : 2:vim-filesystem-7.4.629-6.el7.x86_64                      22/31 ", 
+        "  Verifying  : perl-Encode-2.51-7.el7.x86_64                              23/31 ", 
+        "  Verifying  : perl-Pod-Perldoc-3.20-4.el7.noarch                         24/31 ", 
+        "  Verifying  : perl-podlators-2.5.1-3.el7.noarch                          25/31 ", 
+        "  Verifying  : perl-File-Path-2.09-2.el7.noarch                           26/31 ", 
+        "  Verifying  : perl-threads-1.87-4.el7.x86_64                             27/31 ", 
+        "  Verifying  : gpm-libs-1.20.7-6.el7.x86_64                               28/31 ", 
+        "  Verifying  : perl-Filter-1.49-3.el7.x86_64                              29/31 ", 
+        "  Verifying  : perl-Getopt-Long-2.40-3.el7.noarch                         30/31 ", 
+        "  Verifying  : perl-Text-ParseWords-3.29-4.el7.noarch                     31/31 ", 
+        "", 
+        "Installed:", 
+        "  vim-enhanced.x86_64 2:7.4.629-6.el7                                           ", 
+        "", 
+        "Dependency Installed:", 
+        "  gpm-libs.x86_64 0:1.20.7-6.el7                                                ", 
+        "  perl.x86_64 4:5.16.3-295.el7                                                  ", 
+        "  perl-Carp.noarch 0:1.26-244.el7                                               ", 
+        "  perl-Encode.x86_64 0:2.51-7.el7                                               ", 
+        "  perl-Exporter.noarch 0:5.68-3.el7                                             ", 
+        "  perl-File-Path.noarch 0:2.09-2.el7                                            ", 
+        "  perl-File-Temp.noarch 0:0.23.01-3.el7                                         ", 
+        "  perl-Filter.x86_64 0:1.49-3.el7                                               ", 
+        "  perl-Getopt-Long.noarch 0:2.40-3.el7                                          ", 
+        "  perl-HTTP-Tiny.noarch 0:0.033-3.el7                                           ", 
+        "  perl-PathTools.x86_64 0:3.40-5.el7                                            ", 
+        "  perl-Pod-Escapes.noarch 1:1.04-295.el7                                        ", 
+        "  perl-Pod-Perldoc.noarch 0:3.20-4.el7                                          ", 
+        "  perl-Pod-Simple.noarch 1:3.28-4.el7                                           ", 
+        "  perl-Pod-Usage.noarch 0:1.63-3.el7                                            ", 
+        "  perl-Scalar-List-Utils.x86_64 0:1.27-248.el7                                  ", 
+        "  perl-Socket.x86_64 0:2.010-5.el7                                              ", 
+        "  perl-Storable.x86_64 0:2.45-3.el7                                             ", 
+        "  perl-Text-ParseWords.noarch 0:3.29-4.el7                                      ", 
+        "  perl-Time-HiRes.x86_64 4:1.9725-3.el7                                         ", 
+        "  perl-Time-Local.noarch 0:1.2300-2.el7                                         ", 
+        "  perl-constant.noarch 0:1.27-2.el7                                             ", 
+        "  perl-libs.x86_64 4:5.16.3-295.el7                                             ", 
+        "  perl-macros.x86_64 4:5.16.3-295.el7                                           ", 
+        "  perl-parent.noarch 1:0.225-244.el7                                            ", 
+        "  perl-podlators.noarch 0:2.5.1-3.el7                                           ", 
+        "  perl-threads.x86_64 0:1.87-4.el7                                              ", 
+        "  perl-threads-shared.x86_64 0:1.43-6.el7                                       ", 
+        "  vim-common.x86_64 2:7.4.629-6.el7                                             ", 
+        "  vim-filesystem.x86_64 2:7.4.629-6.el7                                         ", 
+        "", 
+        "Complete!"
+    ]
+}
+2020-10-07 06:15:10,595 p=24386 u=vagrant |  META: ran handlers
+2020-10-07 06:15:10,596 p=24386 u=vagrant |  META: ran handlers
+2020-10-07 06:15:10,597 p=24386 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 06:15:10,597 p=24386 u=vagrant |  192.168.1.11               : ok=3    changed=2    unreachable=0    failed=0   
+2020-10-07 07:30:49,961 p=24494 u=vagrant |  ERROR! The vault password file /home/vagrant/ansible/hosts/a_password_file was not found
+2020-10-07 07:31:03,654 p=24501 u=vagrant |  ERROR! The vault password file /home/vagrant/ansible/hosts/a_password_file was not found
+2020-10-07 07:31:37,394 p=24510 u=vagrant |   [WARNING]: Error in vault password file loading (default): A vault password must be specified to decrypt data
+
+2020-10-07 07:31:37,395 p=24510 u=vagrant |  ERROR! A vault password must be specified to decrypt data
+2020-10-07 07:37:47,041 p=24526 u=vagrant |  ERROR! The vault password file /home/vagrant/ansible/hosts/a_password_file was not found
+2020-10-07 07:37:55,733 p=24533 u=vagrant |  ERROR! The vault password file /home/vagrant/ansible/hosts/passwd was not found
+2020-10-07 07:38:06,804 p=24541 u=vagrant |  Encryption successful
+2020-10-07 07:38:56,884 p=24553 u=vagrant |  ERROR! The vault password file /home/vagrant/ansible/hosts/a_password_file was not found
+2020-10-07 07:39:28,502 p=24561 u=vagrant |  Reading plaintext input from stdin. (ctrl-d to end input)
+2020-10-07 07:39:28,527 p=24561 u=vagrant |  Encryption successful
+2020-10-07 07:40:51,504 p=24580 u=vagrant |   [WARNING]: Skipping 'passwd' as this is not a valid group definition
+
+2020-10-07 07:40:51,789 p=24580 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 07:40:51,799 p=24580 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 07:40:51,879 p=24580 u=vagrant |  fatal: [1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 1 port 22: Invalid argument", "unreachable": true}
+2020-10-07 07:40:51,967 p=24580 u=vagrant |  fatal: [192.168.1.11]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2020-10-07 07:40:51,968 p=24580 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 07:40:51,969 p=24580 u=vagrant |  1                          : ok=0    changed=0    unreachable=1    failed=0   
+2020-10-07 07:40:51,969 p=24580 u=vagrant |  192.168.1.11               : ok=0    changed=0    unreachable=1    failed=0   
+2020-10-07 07:41:18,296 p=24600 u=vagrant |   [WARNING]: Skipping 'passwd' as this is not a valid group definition
+
+2020-10-07 07:41:18,601 p=24600 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 07:41:18,611 p=24600 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 07:41:18,692 p=24600 u=vagrant |  fatal: [1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 1 port 22: Invalid argument", "unreachable": true}
+2020-10-07 07:41:18,764 p=24600 u=vagrant |  fatal: [192.168.1.11]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2020-10-07 07:41:18,765 p=24600 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 07:41:18,765 p=24600 u=vagrant |  1                          : ok=0    changed=0    unreachable=1    failed=0   
+2020-10-07 07:41:18,765 p=24600 u=vagrant |  192.168.1.11               : ok=0    changed=0    unreachable=1    failed=0   
+2020-10-07 07:55:59,783 p=24697 u=vagrant |  ERROR! Missing required action
+2020-10-07 07:56:32,505 p=24704 u=vagrant |  ERROR! The vault password file /home/hosts/.vpasswd was not found
+2020-10-07 07:56:40,614 p=24711 u=vagrant |  ERROR! The vault password file /home/hosts/.vpasswd was not found
+2020-10-07 07:56:47,404 p=24720 u=vagrant |  ERROR! The vault password file /home/hosts/.vpasswd was not found
+2020-10-07 07:56:52,374 p=24727 u=vagrant |  ERROR! The vault password file /home/hosts/.vpasswd was not found
+2020-10-07 07:58:43,147 p=24786 u=vagrant |  ERROR! The vault password file /home/hosts/vault_passwd was not found
+2020-10-07 07:59:04,718 p=24795 u=vagrant |  ERROR! The vault password file /home/vagrant/ansible/hosts/vault_passwd was not found
+2020-10-07 08:07:52,205 p=24921 u=vagrant |  ERROR! The vault password file /home/vagrant/ansible/hosts/vault_passwd was not found
+2020-10-07 08:08:30,680 p=24961 u=vagrant |   [WARNING]: Skipping unexpected key (centOS) in group (hosts), only "vars", "children" and "hosts" are valid
+
+2020-10-07 08:08:30,683 p=24961 u=vagrant |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match
+'all'
+
+2020-10-07 08:08:30,982 p=24961 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 08:08:30,982 p=24961 u=vagrant |  skipping: no hosts matched
+2020-10-07 08:08:30,982 p=24961 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 08:08:51,360 p=24995 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 08:08:51,370 p=24995 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 08:08:51,379 p=24995 u=vagrant |  fatal: [centOS]: FAILED! => {"msg": "Attempting to decrypt but no vault secrets found"}
+2020-10-07 08:08:51,380 p=24995 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 08:08:51,380 p=24995 u=vagrant |  centOS                     : ok=0    changed=0    unreachable=0    failed=1   
+2020-10-07 08:09:24,451 p=25008 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 08:09:24,460 p=25008 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 08:09:24,579 p=25008 u=vagrant |  fatal: [centOS]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2020-10-07 08:09:24,581 p=25008 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 08:09:24,581 p=25008 u=vagrant |  centOS                     : ok=0    changed=0    unreachable=1    failed=0   
+2020-10-07 08:09:29,417 p=25021 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 08:09:29,426 p=25021 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 08:09:30,658 p=25021 u=vagrant |  ok: [centOS]
+2020-10-07 08:09:30,680 p=25021 u=vagrant |  TASK [set_fact] ********************************************************************************************************
+2020-10-07 08:09:30,733 p=25021 u=vagrant |  ok: [centOS] => (item={u'block_used': 831049, u'uuid': u'1c419d6c-5064-4a2b-953c-05b2c67edb15', u'size_total': 42927656960, u'block_total': 10480385, u'mount': u'/', u'block_available': 9649336, u'size_available': 39523680256, u'fstype': u'xfs', u'inode_total': 20971008, u'inode_available': 20938710, u'device': u'/dev/sda1', u'inode_used': 32298, u'block_size': 4096, u'options': u'rw,seclabel,relatime,attr2,inode64,noquota'})
+2020-10-07 08:09:30,755 p=25021 u=vagrant |  TASK [debug] ***********************************************************************************************************
+2020-10-07 08:09:30,798 p=25021 u=vagrant |  ok: [centOS] => {
+    "dk_info": [
+        {
+            "disk_usage": "3403976704", 
+            "disk_usage_ratio": "7"
+        }
+    ]
+}
+2020-10-07 08:09:30,800 p=25021 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 08:09:30,800 p=25021 u=vagrant |  centOS                     : ok=3    changed=0    unreachable=0    failed=0   
+2020-10-07 08:09:43,778 p=25055 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 08:09:43,793 p=25055 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 08:09:43,803 p=25055 u=vagrant |  fatal: [centOS]: FAILED! => {"msg": "Attempting to decrypt but no vault secrets found"}
+2020-10-07 08:09:43,804 p=25055 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 08:09:43,804 p=25055 u=vagrant |  centOS                     : ok=0    changed=0    unreachable=0    failed=1   
+2020-10-07 08:10:04,859 p=25074 u=vagrant |  ERROR! Decryption failed (no vault secrets were found that could decrypt) on ../vault/win_passwd for ../vault/win_passwd
+2020-10-07 08:10:13,728 p=25081 u=vagrant |  ERROR! Decryption failed (no vault secrets were found that could decrypt) on ../vault/win_passwd for ../vault/win_passwd
+2020-10-07 08:10:19,569 p=25088 u=vagrant |  ERROR! Decryption failed (no vault secrets were found that could decrypt) on ../vault/win_passwd for ../vault/win_passwd
+2020-10-07 08:12:15,303 p=25151 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 08:12:15,313 p=25151 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 08:12:15,320 p=25151 u=vagrant |  fatal: [centOS]: FAILED! => {"msg": "Attempting to decrypt but no vault secrets found"}
+2020-10-07 08:12:15,321 p=25151 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 08:12:15,321 p=25151 u=vagrant |  centOS                     : ok=0    changed=0    unreachable=0    failed=1   
+2020-10-07 08:12:28,051 p=25163 u=vagrant |  ansible-playbook 2.7.8
+  config file = /home/vagrant/ansible/cfg/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible
+  executable location = /home/vagrant/.local/bin/ansible-playbook
+  python version = 2.7.5 (default, Apr  2 2020, 13:16:51) [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+2020-10-07 08:12:28,051 p=25163 u=vagrant |  Using /home/vagrant/ansible/cfg/ansible.cfg as config file
+2020-10-07 08:12:28,063 p=25163 u=vagrant |  /home/vagrant/ansible/hosts/hosts.yml did not meet host_list requirements, check plugin documentation if this is unexpected
+2020-10-07 08:12:28,063 p=25163 u=vagrant |  /home/vagrant/ansible/hosts/hosts.yml did not meet script requirements, check plugin documentation if this is unexpected
+2020-10-07 08:12:28,066 p=25163 u=vagrant |  Parsed /home/vagrant/ansible/hosts/hosts.yml inventory source with yaml plugin
+2020-10-07 08:12:28,268 p=25163 u=vagrant |  PLAYBOOK: set_yum_instal.yml *******************************************************************************************
+2020-10-07 08:12:28,268 p=25163 u=vagrant |  1 plays in set_yum_instal.yml
+2020-10-07 08:12:28,293 p=25163 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 08:12:28,306 p=25163 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 08:12:28,307 p=25163 u=vagrant |  task path: /home/vagrant/ansible/yaml/set_yum_instal.yml:2
+2020-10-07 08:12:28,315 p=25163 u=vagrant |  fatal: [centOS]: FAILED! => {
+    "msg": "Attempting to decrypt but no vault secrets found"
+}
+2020-10-07 08:12:28,316 p=25163 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 08:12:28,316 p=25163 u=vagrant |  centOS                     : ok=0    changed=0    unreachable=0    failed=1   
+2020-10-07 08:13:19,765 p=25176 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 08:13:19,774 p=25176 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 08:13:20,931 p=25176 u=vagrant |  ok: [centOS]
+2020-10-07 08:13:20,952 p=25176 u=vagrant |  TASK [shell] ***********************************************************************************************************
+2020-10-07 08:13:21,496 p=25176 u=vagrant |  changed: [centOS]
+2020-10-07 08:13:21,514 p=25176 u=vagrant |  TASK [shell] ***********************************************************************************************************
+2020-10-07 08:13:23,261 p=25176 u=vagrant |   [WARNING]: Consider using 'become', 'become_method', and 'become_user' rather than running sudo
+
+2020-10-07 08:13:23,262 p=25176 u=vagrant |  changed: [centOS]
+2020-10-07 08:13:23,264 p=25176 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 08:13:23,264 p=25176 u=vagrant |  centOS                     : ok=3    changed=2    unreachable=0    failed=0   
+2020-10-07 08:15:28,789 p=25279 u=vagrant |  ERROR! The vault password file /home/vagrant/ansible/hosts/vault/vault_passwd was not found
+2020-10-07 08:15:58,747 p=25288 u=vagrant |  Encryption successful
+2020-10-07 08:16:35,645 p=25307 u=vagrant |  Reading plaintext input from stdin. (ctrl-d to end input)
+2020-10-07 08:16:39,553 p=25307 u=vagrant |  Encryption successful
+2020-10-07 08:16:45,454 p=25314 u=vagrant |  Encryption successful
+2020-10-07 08:16:49,050 p=25321 u=vagrant |  Encryption successful
+2020-10-07 08:17:28,937 p=25342 u=vagrant |  Encryption successful
+2020-10-07 08:18:47,891 p=25382 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 08:18:47,911 p=25382 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 08:18:47,950 p=25382 u=vagrant |  fatal: [centOS]: FAILED! => {"msg": "Decryption failed (no vault secrets were found that could decrypt)"}
+2020-10-07 08:18:47,951 p=25382 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 08:18:47,952 p=25382 u=vagrant |  centOS                     : ok=0    changed=0    unreachable=0    failed=1   
+2020-10-07 08:19:23,417 p=25409 u=vagrant |  PLAY [all] *************************************************************************************************************
+2020-10-07 08:19:23,426 p=25409 u=vagrant |  TASK [Gathering Facts] *************************************************************************************************
+2020-10-07 08:19:24,529 p=25409 u=vagrant |  ok: [centOS]
+2020-10-07 08:19:24,549 p=25409 u=vagrant |  TASK [set_fact] ********************************************************************************************************
+2020-10-07 08:19:24,642 p=25409 u=vagrant |  ok: [centOS] => (item={u'block_used': 831087, u'uuid': u'1c419d6c-5064-4a2b-953c-05b2c67edb15', u'size_total': 42927656960, u'block_total': 10480385, u'mount': u'/', u'block_available': 9649298, u'size_available': 39523524608, u'fstype': u'xfs', u'inode_total': 20971008, u'inode_available': 20938709, u'device': u'/dev/sda1', u'inode_used': 32299, u'block_size': 4096, u'options': u'rw,seclabel,relatime,attr2,inode64,noquota'})
+2020-10-07 08:19:24,660 p=25409 u=vagrant |  TASK [debug] ***********************************************************************************************************
+2020-10-07 08:19:24,740 p=25409 u=vagrant |  ok: [centOS] => {
+    "dk_info": [
+        {
+            "disk_usage": "3404132352", 
+            "disk_usage_ratio": "7"
+        }
+    ]
+}
+2020-10-07 08:19:24,742 p=25409 u=vagrant |  PLAY RECAP *************************************************************************************************************
+2020-10-07 08:19:24,742 p=25409 u=vagrant |  centOS                     : ok=3    changed=0    unreachable=0    failed=0   
+2020-10-07 08:20:27,488 p=25467 u=vagrant |  ERROR! input is not vault encrypted datawin_passwd is not a vault encrypted file for win_passwd

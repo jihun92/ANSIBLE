@@ -1,0 +1,16 @@
+---
+- hosts: all
+
+  tasks:
+  - shell: id
+  - shell: sudo yum install vim -y
+
+#  - yum:
+#      name: vim
+#      state: present
+#    become: yes
+#    become_method: sudo
+##    become_user: sudo
+#    register: rs
+#
+#  - debug: var=rs
