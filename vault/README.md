@@ -1,3 +1,11 @@
+# vault passwd
+
+vault passwd path:
+```sh
+vault_password_file = ../vault/vault_passwd
+```
+
+
 # Create vault string
 
 ```sh
