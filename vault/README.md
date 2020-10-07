@@ -2,6 +2,7 @@
 
 vault passwd path:
 ```sh
+$ cat ansible.cfg | grep vault_password_file
 vault_password_file = ../vault/vault_passwd
 ```
 
