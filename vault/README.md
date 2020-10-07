@@ -1,4 +1,4 @@
-# Vault passwd
+# Vault passwd Information
 
 vault passwd path:
 ```sh
