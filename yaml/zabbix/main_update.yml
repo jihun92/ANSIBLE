@@ -3,6 +3,7 @@
   gather_facts: yes
   vars:
     user: anagent
+    
 
   tasks:
   - name: backup existing Zabbix files
@@ -10,7 +11,8 @@
     vars:
       src: /zabbix/*
       dest: /zabbix/{{file_name}}
-      file_name: backup_{{ansible_date_time.date}}.tar.gz
+      file_name: backup_{{ansible_date_time.date}}_{{times}}.tar.gz
+      times: "{{ ansible_date_time.hour+'-'+ansible_date_time.minute+'-'+ansible_date_time.second }}"
 
   - name: get list of old file in /zabbix
     shell: ls /zabbix
@@ -23,8 +25,9 @@
     vars:
       condi: "{{ file_name }}"
       src: /zabbix/
-      file_name: backup_{{ansible_date_time.date}}.tar.gz
-
+      file_name: backup_{{ansible_date_time.date}}_{{times}}.tar.gz
+      times: "{{ ansible_date_time.hour+'-'+ansible_date_time.minute+'-'+ansible_date_time.second }}"
+  
   - name: upload zabiix install file
     include_tasks: set_upload_zabiix_file.yml
     vars:
@@ -40,6 +43,7 @@
 
   - name: set zabbix conf
     include_tasks: set_zabbix_conf.yml
+    #include_tasks: set_zabbix_conf.yml
     vars:
       ip: 192.168.1.10
       log_path: /zabbix/log/zabbix_agentd.log

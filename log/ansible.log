@@ -28116,3 +28116,1905 @@ use command because file is insufficient you can add 'warn: false' to this comma
 2020-10-14 08:25:36,382 p=12147 u=vagrant |  fatal: [centOS]: FAILED! => {"changed": true, "cmd": "sh /zabbix/install.sh", "delta": "0:00:00.004202", "end": "2020-10-14 08:25:36.337270", "msg": "non-zero return code", "rc": 127, "start": "2020-10-14 08:25:36.333068", "stderr": "sh: /zabbix/install.sh: No such file or directory", "stderr_lines": ["sh: /zabbix/install.sh: No such file or directory"], "stdout": "", "stdout_lines": []}
 2020-10-14 08:25:36,384 p=12147 u=vagrant |  PLAY RECAP ********************************************************************************************
 2020-10-14 08:25:36,384 p=12147 u=vagrant |  centOS                     : ok=7    changed=4    unreachable=0    failed=1   
+2020-10-14 08:33:38,500 p=12469 u=vagrant |  PLAY [centOS] *****************************************************************************************
+2020-10-14 08:33:38,519 p=12469 u=vagrant |  TASK [Gathering Facts] ********************************************************************************
+2020-10-14 08:33:39,846 p=12469 u=vagrant |  ok: [centOS]
+2020-10-14 08:33:39,871 p=12469 u=vagrant |  TASK [set mkdir] **************************************************************************************
+2020-10-14 08:33:39,968 p=12469 u=vagrant |  included: /home/vagrant/ansible/yaml/zabbix/set_mkdir_zabbix.yml for centOS
+2020-10-14 08:33:39,995 p=12469 u=vagrant |  TASK [make dir of /zabbix] ****************************************************************************
+2020-10-14 08:33:40,553 p=12469 u=vagrant |   [WARNING]: when statements should not include jinja2 templating delimiters such as {{ }} or {% %}.
+Found: {{ 'File exists' not in rs.stderr and rs.stdout != '' }}
+
+2020-10-14 08:33:40,561 p=12469 u=vagrant |   [WARNING]: Consider using 'become', 'become_method', and 'become_user' rather than running sudo
+
+2020-10-14 08:33:40,562 p=12469 u=vagrant |  changed: [centOS]
+2020-10-14 08:33:40,587 p=12469 u=vagrant |  TASK [chown dir of /zabbix] ***************************************************************************
+2020-10-14 08:33:40,999 p=12469 u=vagrant |  changed: [centOS]
+2020-10-14 08:33:41,017 p=12469 u=vagrant |  TASK [get state /zabbix] ******************************************************************************
+2020-10-14 08:33:41,399 p=12469 u=vagrant |  changed: [centOS]
+2020-10-14 08:33:41,421 p=12469 u=vagrant |  TASK [debug dir of /zabbix] ***************************************************************************
+2020-10-14 08:33:41,518 p=12469 u=vagrant |  ok: [centOS] => {
+    "zabbix_dir_info.stdout": "drwxrwxr-x.  2 anagent anagent          6 Oct 14 08:33 zabbix\ndrwxrwxr-x.  3 anagent anagent         38 Oct 14 05:53 zabbix.org"
+}
+2020-10-14 08:33:41,544 p=12469 u=vagrant |  TASK [upload zabiix install file] *********************************************************************
+2020-10-14 08:33:41,633 p=12469 u=vagrant |  included: /home/vagrant/ansible/yaml/zabbix/set_upload_zabiix_file.yml for centOS
+2020-10-14 08:33:41,664 p=12469 u=vagrant |  TASK [unarchive] **************************************************************************************
+2020-10-14 08:33:42,952 p=12469 u=vagrant |  changed: [centOS]
+2020-10-14 08:33:42,972 p=12469 u=vagrant |  TASK [install zabbix] *********************************************************************************
+2020-10-14 08:33:43,060 p=12469 u=vagrant |  included: /home/vagrant/ansible/yaml/zabbix/set_install_zabbix.yml for centOS
+2020-10-14 08:33:43,093 p=12469 u=vagrant |  TASK [install zabbix] *********************************************************************************
+2020-10-14 08:33:43,484 p=12469 u=vagrant |  changed: [centOS]
+2020-10-14 08:33:43,504 p=12469 u=vagrant |  TASK [set zabbix conf] ********************************************************************************
+2020-10-14 08:33:43,581 p=12469 u=vagrant |  included: /home/vagrant/ansible/yaml/zabbix/set_chk_zabbix_conf.yml for centOS
+2020-10-14 08:33:43,605 p=12469 u=vagrant |  TASK [get zabbix_agentd.conf] *************************************************************************
+2020-10-14 08:33:43,999 p=12469 u=vagrant |  changed: [centOS]
+2020-10-14 08:33:44,017 p=12469 u=vagrant |  TASK [chk zabbix_agentd_conf] *************************************************************************
+2020-10-14 08:33:44,126 p=12469 u=vagrant |  fatal: [centOS]: FAILED! => {
+    "msg": [
+        "Server=127.0.0.1", 
+        "ServerActive=127.0.0.1", 
+        "LogFile=/tmp/zabbix_agentd.log"
+    ]
+}
+2020-10-14 08:33:44,128 p=12469 u=vagrant |  PLAY RECAP ********************************************************************************************
+2020-10-14 08:33:44,129 p=12469 u=vagrant |  centOS                     : ok=12   changed=6    unreachable=0    failed=1   
+2020-10-14 08:34:08,441 p=12636 u=vagrant |  PLAY [centOS] *****************************************************************************************
+2020-10-14 08:34:08,456 p=12636 u=vagrant |  TASK [Gathering Facts] ********************************************************************************
+2020-10-14 08:34:09,381 p=12636 u=vagrant |  ok: [centOS]
+2020-10-14 08:34:09,402 p=12636 u=vagrant |  TASK [set mkdir] **************************************************************************************
+2020-10-14 08:34:09,492 p=12636 u=vagrant |  included: /home/vagrant/ansible/yaml/zabbix/set_mkdir_zabbix.yml for centOS
+2020-10-14 08:34:09,519 p=12636 u=vagrant |  TASK [make dir of /zabbix] ****************************************************************************
+2020-10-14 08:34:10,138 p=12636 u=vagrant |   [WARNING]: when statements should not include jinja2 templating delimiters such as {{ }} or {% %}.
+Found: {{ 'File exists' not in rs.stderr and rs.stdout != '' }}
+
+2020-10-14 08:34:10,148 p=12636 u=vagrant |   [WARNING]: Consider using 'become', 'become_method', and 'become_user' rather than running sudo
+
+2020-10-14 08:34:10,149 p=12636 u=vagrant |  changed: [centOS]
+2020-10-14 08:34:10,170 p=12636 u=vagrant |  TASK [chown dir of /zabbix] ***************************************************************************
+2020-10-14 08:34:10,577 p=12636 u=vagrant |  changed: [centOS]
+2020-10-14 08:34:10,607 p=12636 u=vagrant |  TASK [get state /zabbix] ******************************************************************************
+2020-10-14 08:34:11,002 p=12636 u=vagrant |  changed: [centOS]
+2020-10-14 08:34:11,023 p=12636 u=vagrant |  TASK [debug dir of /zabbix] ***************************************************************************
+2020-10-14 08:34:11,119 p=12636 u=vagrant |  ok: [centOS] => {
+    "zabbix_dir_info.stdout": "drwxrwxr-x.  5 anagent anagent         59 Oct 14 08:33 zabbix\ndrwxrwxr-x.  3 anagent anagent         38 Oct 14 05:53 zabbix.org"
+}
+2020-10-14 08:34:11,140 p=12636 u=vagrant |  TASK [upload zabiix install file] *********************************************************************
+2020-10-14 08:34:11,234 p=12636 u=vagrant |  included: /home/vagrant/ansible/yaml/zabbix/set_upload_zabiix_file.yml for centOS
+2020-10-14 08:34:11,265 p=12636 u=vagrant |  TASK [unarchive] **************************************************************************************
+2020-10-14 08:34:12,494 p=12636 u=vagrant |  ok: [centOS]
+2020-10-14 08:34:12,514 p=12636 u=vagrant |  TASK [install zabbix] *********************************************************************************
+2020-10-14 08:34:12,598 p=12636 u=vagrant |  included: /home/vagrant/ansible/yaml/zabbix/set_install_zabbix.yml for centOS
+2020-10-14 08:34:12,624 p=12636 u=vagrant |  TASK [install zabbix] *********************************************************************************
+2020-10-14 08:34:12,999 p=12636 u=vagrant |  changed: [centOS]
+2020-10-14 08:34:13,019 p=12636 u=vagrant |  TASK [set zabbix conf] ********************************************************************************
+2020-10-14 08:34:13,097 p=12636 u=vagrant |  included: /home/vagrant/ansible/yaml/zabbix/set_zabbix_conf.yml for centOS
+2020-10-14 08:34:13,121 p=12636 u=vagrant |  TASK [set zabbix_agentd.conf] *************************************************************************
+2020-10-14 08:34:13,675 p=12636 u=vagrant |  changed: [centOS] => (item=[u'^Server=.*', u'Server=192.168.1.10'])
+2020-10-14 08:34:14,020 p=12636 u=vagrant |  changed: [centOS] => (item=[u'^ServerActive.*', u'ServerActive=192.168.1.10'])
+2020-10-14 08:34:14,354 p=12636 u=vagrant |  changed: [centOS] => (item=[u'^LogFile=.*', u'LogFile=/zabbix/log/zabbix_agentd.log'])
+2020-10-14 08:34:14,380 p=12636 u=vagrant |  TASK [chk zabbix_agentd.conf] *************************************************************************
+2020-10-14 08:34:14,758 p=12636 u=vagrant |  changed: [centOS]
+2020-10-14 08:34:14,778 p=12636 u=vagrant |  TASK [debug zabbix_agentd_conf file] ******************************************************************
+2020-10-14 08:34:14,883 p=12636 u=vagrant |  ok: [centOS] => {
+    "zabbix_agentd_conf.stdout_lines": [
+        "Server=192.168.1.10", 
+        "ServerActive=192.168.1.10", 
+        "LogFile=/zabbix/log/zabbix_agentd.log"
+    ]
+}
+2020-10-14 08:34:14,906 p=12636 u=vagrant |  TASK [start zabbix] ***********************************************************************************
+2020-10-14 08:34:15,004 p=12636 u=vagrant |  included: /home/vagrant/ansible/yaml/zabbix/set_start_zabbix.yml for centOS
+2020-10-14 08:34:15,031 p=12636 u=vagrant |  TASK [start zabbix] ***********************************************************************************
+2020-10-14 08:34:15,415 p=12636 u=vagrant |  changed: [centOS]
+2020-10-14 08:34:15,436 p=12636 u=vagrant |  TASK [chk zabbix process] *****************************************************************************
+2020-10-14 08:34:15,828 p=12636 u=vagrant |  changed: [centOS]
+2020-10-14 08:34:15,852 p=12636 u=vagrant |  TASK [debug zabbix process] ***************************************************************************
+2020-10-14 08:34:15,938 p=12636 u=vagrant |   [WARNING]: when statements should not include jinja2 templating delimiters such as {{ }} or {% %}.
+Found: {{ false if rs.stdout | int > 0 else true }}
+
+2020-10-14 08:34:15,945 p=12636 u=vagrant |  fatal: [centOS]: FAILED! => {
+    "msg": "ERROR!!! Please Check Zabbix agent Process..."
+}
+2020-10-14 08:34:15,946 p=12636 u=vagrant |  PLAY RECAP ********************************************************************************************
+2020-10-14 08:34:15,946 p=12636 u=vagrant |  centOS                     : ok=17   changed=8    unreachable=0    failed=1   
+2020-10-14 08:35:57,184 p=12936 u=vagrant |  ansible-playbook 2.7.8
+  config file = /home/vagrant/ansible/cfg/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible
+  executable location = /home/vagrant/.local/bin/ansible-playbook
+  python version = 2.7.5 (default, Apr  2 2020, 13:16:51) [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+2020-10-14 08:35:57,184 p=12936 u=vagrant |  Using /home/vagrant/ansible/cfg/ansible.cfg as config file
+2020-10-14 08:35:57,199 p=12936 u=vagrant |  /home/vagrant/ansible/hosts/hosts.yml did not meet host_list requirements, check plugin documentation if this is unexpected
+2020-10-14 08:35:57,199 p=12936 u=vagrant |  /home/vagrant/ansible/hosts/hosts.yml did not meet script requirements, check plugin documentation if this is unexpected
+2020-10-14 08:35:57,202 p=12936 u=vagrant |  Parsed /home/vagrant/ansible/hosts/hosts.yml inventory source with yaml plugin
+2020-10-14 08:35:57,530 p=12936 u=vagrant |  PLAYBOOK: main_update.yml *****************************************************************************
+2020-10-14 08:35:57,531 p=12936 u=vagrant |  1 plays in main_update.yml
+2020-10-14 08:35:57,568 p=12936 u=vagrant |  PLAY [centOS] *****************************************************************************************
+2020-10-14 08:35:57,580 p=12936 u=vagrant |  TASK [Gathering Facts] ********************************************************************************
+2020-10-14 08:35:57,580 p=12936 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:2
+2020-10-14 08:35:58,467 p=12936 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/system/setup.py
+2020-10-14 08:35:58,912 p=12936 u=vagrant |  ok: [centOS]
+2020-10-14 08:35:58,912 p=12936 u=vagrant |  META: ran handlers
+2020-10-14 08:35:58,938 p=12936 u=vagrant |  TASK [backup existing Zabbix files] *******************************************************************
+2020-10-14 08:35:58,938 p=12936 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:8
+2020-10-14 08:35:59,288 p=12936 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:35:59,789 p=12936 u=vagrant |   [WARNING]: Consider using the unarchive module rather than running 'tar'.  If you need to use command
+because unarchive is insufficient you can add 'warn: false' to this command task or set
+'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2020-10-14 08:35:59,790 p=12936 u=vagrant |  changed: [centOS] => {
+    "changed": true, 
+    "cmd": "tar zcvf /zabbix/backup_2020-10-14.tar.gz /zabbix/*", 
+    "delta": "0:00:00.264316", 
+    "end": "2020-10-14 08:35:59.736843", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "tar zcvf /zabbix/backup_2020-10-14.tar.gz /zabbix/*", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2020-10-14 08:35:59.472527", 
+    "stderr": "tar: Removing leading `/' from member names", 
+    "stderr_lines": [
+        "tar: Removing leading `/' from member names"
+    ], 
+    "stdout": "/zabbix/bin/\n/zabbix/bin/zabbix_sender\n/zabbix/bin/zabbix_get\n/zabbix/conf/\n/zabbix/conf/zabbix_agentd/\n/zabbix/conf/zabbix_agentd/userparameter_examples.conf\n/zabbix/conf/zabbix_agentd/userparameter_mysql.conf\n/zabbix/conf/zabbix_agentd.conf\n/zabbix/install.sh\n/zabbix/sbin/\n/zabbix/sbin/zabbix_agentd\n/zabbix/sbin/start.sh\n/zabbix/sbin/stop.sh", 
+    "stdout_lines": [
+        "/zabbix/bin/", 
+        "/zabbix/bin/zabbix_sender", 
+        "/zabbix/bin/zabbix_get", 
+        "/zabbix/conf/", 
+        "/zabbix/conf/zabbix_agentd/", 
+        "/zabbix/conf/zabbix_agentd/userparameter_examples.conf", 
+        "/zabbix/conf/zabbix_agentd/userparameter_mysql.conf", 
+        "/zabbix/conf/zabbix_agentd.conf", 
+        "/zabbix/install.sh", 
+        "/zabbix/sbin/", 
+        "/zabbix/sbin/zabbix_agentd", 
+        "/zabbix/sbin/start.sh", 
+        "/zabbix/sbin/stop.sh"
+    ]
+}
+2020-10-14 08:35:59,811 p=12936 u=vagrant |  TASK [get list of old file in /zabbix] ****************************************************************
+2020-10-14 08:35:59,811 p=12936 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:15
+2020-10-14 08:35:59,968 p=12936 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:36:00,226 p=12936 u=vagrant |  changed: [centOS] => {
+    "changed": true, 
+    "cmd": "ls /zabbix", 
+    "delta": "0:00:00.004147", 
+    "end": "2020-10-14 08:36:00.175596", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "ls /zabbix", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2020-10-14 08:36:00.171449", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "backup_2020-10-14.tar.gz\nbin\nconf\ninstall.sh\nsbin", 
+    "stdout_lines": [
+        "backup_2020-10-14.tar.gz", 
+        "bin", 
+        "conf", 
+        "install.sh", 
+        "sbin"
+    ]
+}
+2020-10-14 08:36:00,248 p=12936 u=vagrant |  TASK [remove old file in /zabbix] *********************************************************************
+2020-10-14 08:36:00,248 p=12936 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:19
+2020-10-14 08:36:00,347 p=12936 u=vagrant |  skipping: [centOS] => (item=backup_2020-10-14.tar.gz)  => {
+    "changed": false, 
+    "item": "backup_2020-10-14.tar.gz", 
+    "skip_reason": "Conditional result was False"
+}
+2020-10-14 08:36:00,487 p=12936 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:36:00,723 p=12936 u=vagrant |  changed: [centOS] => (item=bin) => {
+    "changed": true, 
+    "cmd": "rm -rf /zabbix/bin", 
+    "delta": "0:00:00.005227", 
+    "end": "2020-10-14 08:36:00.668200", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "rm -rf /zabbix/bin", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "item": "bin", 
+    "rc": 0, 
+    "start": "2020-10-14 08:36:00.662973", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "", 
+    "stdout_lines": [], 
+    "warnings": [
+        "Consider using the file module with state=absent rather than running 'rm'.  If you need to use command because file is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message."
+    ]
+}
+2020-10-14 08:36:00,846 p=12936 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:36:01,090 p=12936 u=vagrant |  changed: [centOS] => (item=conf) => {
+    "changed": true, 
+    "cmd": "rm -rf /zabbix/conf", 
+    "delta": "0:00:00.004600", 
+    "end": "2020-10-14 08:36:01.028877", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "rm -rf /zabbix/conf", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "item": "conf", 
+    "rc": 0, 
+    "start": "2020-10-14 08:36:01.024277", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "", 
+    "stdout_lines": [], 
+    "warnings": [
+        "Consider using the file module with state=absent rather than running 'rm'.  If you need to use command because file is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message."
+    ]
+}
+2020-10-14 08:36:01,209 p=12936 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:36:01,464 p=12936 u=vagrant |  changed: [centOS] => (item=install.sh) => {
+    "changed": true, 
+    "cmd": "rm -rf /zabbix/install.sh", 
+    "delta": "0:00:00.004567", 
+    "end": "2020-10-14 08:36:01.393495", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "rm -rf /zabbix/install.sh", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "item": "install.sh", 
+    "rc": 0, 
+    "start": "2020-10-14 08:36:01.388928", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "", 
+    "stdout_lines": [], 
+    "warnings": [
+        "Consider using the file module with state=absent rather than running 'rm'.  If you need to use command because file is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message."
+    ]
+}
+2020-10-14 08:36:01,598 p=12936 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:36:01,845 p=12936 u=vagrant |  changed: [centOS] => (item=sbin) => {
+    "changed": true, 
+    "cmd": "rm -rf /zabbix/sbin", 
+    "delta": "0:00:00.004826", 
+    "end": "2020-10-14 08:36:01.790155", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "rm -rf /zabbix/sbin", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "item": "sbin", 
+    "rc": 0, 
+    "start": "2020-10-14 08:36:01.785329", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "", 
+    "stdout_lines": [], 
+    "warnings": [
+        "Consider using the file module with state=absent rather than running 'rm'.  If you need to use command because file is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message."
+    ]
+}
+2020-10-14 08:36:01,846 p=12936 u=vagrant |   [WARNING]: Consider using the file module with state=absent rather than running 'rm'.  If you need to
+use command because file is insufficient you can add 'warn: false' to this command task or set
+'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2020-10-14 08:36:01,870 p=12936 u=vagrant |  TASK [upload zabiix install file] *********************************************************************
+2020-10-14 08:36:01,870 p=12936 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:28
+2020-10-14 08:36:01,962 p=12936 u=vagrant |  included: /home/vagrant/ansible/yaml/zabbix/set_upload_zabiix_file.yml for centOS
+2020-10-14 08:36:01,988 p=12936 u=vagrant |  TASK [unarchive] **************************************************************************************
+2020-10-14 08:36:01,988 p=12936 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/set_upload_zabiix_file.yml:2
+2020-10-14 08:36:02,348 p=12936 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/files/stat.py
+2020-10-14 08:36:02,936 p=12936 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/files/unarchive.py
+2020-10-14 08:36:03,389 p=12936 u=vagrant |  changed: [centOS] => {
+    "changed": true, 
+    "dest": "/zabbix", 
+    "extract_results": {
+        "cmd": [
+            "/usr/bin/gtar", 
+            "--extract", 
+            "-C", 
+            "/zabbix", 
+            "-z", 
+            "-f", 
+            "/home/anagent/.ansible/tmp/ansible-tmp-1602664562.1-124860918675845/source"
+        ], 
+        "err": "", 
+        "out": "", 
+        "rc": 0
+    }, 
+    "gid": 1001, 
+    "group": "anagent", 
+    "handler": "TgzArchive", 
+    "invocation": {
+        "module_args": {
+            "attributes": null, 
+            "backup": null, 
+            "content": null, 
+            "creates": null, 
+            "delimiter": null, 
+            "dest": "/zabbix", 
+            "directory_mode": null, 
+            "exclude": [], 
+            "extra_opts": [], 
+            "follow": false, 
+            "force": null, 
+            "group": null, 
+            "keep_newer": false, 
+            "list_files": false, 
+            "mode": null, 
+            "owner": null, 
+            "regexp": null, 
+            "remote_src": false, 
+            "selevel": null, 
+            "serole": null, 
+            "setype": null, 
+            "seuser": null, 
+            "src": "/home/anagent/.ansible/tmp/ansible-tmp-1602664562.1-124860918675845/source", 
+            "unsafe_writes": null, 
+            "validate_certs": true
+        }
+    }, 
+    "mode": "0775", 
+    "owner": "anagent", 
+    "secontext": "unconfined_u:object_r:default_t:s0", 
+    "size": 91, 
+    "src": "/home/anagent/.ansible/tmp/ansible-tmp-1602664562.1-124860918675845/source", 
+    "state": "directory", 
+    "uid": 1001
+}
+2020-10-14 08:36:03,412 p=12936 u=vagrant |  TASK [install zabbix] *********************************************************************************
+2020-10-14 08:36:03,412 p=12936 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:38
+2020-10-14 08:36:03,502 p=12936 u=vagrant |  included: /home/vagrant/ansible/yaml/zabbix/set_install_zabbix.yml for centOS
+2020-10-14 08:36:03,524 p=12936 u=vagrant |  TASK [install zabbix] *********************************************************************************
+2020-10-14 08:36:03,524 p=12936 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/set_install_zabbix.yml:2
+2020-10-14 08:36:03,688 p=12936 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:36:03,915 p=12936 u=vagrant |  changed: [centOS] => {
+    "changed": true, 
+    "cmd": "sh /zabbix/install.sh", 
+    "delta": "0:00:00.004233", 
+    "end": "2020-10-14 08:36:03.865012", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "sh /zabbix/install.sh", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2020-10-14 08:36:03.860779", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "", 
+    "stdout_lines": []
+}
+2020-10-14 08:36:03,940 p=12936 u=vagrant |  TASK [set zabbix conf] ********************************************************************************
+2020-10-14 08:36:03,940 p=12936 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:41
+2020-10-14 08:36:04,026 p=12936 u=vagrant |  included: /home/vagrant/ansible/yaml/zabbix/set_zabbix_conf.yml for centOS
+2020-10-14 08:36:04,048 p=12936 u=vagrant |  TASK [set zabbix_agentd.conf] *************************************************************************
+2020-10-14 08:36:04,049 p=12936 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/set_zabbix_conf.yml:2
+2020-10-14 08:36:04,424 p=12936 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/files/replace.py
+2020-10-14 08:36:04,692 p=12936 u=vagrant |  changed: [centOS] => (item=[u'^Server=.*', u'Server=192.168.1.10']) => {
+    "changed": true, 
+    "invocation": {
+        "module_args": {
+            "after": null, 
+            "attributes": null, 
+            "backup": false, 
+            "before": null, 
+            "content": null, 
+            "delimiter": null, 
+            "directory_mode": null, 
+            "encoding": "utf-8", 
+            "follow": false, 
+            "force": null, 
+            "group": null, 
+            "mode": null, 
+            "owner": null, 
+            "path": "/zabbix/conf/zabbix_agentd.conf", 
+            "regexp": "^Server=.*", 
+            "remote_src": null, 
+            "replace": "Server=192.168.1.10", 
+            "selevel": null, 
+            "serole": null, 
+            "setype": null, 
+            "seuser": null, 
+            "src": null, 
+            "unsafe_writes": null, 
+            "validate": null
+        }
+    }, 
+    "item": [
+        "^Server=.*", 
+        "Server=192.168.1.10"
+    ], 
+    "msg": "1 replacements made"
+}
+2020-10-14 08:36:04,806 p=12936 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/files/replace.py
+2020-10-14 08:36:05,045 p=12936 u=vagrant |  changed: [centOS] => (item=[u'^ServerActive.*', u'ServerActive=192.168.1.10']) => {
+    "changed": true, 
+    "invocation": {
+        "module_args": {
+            "after": null, 
+            "attributes": null, 
+            "backup": false, 
+            "before": null, 
+            "content": null, 
+            "delimiter": null, 
+            "directory_mode": null, 
+            "encoding": "utf-8", 
+            "follow": false, 
+            "force": null, 
+            "group": null, 
+            "mode": null, 
+            "owner": null, 
+            "path": "/zabbix/conf/zabbix_agentd.conf", 
+            "regexp": "^ServerActive.*", 
+            "remote_src": null, 
+            "replace": "ServerActive=192.168.1.10", 
+            "selevel": null, 
+            "serole": null, 
+            "setype": null, 
+            "seuser": null, 
+            "src": null, 
+            "unsafe_writes": null, 
+            "validate": null
+        }
+    }, 
+    "item": [
+        "^ServerActive.*", 
+        "ServerActive=192.168.1.10"
+    ], 
+    "msg": "1 replacements made"
+}
+2020-10-14 08:36:05,173 p=12936 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/files/replace.py
+2020-10-14 08:36:05,421 p=12936 u=vagrant |  changed: [centOS] => (item=[u'^LogFile=.*', u'LogFile=/zabbix/log/zabbix_agentd.log']) => {
+    "changed": true, 
+    "invocation": {
+        "module_args": {
+            "after": null, 
+            "attributes": null, 
+            "backup": false, 
+            "before": null, 
+            "content": null, 
+            "delimiter": null, 
+            "directory_mode": null, 
+            "encoding": "utf-8", 
+            "follow": false, 
+            "force": null, 
+            "group": null, 
+            "mode": null, 
+            "owner": null, 
+            "path": "/zabbix/conf/zabbix_agentd.conf", 
+            "regexp": "^LogFile=.*", 
+            "remote_src": null, 
+            "replace": "LogFile=/zabbix/log/zabbix_agentd.log", 
+            "selevel": null, 
+            "serole": null, 
+            "setype": null, 
+            "seuser": null, 
+            "src": null, 
+            "unsafe_writes": null, 
+            "validate": null
+        }
+    }, 
+    "item": [
+        "^LogFile=.*", 
+        "LogFile=/zabbix/log/zabbix_agentd.log"
+    ], 
+    "msg": "1 replacements made"
+}
+2020-10-14 08:36:05,449 p=12936 u=vagrant |  TASK [chk zabbix_agentd.conf] *************************************************************************
+2020-10-14 08:36:05,449 p=12936 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/set_zabbix_conf.yml:13
+2020-10-14 08:36:05,600 p=12936 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:36:05,842 p=12936 u=vagrant |  changed: [centOS] => {
+    "changed": true, 
+    "cmd": "cat /zabbix/conf/zabbix_agentd.conf | grep ^Server=.*\n cat /zabbix/conf/zabbix_agentd.conf | grep ^ServerActive=.* # or ActiveServer\n cat /zabbix/conf/zabbix_agentd.conf | grep ^LogFile=.*", 
+    "delta": "0:00:00.010722", 
+    "end": "2020-10-14 08:36:05.791508", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "cat /zabbix/conf/zabbix_agentd.conf | grep ^Server=.*\n cat /zabbix/conf/zabbix_agentd.conf | grep ^ServerActive=.* # or ActiveServer\n cat /zabbix/conf/zabbix_agentd.conf | grep ^LogFile=.*", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2020-10-14 08:36:05.780786", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "Server=192.168.1.10\nServerActive=192.168.1.10\nLogFile=/zabbix/log/zabbix_agentd.log", 
+    "stdout_lines": [
+        "Server=192.168.1.10", 
+        "ServerActive=192.168.1.10", 
+        "LogFile=/zabbix/log/zabbix_agentd.log"
+    ]
+}
+2020-10-14 08:36:05,866 p=12936 u=vagrant |  TASK [debug zabbix_agentd_conf file] ******************************************************************
+2020-10-14 08:36:05,866 p=12936 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/set_zabbix_conf.yml:20
+2020-10-14 08:36:05,967 p=12936 u=vagrant |  ok: [centOS] => {
+    "zabbix_agentd_conf.stdout_lines": [
+        "Server=192.168.1.10", 
+        "ServerActive=192.168.1.10", 
+        "LogFile=/zabbix/log/zabbix_agentd.log"
+    ]
+}
+2020-10-14 08:36:05,986 p=12936 u=vagrant |  TASK [start zabbix] ***********************************************************************************
+2020-10-14 08:36:05,986 p=12936 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:48
+2020-10-14 08:36:06,088 p=12936 u=vagrant |  included: /home/vagrant/ansible/yaml/zabbix/set_start_zabbix.yml for centOS
+2020-10-14 08:36:06,126 p=12936 u=vagrant |  TASK [start zabbix] ***********************************************************************************
+2020-10-14 08:36:06,127 p=12936 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/set_start_zabbix.yml:2
+2020-10-14 08:36:06,337 p=12936 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:36:06,642 p=12936 u=vagrant |  changed: [centOS] => {
+    "changed": true, 
+    "cmd": "sh /zabbix/sbin/start.sh", 
+    "delta": "0:00:00.007983", 
+    "end": "2020-10-14 08:36:06.584190", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "sh /zabbix/sbin/start.sh", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2020-10-14 08:36:06.576207", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "", 
+    "stdout_lines": []
+}
+2020-10-14 08:36:06,665 p=12936 u=vagrant |  TASK [chk zabbix process] *****************************************************************************
+2020-10-14 08:36:06,665 p=12936 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/set_start_zabbix.yml:5
+2020-10-14 08:36:06,895 p=12936 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:36:07,214 p=12936 u=vagrant |  changed: [centOS] => {
+    "changed": true, 
+    "cmd": "ps -ef | grep -v grep | grep zabbix_agentd | wc -l", 
+    "delta": "0:00:00.053632", 
+    "end": "2020-10-14 08:36:07.148841", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "ps -ef | grep -v grep | grep zabbix_agentd | wc -l", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2020-10-14 08:36:07.095209", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "0", 
+    "stdout_lines": [
+        "0"
+    ]
+}
+2020-10-14 08:36:07,248 p=12936 u=vagrant |  TASK [debug zabbix process] ***************************************************************************
+2020-10-14 08:36:07,248 p=12936 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/set_start_zabbix.yml:9
+2020-10-14 08:36:07,407 p=12936 u=vagrant |   [WARNING]: when statements should not include jinja2 templating delimiters such as {{ }} or {% %}.
+Found: {{ false if rs.stdout | int > 0 else true }}
+
+2020-10-14 08:36:07,421 p=12936 u=vagrant |  fatal: [centOS]: FAILED! => {
+    "msg": "ERROR!!! Please Check Zabbix agent Process..."
+}
+2020-10-14 08:36:07,423 p=12936 u=vagrant |  PLAY RECAP ********************************************************************************************
+2020-10-14 08:36:07,423 p=12936 u=vagrant |  centOS                     : ok=15   changed=9    unreachable=0    failed=1   
+2020-10-14 08:40:32,985 p=13199 u=vagrant |  ansible-playbook 2.7.8
+  config file = /home/vagrant/ansible/cfg/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible
+  executable location = /home/vagrant/.local/bin/ansible-playbook
+  python version = 2.7.5 (default, Apr  2 2020, 13:16:51) [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+2020-10-14 08:40:32,985 p=13199 u=vagrant |  Using /home/vagrant/ansible/cfg/ansible.cfg as config file
+2020-10-14 08:40:33,001 p=13199 u=vagrant |  /home/vagrant/ansible/hosts/hosts.yml did not meet host_list requirements, check plugin documentation if this is unexpected
+2020-10-14 08:40:33,001 p=13199 u=vagrant |  /home/vagrant/ansible/hosts/hosts.yml did not meet script requirements, check plugin documentation if this is unexpected
+2020-10-14 08:40:33,005 p=13199 u=vagrant |  Parsed /home/vagrant/ansible/hosts/hosts.yml inventory source with yaml plugin
+2020-10-14 08:40:33,020 p=13199 u=vagrant |  ERROR! Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to have been in '/home/vagrant/ansible/yaml/zabbix/main_update.yml': line 27, column 42, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+      file_name: backup_{{ansible_date_time.date}}_{{times}}.tar.gz
+      times: '{{ansible_date_time.hour}}'-'{{ansible_date_time.minute}}'-'{{ansible_date_time.second}}'
+                                         ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes.  Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2020-10-14 08:41:13,599 p=13209 u=vagrant |  ansible-playbook 2.7.8
+  config file = /home/vagrant/ansible/cfg/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible
+  executable location = /home/vagrant/.local/bin/ansible-playbook
+  python version = 2.7.5 (default, Apr  2 2020, 13:16:51) [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+2020-10-14 08:41:13,599 p=13209 u=vagrant |  Using /home/vagrant/ansible/cfg/ansible.cfg as config file
+2020-10-14 08:41:13,615 p=13209 u=vagrant |  /home/vagrant/ansible/hosts/hosts.yml did not meet host_list requirements, check plugin documentation if this is unexpected
+2020-10-14 08:41:13,616 p=13209 u=vagrant |  /home/vagrant/ansible/hosts/hosts.yml did not meet script requirements, check plugin documentation if this is unexpected
+2020-10-14 08:41:13,619 p=13209 u=vagrant |  Parsed /home/vagrant/ansible/hosts/hosts.yml inventory source with yaml plugin
+2020-10-14 08:41:14,006 p=13209 u=vagrant |  PLAYBOOK: main_update.yml *****************************************************************************
+2020-10-14 08:41:14,007 p=13209 u=vagrant |  1 plays in main_update.yml
+2020-10-14 08:41:14,048 p=13209 u=vagrant |  PLAY [centOS] *****************************************************************************************
+2020-10-14 08:41:14,063 p=13209 u=vagrant |  TASK [Gathering Facts] ********************************************************************************
+2020-10-14 08:41:14,064 p=13209 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:2
+2020-10-14 08:41:14,952 p=13209 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/system/setup.py
+2020-10-14 08:41:15,453 p=13209 u=vagrant |  ok: [centOS]
+2020-10-14 08:41:15,454 p=13209 u=vagrant |  META: ran handlers
+2020-10-14 08:41:15,482 p=13209 u=vagrant |  TASK [backup existing Zabbix files] *******************************************************************
+2020-10-14 08:41:15,482 p=13209 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:8
+2020-10-14 08:41:15,898 p=13209 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:41:16,512 p=13209 u=vagrant |   [WARNING]: Consider using the unarchive module rather than running 'tar'.  If you need to use command
+because unarchive is insufficient you can add 'warn: false' to this command task or set
+'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2020-10-14 08:41:16,513 p=13209 u=vagrant |  fatal: [centOS]: FAILED! => {
+    "changed": true, 
+    "cmd": "tar zcvf /zabbix/backup_2020-10-14.tar.gz /zabbix/*", 
+    "delta": "0:00:00.355929", 
+    "end": "2020-10-14 08:41:16.461770", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "tar zcvf /zabbix/backup_2020-10-14.tar.gz /zabbix/*", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "msg": "non-zero return code", 
+    "rc": 1, 
+    "start": "2020-10-14 08:41:16.105841", 
+    "stderr": "tar: Removing leading `/' from member names\ntar: /zabbix/backup_2020-10-14.tar.gz: File shrank by 1753923 bytes; padding with zeros", 
+    "stderr_lines": [
+        "tar: Removing leading `/' from member names", 
+        "tar: /zabbix/backup_2020-10-14.tar.gz: File shrank by 1753923 bytes; padding with zeros"
+    ], 
+    "stdout": "/zabbix/backup_2020-10-14.tar.gz\n/zabbix/bin/\n/zabbix/bin/zabbix_sender\n/zabbix/bin/zabbix_get\n/zabbix/conf/\n/zabbix/conf/zabbix_agentd/\n/zabbix/conf/zabbix_agentd/userparameter_examples.conf\n/zabbix/conf/zabbix_agentd/userparameter_mysql.conf\n/zabbix/conf/zabbix_agentd.conf\n/zabbix/install.sh\n/zabbix/sbin/\n/zabbix/sbin/zabbix_agentd\n/zabbix/sbin/start.sh\n/zabbix/sbin/stop.sh", 
+    "stdout_lines": [
+        "/zabbix/backup_2020-10-14.tar.gz", 
+        "/zabbix/bin/", 
+        "/zabbix/bin/zabbix_sender", 
+        "/zabbix/bin/zabbix_get", 
+        "/zabbix/conf/", 
+        "/zabbix/conf/zabbix_agentd/", 
+        "/zabbix/conf/zabbix_agentd/userparameter_examples.conf", 
+        "/zabbix/conf/zabbix_agentd/userparameter_mysql.conf", 
+        "/zabbix/conf/zabbix_agentd.conf", 
+        "/zabbix/install.sh", 
+        "/zabbix/sbin/", 
+        "/zabbix/sbin/zabbix_agentd", 
+        "/zabbix/sbin/start.sh", 
+        "/zabbix/sbin/stop.sh"
+    ]
+}
+2020-10-14 08:41:16,515 p=13209 u=vagrant |  PLAY RECAP ********************************************************************************************
+2020-10-14 08:41:16,515 p=13209 u=vagrant |  centOS                     : ok=1    changed=0    unreachable=0    failed=1   
+2020-10-14 08:42:37,566 p=13255 u=vagrant |  ansible-playbook 2.7.8
+  config file = /home/vagrant/ansible/cfg/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible
+  executable location = /home/vagrant/.local/bin/ansible-playbook
+  python version = 2.7.5 (default, Apr  2 2020, 13:16:51) [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+2020-10-14 08:42:37,567 p=13255 u=vagrant |  Using /home/vagrant/ansible/cfg/ansible.cfg as config file
+2020-10-14 08:42:37,585 p=13255 u=vagrant |  /home/vagrant/ansible/hosts/hosts.yml did not meet host_list requirements, check plugin documentation if this is unexpected
+2020-10-14 08:42:37,585 p=13255 u=vagrant |  /home/vagrant/ansible/hosts/hosts.yml did not meet script requirements, check plugin documentation if this is unexpected
+2020-10-14 08:42:37,591 p=13255 u=vagrant |  Parsed /home/vagrant/ansible/hosts/hosts.yml inventory source with yaml plugin
+2020-10-14 08:42:37,971 p=13255 u=vagrant |  PLAYBOOK: main_update.yml *****************************************************************************
+2020-10-14 08:42:37,971 p=13255 u=vagrant |  1 plays in main_update.yml
+2020-10-14 08:42:38,008 p=13255 u=vagrant |  PLAY [centOS] *****************************************************************************************
+2020-10-14 08:42:38,022 p=13255 u=vagrant |  TASK [Gathering Facts] ********************************************************************************
+2020-10-14 08:42:38,024 p=13255 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:2
+2020-10-14 08:42:38,968 p=13255 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/system/setup.py
+2020-10-14 08:42:39,434 p=13255 u=vagrant |  ok: [centOS]
+2020-10-14 08:42:39,435 p=13255 u=vagrant |  META: ran handlers
+2020-10-14 08:42:39,457 p=13255 u=vagrant |  TASK [backup existing Zabbix files] *******************************************************************
+2020-10-14 08:42:39,458 p=13255 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:9
+2020-10-14 08:42:39,540 p=13255 u=vagrant |  fatal: [centOS]: FAILED! => {
+    "msg": "An unhandled exception occurred while templating 'backup_{{ansible_date_time.date}}_{{times}}.tar.gz'. Error was a <class 'ansible.errors.AnsibleError'>, original message: An unhandled exception occurred while templating '{{ ansible_date_time.hour+'-'+ansible_date_time.minute+'-'ansible_date_time.second }}'. Error was a <class 'ansible.errors.AnsibleError'>, original message: template error while templating string: expected token 'end of print statement', got 'ansible_date_time'. String: {{ ansible_date_time.hour+'-'+ansible_date_time.minute+'-'ansible_date_time.second }}"
+}
+2020-10-14 08:42:39,541 p=13255 u=vagrant |  PLAY RECAP ********************************************************************************************
+2020-10-14 08:42:39,541 p=13255 u=vagrant |  centOS                     : ok=1    changed=0    unreachable=0    failed=1   
+2020-10-14 08:42:56,193 p=13287 u=vagrant |  ansible-playbook 2.7.8
+  config file = /home/vagrant/ansible/cfg/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible
+  executable location = /home/vagrant/.local/bin/ansible-playbook
+  python version = 2.7.5 (default, Apr  2 2020, 13:16:51) [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+2020-10-14 08:42:56,194 p=13287 u=vagrant |  Using /home/vagrant/ansible/cfg/ansible.cfg as config file
+2020-10-14 08:42:56,213 p=13287 u=vagrant |  /home/vagrant/ansible/hosts/hosts.yml did not meet host_list requirements, check plugin documentation if this is unexpected
+2020-10-14 08:42:56,213 p=13287 u=vagrant |  /home/vagrant/ansible/hosts/hosts.yml did not meet script requirements, check plugin documentation if this is unexpected
+2020-10-14 08:42:56,218 p=13287 u=vagrant |  Parsed /home/vagrant/ansible/hosts/hosts.yml inventory source with yaml plugin
+2020-10-14 08:42:56,628 p=13287 u=vagrant |  PLAYBOOK: main_update.yml *****************************************************************************
+2020-10-14 08:42:56,628 p=13287 u=vagrant |  1 plays in main_update.yml
+2020-10-14 08:42:56,662 p=13287 u=vagrant |  PLAY [centOS] *****************************************************************************************
+2020-10-14 08:42:56,675 p=13287 u=vagrant |  TASK [Gathering Facts] ********************************************************************************
+2020-10-14 08:42:56,676 p=13287 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:2
+2020-10-14 08:42:57,165 p=13287 u=vagrant |   [ERROR]: User interrupted execution
+
+2020-10-14 08:43:06,627 p=13303 u=vagrant |  ansible-playbook 2.7.8
+  config file = /home/vagrant/ansible/cfg/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible
+  executable location = /home/vagrant/.local/bin/ansible-playbook
+  python version = 2.7.5 (default, Apr  2 2020, 13:16:51) [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+2020-10-14 08:43:06,627 p=13303 u=vagrant |  Using /home/vagrant/ansible/cfg/ansible.cfg as config file
+2020-10-14 08:43:06,642 p=13303 u=vagrant |  /home/vagrant/ansible/hosts/hosts.yml did not meet host_list requirements, check plugin documentation if this is unexpected
+2020-10-14 08:43:06,643 p=13303 u=vagrant |  /home/vagrant/ansible/hosts/hosts.yml did not meet script requirements, check plugin documentation if this is unexpected
+2020-10-14 08:43:06,646 p=13303 u=vagrant |  Parsed /home/vagrant/ansible/hosts/hosts.yml inventory source with yaml plugin
+2020-10-14 08:43:07,031 p=13303 u=vagrant |  PLAYBOOK: main_update.yml *****************************************************************************
+2020-10-14 08:43:07,031 p=13303 u=vagrant |  1 plays in main_update.yml
+2020-10-14 08:43:07,065 p=13303 u=vagrant |  PLAY [centOS] *****************************************************************************************
+2020-10-14 08:43:07,078 p=13303 u=vagrant |  TASK [Gathering Facts] ********************************************************************************
+2020-10-14 08:43:07,079 p=13303 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:2
+2020-10-14 08:43:07,679 p=13303 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/system/setup.py
+2020-10-14 08:43:08,130 p=13303 u=vagrant |  ok: [centOS]
+2020-10-14 08:43:08,131 p=13303 u=vagrant |  META: ran handlers
+2020-10-14 08:43:08,157 p=13303 u=vagrant |  TASK [backup existing Zabbix files] *******************************************************************
+2020-10-14 08:43:08,157 p=13303 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:9
+2020-10-14 08:43:08,549 p=13303 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:43:09,195 p=13303 u=vagrant |   [WARNING]: Consider using the unarchive module rather than running 'tar'.  If you need to use command
+because unarchive is insufficient you can add 'warn: false' to this command task or set
+'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2020-10-14 08:43:09,196 p=13303 u=vagrant |  changed: [centOS] => {
+    "changed": true, 
+    "cmd": "tar zcvf /zabbix/backup_2020-10-14_08-43-07.tar.gz /zabbix/*", 
+    "delta": "0:00:00.407704", 
+    "end": "2020-10-14 08:43:09.138442", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "tar zcvf /zabbix/backup_2020-10-14_08-43-07.tar.gz /zabbix/*", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2020-10-14 08:43:08.730738", 
+    "stderr": "tar: Removing leading `/' from member names", 
+    "stderr_lines": [
+        "tar: Removing leading `/' from member names"
+    ], 
+    "stdout": "/zabbix/backup_2020-10-14.tar.gz\n/zabbix/bin/\n/zabbix/bin/zabbix_sender\n/zabbix/bin/zabbix_get\n/zabbix/conf/\n/zabbix/conf/zabbix_agentd/\n/zabbix/conf/zabbix_agentd/userparameter_examples.conf\n/zabbix/conf/zabbix_agentd/userparameter_mysql.conf\n/zabbix/conf/zabbix_agentd.conf\n/zabbix/install.sh\n/zabbix/sbin/\n/zabbix/sbin/zabbix_agentd\n/zabbix/sbin/start.sh\n/zabbix/sbin/stop.sh", 
+    "stdout_lines": [
+        "/zabbix/backup_2020-10-14.tar.gz", 
+        "/zabbix/bin/", 
+        "/zabbix/bin/zabbix_sender", 
+        "/zabbix/bin/zabbix_get", 
+        "/zabbix/conf/", 
+        "/zabbix/conf/zabbix_agentd/", 
+        "/zabbix/conf/zabbix_agentd/userparameter_examples.conf", 
+        "/zabbix/conf/zabbix_agentd/userparameter_mysql.conf", 
+        "/zabbix/conf/zabbix_agentd.conf", 
+        "/zabbix/install.sh", 
+        "/zabbix/sbin/", 
+        "/zabbix/sbin/zabbix_agentd", 
+        "/zabbix/sbin/start.sh", 
+        "/zabbix/sbin/stop.sh"
+    ]
+}
+2020-10-14 08:43:09,223 p=13303 u=vagrant |  TASK [get list of old file in /zabbix] ****************************************************************
+2020-10-14 08:43:09,223 p=13303 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:18
+2020-10-14 08:43:09,401 p=13303 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:43:09,656 p=13303 u=vagrant |  changed: [centOS] => {
+    "changed": true, 
+    "cmd": "ls /zabbix", 
+    "delta": "0:00:00.005161", 
+    "end": "2020-10-14 08:43:09.601708", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "ls /zabbix", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2020-10-14 08:43:09.596547", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "backup_2020-10-14_08-43-07.tar.gz\nbackup_2020-10-14.tar.gz\nbin\nconf\ninstall.sh\nsbin", 
+    "stdout_lines": [
+        "backup_2020-10-14_08-43-07.tar.gz", 
+        "backup_2020-10-14.tar.gz", 
+        "bin", 
+        "conf", 
+        "install.sh", 
+        "sbin"
+    ]
+}
+2020-10-14 08:43:09,681 p=13303 u=vagrant |  TASK [remove old file in /zabbix] *********************************************************************
+2020-10-14 08:43:09,681 p=13303 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:22
+2020-10-14 08:43:09,783 p=13303 u=vagrant |  fatal: [centOS]: FAILED! => {
+    "msg": "The conditional check 'condi != item' failed. The error was: An unhandled exception occurred while templating '{{ file_name }}'. Error was a <class 'ansible.errors.AnsibleError'>, original message: An unhandled exception occurred while templating 'backup_{{ansible_date_time.date}}_{{times}}.tar.gz'. Error was a <class 'ansible.errors.AnsibleError'>, original message: An unhandled exception occurred while templating '{{ ansible_date_time.hour+'-'+ansible_date_time.minute+'-'ansible_date_time.second }}'. Error was a <class 'ansible.errors.AnsibleError'>, original message: template error while templating string: expected token 'end of print statement', got 'ansible_date_time'. String: {{ ansible_date_time.hour+'-'+ansible_date_time.minute+'-'ansible_date_time.second }}\n\nThe error appears to have been in '/home/vagrant/ansible/yaml/zabbix/main_update.yml': line 22, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n  - name: remove old file in /zabbix\n    ^ here\n"
+}
+2020-10-14 08:43:09,785 p=13303 u=vagrant |  PLAY RECAP ********************************************************************************************
+2020-10-14 08:43:09,785 p=13303 u=vagrant |  centOS                     : ok=3    changed=2    unreachable=0    failed=1   
+2020-10-14 08:43:25,633 p=13369 u=vagrant |  ansible-playbook 2.7.8
+  config file = /home/vagrant/ansible/cfg/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible
+  executable location = /home/vagrant/.local/bin/ansible-playbook
+  python version = 2.7.5 (default, Apr  2 2020, 13:16:51) [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+2020-10-14 08:43:25,633 p=13369 u=vagrant |  Using /home/vagrant/ansible/cfg/ansible.cfg as config file
+2020-10-14 08:43:25,652 p=13369 u=vagrant |  /home/vagrant/ansible/hosts/hosts.yml did not meet host_list requirements, check plugin documentation if this is unexpected
+2020-10-14 08:43:25,652 p=13369 u=vagrant |  /home/vagrant/ansible/hosts/hosts.yml did not meet script requirements, check plugin documentation if this is unexpected
+2020-10-14 08:43:25,655 p=13369 u=vagrant |  Parsed /home/vagrant/ansible/hosts/hosts.yml inventory source with yaml plugin
+2020-10-14 08:43:26,042 p=13369 u=vagrant |  PLAYBOOK: main_update.yml *****************************************************************************
+2020-10-14 08:43:26,043 p=13369 u=vagrant |  1 plays in main_update.yml
+2020-10-14 08:43:26,084 p=13369 u=vagrant |  PLAY [centOS] *****************************************************************************************
+2020-10-14 08:43:26,101 p=13369 u=vagrant |  TASK [Gathering Facts] ********************************************************************************
+2020-10-14 08:43:26,102 p=13369 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:2
+2020-10-14 08:43:26,729 p=13369 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/system/setup.py
+2020-10-14 08:43:27,190 p=13369 u=vagrant |  ok: [centOS]
+2020-10-14 08:43:27,191 p=13369 u=vagrant |  META: ran handlers
+2020-10-14 08:43:27,218 p=13369 u=vagrant |  TASK [backup existing Zabbix files] *******************************************************************
+2020-10-14 08:43:27,218 p=13369 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:9
+2020-10-14 08:43:27,613 p=13369 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:43:28,477 p=13369 u=vagrant |   [WARNING]: Consider using the unarchive module rather than running 'tar'.  If you need to use command
+because unarchive is insufficient you can add 'warn: false' to this command task or set
+'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2020-10-14 08:43:28,478 p=13369 u=vagrant |  changed: [centOS] => {
+    "changed": true, 
+    "cmd": "tar zcvf /zabbix/backup_2020-10-14_08-43-27.tar.gz /zabbix/*", 
+    "delta": "0:00:00.612716", 
+    "end": "2020-10-14 08:43:28.417341", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "tar zcvf /zabbix/backup_2020-10-14_08-43-27.tar.gz /zabbix/*", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2020-10-14 08:43:27.804625", 
+    "stderr": "tar: Removing leading `/' from member names", 
+    "stderr_lines": [
+        "tar: Removing leading `/' from member names"
+    ], 
+    "stdout": "/zabbix/backup_2020-10-14_08-43-07.tar.gz\n/zabbix/backup_2020-10-14.tar.gz\n/zabbix/bin/\n/zabbix/bin/zabbix_sender\n/zabbix/bin/zabbix_get\n/zabbix/conf/\n/zabbix/conf/zabbix_agentd/\n/zabbix/conf/zabbix_agentd/userparameter_examples.conf\n/zabbix/conf/zabbix_agentd/userparameter_mysql.conf\n/zabbix/conf/zabbix_agentd.conf\n/zabbix/install.sh\n/zabbix/sbin/\n/zabbix/sbin/zabbix_agentd\n/zabbix/sbin/start.sh\n/zabbix/sbin/stop.sh", 
+    "stdout_lines": [
+        "/zabbix/backup_2020-10-14_08-43-07.tar.gz", 
+        "/zabbix/backup_2020-10-14.tar.gz", 
+        "/zabbix/bin/", 
+        "/zabbix/bin/zabbix_sender", 
+        "/zabbix/bin/zabbix_get", 
+        "/zabbix/conf/", 
+        "/zabbix/conf/zabbix_agentd/", 
+        "/zabbix/conf/zabbix_agentd/userparameter_examples.conf", 
+        "/zabbix/conf/zabbix_agentd/userparameter_mysql.conf", 
+        "/zabbix/conf/zabbix_agentd.conf", 
+        "/zabbix/install.sh", 
+        "/zabbix/sbin/", 
+        "/zabbix/sbin/zabbix_agentd", 
+        "/zabbix/sbin/start.sh", 
+        "/zabbix/sbin/stop.sh"
+    ]
+}
+2020-10-14 08:43:28,503 p=13369 u=vagrant |  TASK [get list of old file in /zabbix] ****************************************************************
+2020-10-14 08:43:28,504 p=13369 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:17
+2020-10-14 08:43:28,678 p=13369 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:43:28,942 p=13369 u=vagrant |  changed: [centOS] => {
+    "changed": true, 
+    "cmd": "ls /zabbix", 
+    "delta": "0:00:00.004398", 
+    "end": "2020-10-14 08:43:28.884060", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "ls /zabbix", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2020-10-14 08:43:28.879662", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "backup_2020-10-14_08-43-07.tar.gz\nbackup_2020-10-14_08-43-27.tar.gz\nbackup_2020-10-14.tar.gz\nbin\nconf\ninstall.sh\nsbin", 
+    "stdout_lines": [
+        "backup_2020-10-14_08-43-07.tar.gz", 
+        "backup_2020-10-14_08-43-27.tar.gz", 
+        "backup_2020-10-14.tar.gz", 
+        "bin", 
+        "conf", 
+        "install.sh", 
+        "sbin"
+    ]
+}
+2020-10-14 08:43:28,971 p=13369 u=vagrant |  TASK [remove old file in /zabbix] *********************************************************************
+2020-10-14 08:43:28,971 p=13369 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:21
+2020-10-14 08:43:29,070 p=13369 u=vagrant |  fatal: [centOS]: FAILED! => {
+    "msg": "The conditional check 'condi != item' failed. The error was: An unhandled exception occurred while templating '{{ file_name }}'. Error was a <class 'ansible.errors.AnsibleError'>, original message: An unhandled exception occurred while templating 'backup_{{ansible_date_time.date}}_{{times}}.tar.gz'. Error was a <class 'ansible.errors.AnsibleError'>, original message: An unhandled exception occurred while templating '{{ ansible_date_time.hour+'-'+ansible_date_time.minute+'-'ansible_date_time.second }}'. Error was a <class 'ansible.errors.AnsibleError'>, original message: template error while templating string: expected token 'end of print statement', got 'ansible_date_time'. String: {{ ansible_date_time.hour+'-'+ansible_date_time.minute+'-'ansible_date_time.second }}\n\nThe error appears to have been in '/home/vagrant/ansible/yaml/zabbix/main_update.yml': line 21, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n  - name: remove old file in /zabbix\n    ^ here\n"
+}
+2020-10-14 08:43:29,072 p=13369 u=vagrant |  PLAY RECAP ********************************************************************************************
+2020-10-14 08:43:29,072 p=13369 u=vagrant |  centOS                     : ok=3    changed=2    unreachable=0    failed=1   
+2020-10-14 08:43:45,228 p=13430 u=vagrant |  ansible-playbook 2.7.8
+  config file = /home/vagrant/ansible/cfg/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible
+  executable location = /home/vagrant/.local/bin/ansible-playbook
+  python version = 2.7.5 (default, Apr  2 2020, 13:16:51) [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+2020-10-14 08:43:45,229 p=13430 u=vagrant |  Using /home/vagrant/ansible/cfg/ansible.cfg as config file
+2020-10-14 08:43:45,244 p=13430 u=vagrant |  /home/vagrant/ansible/hosts/hosts.yml did not meet host_list requirements, check plugin documentation if this is unexpected
+2020-10-14 08:43:45,245 p=13430 u=vagrant |  /home/vagrant/ansible/hosts/hosts.yml did not meet script requirements, check plugin documentation if this is unexpected
+2020-10-14 08:43:45,248 p=13430 u=vagrant |  Parsed /home/vagrant/ansible/hosts/hosts.yml inventory source with yaml plugin
+2020-10-14 08:43:45,657 p=13430 u=vagrant |  PLAYBOOK: main_update.yml *****************************************************************************
+2020-10-14 08:43:45,657 p=13430 u=vagrant |  1 plays in main_update.yml
+2020-10-14 08:43:45,691 p=13430 u=vagrant |  PLAY [centOS] *****************************************************************************************
+2020-10-14 08:43:45,703 p=13430 u=vagrant |  TASK [Gathering Facts] ********************************************************************************
+2020-10-14 08:43:45,703 p=13430 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:2
+2020-10-14 08:43:46,317 p=13430 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/system/setup.py
+2020-10-14 08:43:46,780 p=13430 u=vagrant |  ok: [centOS]
+2020-10-14 08:43:46,781 p=13430 u=vagrant |  META: ran handlers
+2020-10-14 08:43:46,813 p=13430 u=vagrant |  TASK [backup existing Zabbix files] *******************************************************************
+2020-10-14 08:43:46,814 p=13430 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:9
+2020-10-14 08:43:47,248 p=13430 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:43:48,411 p=13430 u=vagrant |   [WARNING]: Consider using the unarchive module rather than running 'tar'.  If you need to use command
+because unarchive is insufficient you can add 'warn: false' to this command task or set
+'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2020-10-14 08:43:48,412 p=13430 u=vagrant |  changed: [centOS] => {
+    "changed": true, 
+    "cmd": "tar zcvf /zabbix/backup_2020-10-14_ansible_date_time.hour+'-'+ansible_date_time.minute+'-'+ansible_date_time.second.tar.gz /zabbix/*", 
+    "delta": "0:00:00.925247", 
+    "end": "2020-10-14 08:43:48.359033", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "tar zcvf /zabbix/backup_2020-10-14_ansible_date_time.hour+'-'+ansible_date_time.minute+'-'+ansible_date_time.second.tar.gz /zabbix/*", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2020-10-14 08:43:47.433786", 
+    "stderr": "tar: Removing leading `/' from member names", 
+    "stderr_lines": [
+        "tar: Removing leading `/' from member names"
+    ], 
+    "stdout": "/zabbix/backup_2020-10-14_08-43-07.tar.gz\n/zabbix/backup_2020-10-14_08-43-27.tar.gz\n/zabbix/backup_2020-10-14.tar.gz\n/zabbix/bin/\n/zabbix/bin/zabbix_sender\n/zabbix/bin/zabbix_get\n/zabbix/conf/\n/zabbix/conf/zabbix_agentd/\n/zabbix/conf/zabbix_agentd/userparameter_examples.conf\n/zabbix/conf/zabbix_agentd/userparameter_mysql.conf\n/zabbix/conf/zabbix_agentd.conf\n/zabbix/install.sh\n/zabbix/sbin/\n/zabbix/sbin/zabbix_agentd\n/zabbix/sbin/start.sh\n/zabbix/sbin/stop.sh", 
+    "stdout_lines": [
+        "/zabbix/backup_2020-10-14_08-43-07.tar.gz", 
+        "/zabbix/backup_2020-10-14_08-43-27.tar.gz", 
+        "/zabbix/backup_2020-10-14.tar.gz", 
+        "/zabbix/bin/", 
+        "/zabbix/bin/zabbix_sender", 
+        "/zabbix/bin/zabbix_get", 
+        "/zabbix/conf/", 
+        "/zabbix/conf/zabbix_agentd/", 
+        "/zabbix/conf/zabbix_agentd/userparameter_examples.conf", 
+        "/zabbix/conf/zabbix_agentd/userparameter_mysql.conf", 
+        "/zabbix/conf/zabbix_agentd.conf", 
+        "/zabbix/install.sh", 
+        "/zabbix/sbin/", 
+        "/zabbix/sbin/zabbix_agentd", 
+        "/zabbix/sbin/start.sh", 
+        "/zabbix/sbin/stop.sh"
+    ]
+}
+2020-10-14 08:43:48,436 p=13430 u=vagrant |  TASK [get list of old file in /zabbix] ****************************************************************
+2020-10-14 08:43:48,436 p=13430 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:17
+2020-10-14 08:43:48,629 p=13430 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:43:48,906 p=13430 u=vagrant |  changed: [centOS] => {
+    "changed": true, 
+    "cmd": "ls /zabbix", 
+    "delta": "0:00:00.004890", 
+    "end": "2020-10-14 08:43:48.845677", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "ls /zabbix", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2020-10-14 08:43:48.840787", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "backup_2020-10-14_08-43-07.tar.gz\nbackup_2020-10-14_08-43-27.tar.gz\nbackup_2020-10-14_ansible_date_time.hour+-+ansible_date_time.minute+-+ansible_date_time.second.tar.gz\nbackup_2020-10-14.tar.gz\nbin\nconf\ninstall.sh\nsbin", 
+    "stdout_lines": [
+        "backup_2020-10-14_08-43-07.tar.gz", 
+        "backup_2020-10-14_08-43-27.tar.gz", 
+        "backup_2020-10-14_ansible_date_time.hour+-+ansible_date_time.minute+-+ansible_date_time.second.tar.gz", 
+        "backup_2020-10-14.tar.gz", 
+        "bin", 
+        "conf", 
+        "install.sh", 
+        "sbin"
+    ]
+}
+2020-10-14 08:43:48,935 p=13430 u=vagrant |  TASK [remove old file in /zabbix] *********************************************************************
+2020-10-14 08:43:48,935 p=13430 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:21
+2020-10-14 08:43:49,024 p=13430 u=vagrant |  fatal: [centOS]: FAILED! => {
+    "msg": "The conditional check 'condi != item' failed. The error was: An unhandled exception occurred while templating '{{ file_name }}'. Error was a <class 'ansible.errors.AnsibleError'>, original message: An unhandled exception occurred while templating 'backup_{{ansible_date_time.date}}_{{times}}.tar.gz'. Error was a <class 'ansible.errors.AnsibleError'>, original message: An unhandled exception occurred while templating '{{ ansible_date_time.hour+'-'+ansible_date_time.minute+'-'ansible_date_time.second }}'. Error was a <class 'ansible.errors.AnsibleError'>, original message: template error while templating string: expected token 'end of print statement', got 'ansible_date_time'. String: {{ ansible_date_time.hour+'-'+ansible_date_time.minute+'-'ansible_date_time.second }}\n\nThe error appears to have been in '/home/vagrant/ansible/yaml/zabbix/main_update.yml': line 21, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n  - name: remove old file in /zabbix\n    ^ here\n"
+}
+2020-10-14 08:43:49,025 p=13430 u=vagrant |  PLAY RECAP ********************************************************************************************
+2020-10-14 08:43:49,025 p=13430 u=vagrant |  centOS                     : ok=3    changed=2    unreachable=0    failed=1   
+2020-10-14 08:44:07,497 p=13490 u=vagrant |  ansible-playbook 2.7.8
+  config file = /home/vagrant/ansible/cfg/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible
+  executable location = /home/vagrant/.local/bin/ansible-playbook
+  python version = 2.7.5 (default, Apr  2 2020, 13:16:51) [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+2020-10-14 08:44:07,497 p=13490 u=vagrant |  Using /home/vagrant/ansible/cfg/ansible.cfg as config file
+2020-10-14 08:44:07,513 p=13490 u=vagrant |  /home/vagrant/ansible/hosts/hosts.yml did not meet host_list requirements, check plugin documentation if this is unexpected
+2020-10-14 08:44:07,514 p=13490 u=vagrant |  /home/vagrant/ansible/hosts/hosts.yml did not meet script requirements, check plugin documentation if this is unexpected
+2020-10-14 08:44:07,519 p=13490 u=vagrant |  Parsed /home/vagrant/ansible/hosts/hosts.yml inventory source with yaml plugin
+2020-10-14 08:44:07,912 p=13490 u=vagrant |  PLAYBOOK: main_update.yml *****************************************************************************
+2020-10-14 08:44:07,912 p=13490 u=vagrant |  1 plays in main_update.yml
+2020-10-14 08:44:07,964 p=13490 u=vagrant |  PLAY [centOS] *****************************************************************************************
+2020-10-14 08:44:07,980 p=13490 u=vagrant |  TASK [Gathering Facts] ********************************************************************************
+2020-10-14 08:44:07,981 p=13490 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:2
+2020-10-14 08:44:08,572 p=13490 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/system/setup.py
+2020-10-14 08:44:09,029 p=13490 u=vagrant |  ok: [centOS]
+2020-10-14 08:44:09,030 p=13490 u=vagrant |  META: ran handlers
+2020-10-14 08:44:09,057 p=13490 u=vagrant |  TASK [backup existing Zabbix files] *******************************************************************
+2020-10-14 08:44:09,057 p=13490 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:9
+2020-10-14 08:44:09,472 p=13490 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:44:10,065 p=13490 u=vagrant |   [WARNING]: Consider using the unarchive module rather than running 'tar'.  If you need to use command
+because unarchive is insufficient you can add 'warn: false' to this command task or set
+'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2020-10-14 08:44:10,066 p=13490 u=vagrant |  changed: [centOS] => {
+    "changed": true, 
+    "cmd": "tar zcvf /zabbix/backup_2020-10-14_ansible_date_time.hour+'-'+ansible_date_time.minute+'-'+ansible_date_time.second.tar.gz /zabbix/*", 
+    "delta": "0:00:00.336689", 
+    "end": "2020-10-14 08:44:10.006792", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "tar zcvf /zabbix/backup_2020-10-14_ansible_date_time.hour+'-'+ansible_date_time.minute+'-'+ansible_date_time.second.tar.gz /zabbix/*", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2020-10-14 08:44:09.670103", 
+    "stderr": "tar: Removing leading `/' from member names", 
+    "stderr_lines": [
+        "tar: Removing leading `/' from member names"
+    ], 
+    "stdout": "/zabbix/bin/\n/zabbix/bin/zabbix_sender\n/zabbix/bin/zabbix_get\n/zabbix/conf/\n/zabbix/conf/zabbix_agentd/\n/zabbix/conf/zabbix_agentd/userparameter_examples.conf\n/zabbix/conf/zabbix_agentd/userparameter_mysql.conf\n/zabbix/conf/zabbix_agentd.conf\n/zabbix/install.sh\n/zabbix/sbin/\n/zabbix/sbin/zabbix_agentd\n/zabbix/sbin/start.sh\n/zabbix/sbin/stop.sh", 
+    "stdout_lines": [
+        "/zabbix/bin/", 
+        "/zabbix/bin/zabbix_sender", 
+        "/zabbix/bin/zabbix_get", 
+        "/zabbix/conf/", 
+        "/zabbix/conf/zabbix_agentd/", 
+        "/zabbix/conf/zabbix_agentd/userparameter_examples.conf", 
+        "/zabbix/conf/zabbix_agentd/userparameter_mysql.conf", 
+        "/zabbix/conf/zabbix_agentd.conf", 
+        "/zabbix/install.sh", 
+        "/zabbix/sbin/", 
+        "/zabbix/sbin/zabbix_agentd", 
+        "/zabbix/sbin/start.sh", 
+        "/zabbix/sbin/stop.sh"
+    ]
+}
+2020-10-14 08:44:10,095 p=13490 u=vagrant |  TASK [get list of old file in /zabbix] ****************************************************************
+2020-10-14 08:44:10,096 p=13490 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:17
+2020-10-14 08:44:10,274 p=13490 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:44:10,527 p=13490 u=vagrant |  changed: [centOS] => {
+    "changed": true, 
+    "cmd": "ls /zabbix", 
+    "delta": "0:00:00.004604", 
+    "end": "2020-10-14 08:44:10.474447", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "ls /zabbix", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2020-10-14 08:44:10.469843", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "backup_2020-10-14_ansible_date_time.hour+-+ansible_date_time.minute+-+ansible_date_time.second.tar.gz\nbin\nconf\ninstall.sh\nsbin", 
+    "stdout_lines": [
+        "backup_2020-10-14_ansible_date_time.hour+-+ansible_date_time.minute+-+ansible_date_time.second.tar.gz", 
+        "bin", 
+        "conf", 
+        "install.sh", 
+        "sbin"
+    ]
+}
+2020-10-14 08:44:10,557 p=13490 u=vagrant |  TASK [remove old file in /zabbix] *********************************************************************
+2020-10-14 08:44:10,557 p=13490 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:21
+2020-10-14 08:44:10,650 p=13490 u=vagrant |  fatal: [centOS]: FAILED! => {
+    "msg": "The conditional check 'condi != item' failed. The error was: An unhandled exception occurred while templating '{{ file_name }}'. Error was a <class 'ansible.errors.AnsibleError'>, original message: An unhandled exception occurred while templating 'backup_{{ansible_date_time.date}}_{{times}}.tar.gz'. Error was a <class 'ansible.errors.AnsibleError'>, original message: An unhandled exception occurred while templating '{{ ansible_date_time.hour+'-'+ansible_date_time.minute+'-'ansible_date_time.second }}'. Error was a <class 'ansible.errors.AnsibleError'>, original message: template error while templating string: expected token 'end of print statement', got 'ansible_date_time'. String: {{ ansible_date_time.hour+'-'+ansible_date_time.minute+'-'ansible_date_time.second }}\n\nThe error appears to have been in '/home/vagrant/ansible/yaml/zabbix/main_update.yml': line 21, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n  - name: remove old file in /zabbix\n    ^ here\n"
+}
+2020-10-14 08:44:10,651 p=13490 u=vagrant |  PLAY RECAP ********************************************************************************************
+2020-10-14 08:44:10,652 p=13490 u=vagrant |  centOS                     : ok=3    changed=2    unreachable=0    failed=1   
+2020-10-14 08:44:25,910 p=13551 u=vagrant |  ansible-playbook 2.7.8
+  config file = /home/vagrant/ansible/cfg/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible
+  executable location = /home/vagrant/.local/bin/ansible-playbook
+  python version = 2.7.5 (default, Apr  2 2020, 13:16:51) [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+2020-10-14 08:44:25,910 p=13551 u=vagrant |  Using /home/vagrant/ansible/cfg/ansible.cfg as config file
+2020-10-14 08:44:25,929 p=13551 u=vagrant |  /home/vagrant/ansible/hosts/hosts.yml did not meet host_list requirements, check plugin documentation if this is unexpected
+2020-10-14 08:44:25,929 p=13551 u=vagrant |  /home/vagrant/ansible/hosts/hosts.yml did not meet script requirements, check plugin documentation if this is unexpected
+2020-10-14 08:44:25,934 p=13551 u=vagrant |  Parsed /home/vagrant/ansible/hosts/hosts.yml inventory source with yaml plugin
+2020-10-14 08:44:26,364 p=13551 u=vagrant |  PLAYBOOK: main_update.yml *****************************************************************************
+2020-10-14 08:44:26,364 p=13551 u=vagrant |  1 plays in main_update.yml
+2020-10-14 08:44:26,405 p=13551 u=vagrant |  PLAY [centOS] *****************************************************************************************
+2020-10-14 08:44:26,419 p=13551 u=vagrant |  TASK [Gathering Facts] ********************************************************************************
+2020-10-14 08:44:26,420 p=13551 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:2
+2020-10-14 08:44:27,080 p=13551 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/system/setup.py
+2020-10-14 08:44:27,551 p=13551 u=vagrant |  ok: [centOS]
+2020-10-14 08:44:27,552 p=13551 u=vagrant |  META: ran handlers
+2020-10-14 08:44:27,582 p=13551 u=vagrant |  TASK [backup existing Zabbix files] *******************************************************************
+2020-10-14 08:44:27,583 p=13551 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:9
+2020-10-14 08:44:28,017 p=13551 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:44:28,602 p=13551 u=vagrant |   [WARNING]: Consider using the unarchive module rather than running 'tar'.  If you need to use command
+because unarchive is insufficient you can add 'warn: false' to this command task or set
+'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2020-10-14 08:44:28,602 p=13551 u=vagrant |  changed: [centOS] => {
+    "changed": true, 
+    "cmd": "tar zcvf /zabbix/backup_2020-10-14_08-44-27.tar.gz /zabbix/*", 
+    "delta": "0:00:00.321470", 
+    "end": "2020-10-14 08:44:28.531591", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "tar zcvf /zabbix/backup_2020-10-14_08-44-27.tar.gz /zabbix/*", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2020-10-14 08:44:28.210121", 
+    "stderr": "tar: Removing leading `/' from member names", 
+    "stderr_lines": [
+        "tar: Removing leading `/' from member names"
+    ], 
+    "stdout": "/zabbix/bin/\n/zabbix/bin/zabbix_sender\n/zabbix/bin/zabbix_get\n/zabbix/conf/\n/zabbix/conf/zabbix_agentd/\n/zabbix/conf/zabbix_agentd/userparameter_examples.conf\n/zabbix/conf/zabbix_agentd/userparameter_mysql.conf\n/zabbix/conf/zabbix_agentd.conf\n/zabbix/install.sh\n/zabbix/sbin/\n/zabbix/sbin/zabbix_agentd\n/zabbix/sbin/start.sh\n/zabbix/sbin/stop.sh", 
+    "stdout_lines": [
+        "/zabbix/bin/", 
+        "/zabbix/bin/zabbix_sender", 
+        "/zabbix/bin/zabbix_get", 
+        "/zabbix/conf/", 
+        "/zabbix/conf/zabbix_agentd/", 
+        "/zabbix/conf/zabbix_agentd/userparameter_examples.conf", 
+        "/zabbix/conf/zabbix_agentd/userparameter_mysql.conf", 
+        "/zabbix/conf/zabbix_agentd.conf", 
+        "/zabbix/install.sh", 
+        "/zabbix/sbin/", 
+        "/zabbix/sbin/zabbix_agentd", 
+        "/zabbix/sbin/start.sh", 
+        "/zabbix/sbin/stop.sh"
+    ]
+}
+2020-10-14 08:44:28,629 p=13551 u=vagrant |  TASK [get list of old file in /zabbix] ****************************************************************
+2020-10-14 08:44:28,630 p=13551 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:17
+2020-10-14 08:44:28,829 p=13551 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:44:29,103 p=13551 u=vagrant |  changed: [centOS] => {
+    "changed": true, 
+    "cmd": "ls /zabbix", 
+    "delta": "0:00:00.004287", 
+    "end": "2020-10-14 08:44:29.042967", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "ls /zabbix", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2020-10-14 08:44:29.038680", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "backup_2020-10-14_08-44-27.tar.gz\nbin\nconf\ninstall.sh\nsbin", 
+    "stdout_lines": [
+        "backup_2020-10-14_08-44-27.tar.gz", 
+        "bin", 
+        "conf", 
+        "install.sh", 
+        "sbin"
+    ]
+}
+2020-10-14 08:44:29,127 p=13551 u=vagrant |  TASK [remove old file in /zabbix] *********************************************************************
+2020-10-14 08:44:29,127 p=13551 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:21
+2020-10-14 08:44:29,226 p=13551 u=vagrant |  fatal: [centOS]: FAILED! => {
+    "msg": "The conditional check 'condi != item' failed. The error was: An unhandled exception occurred while templating '{{ file_name }}'. Error was a <class 'ansible.errors.AnsibleError'>, original message: An unhandled exception occurred while templating 'backup_{{ansible_date_time.date}}_{{times}}.tar.gz'. Error was a <class 'ansible.errors.AnsibleError'>, original message: An unhandled exception occurred while templating '{{ ansible_date_time.hour+'-'+ansible_date_time.minute+'-'ansible_date_time.second }}'. Error was a <class 'ansible.errors.AnsibleError'>, original message: template error while templating string: expected token 'end of print statement', got 'ansible_date_time'. String: {{ ansible_date_time.hour+'-'+ansible_date_time.minute+'-'ansible_date_time.second }}\n\nThe error appears to have been in '/home/vagrant/ansible/yaml/zabbix/main_update.yml': line 21, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n  - name: remove old file in /zabbix\n    ^ here\n"
+}
+2020-10-14 08:44:29,228 p=13551 u=vagrant |  PLAY RECAP ********************************************************************************************
+2020-10-14 08:44:29,229 p=13551 u=vagrant |  centOS                     : ok=3    changed=2    unreachable=0    failed=1   
+2020-10-14 08:45:25,421 p=13617 u=vagrant |  ansible-playbook 2.7.8
+  config file = /home/vagrant/ansible/cfg/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible
+  executable location = /home/vagrant/.local/bin/ansible-playbook
+  python version = 2.7.5 (default, Apr  2 2020, 13:16:51) [GCC 4.8.5 20150623 (Red Hat 4.8.5-39)]
+2020-10-14 08:45:25,421 p=13617 u=vagrant |  Using /home/vagrant/ansible/cfg/ansible.cfg as config file
+2020-10-14 08:45:25,437 p=13617 u=vagrant |  /home/vagrant/ansible/hosts/hosts.yml did not meet host_list requirements, check plugin documentation if this is unexpected
+2020-10-14 08:45:25,438 p=13617 u=vagrant |  /home/vagrant/ansible/hosts/hosts.yml did not meet script requirements, check plugin documentation if this is unexpected
+2020-10-14 08:45:25,443 p=13617 u=vagrant |  Parsed /home/vagrant/ansible/hosts/hosts.yml inventory source with yaml plugin
+2020-10-14 08:45:25,854 p=13617 u=vagrant |  PLAYBOOK: main_update.yml *****************************************************************************
+2020-10-14 08:45:25,855 p=13617 u=vagrant |  1 plays in main_update.yml
+2020-10-14 08:45:25,897 p=13617 u=vagrant |  PLAY [centOS] *****************************************************************************************
+2020-10-14 08:45:25,912 p=13617 u=vagrant |  TASK [Gathering Facts] ********************************************************************************
+2020-10-14 08:45:25,914 p=13617 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:2
+2020-10-14 08:45:26,510 p=13617 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/system/setup.py
+2020-10-14 08:45:26,999 p=13617 u=vagrant |  ok: [centOS]
+2020-10-14 08:45:27,000 p=13617 u=vagrant |  META: ran handlers
+2020-10-14 08:45:27,029 p=13617 u=vagrant |  TASK [backup existing Zabbix files] *******************************************************************
+2020-10-14 08:45:27,030 p=13617 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:9
+2020-10-14 08:45:27,396 p=13617 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:45:27,968 p=13617 u=vagrant |   [WARNING]: Consider using the unarchive module rather than running 'tar'.  If you need to use command
+because unarchive is insufficient you can add 'warn: false' to this command task or set
+'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2020-10-14 08:45:27,969 p=13617 u=vagrant |  changed: [centOS] => {
+    "changed": true, 
+    "cmd": "tar zcvf /zabbix/backup_2020-10-14_08-45-26.tar.gz /zabbix/*", 
+    "delta": "0:00:00.318576", 
+    "end": "2020-10-14 08:45:27.914168", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "tar zcvf /zabbix/backup_2020-10-14_08-45-26.tar.gz /zabbix/*", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2020-10-14 08:45:27.595592", 
+    "stderr": "tar: Removing leading `/' from member names", 
+    "stderr_lines": [
+        "tar: Removing leading `/' from member names"
+    ], 
+    "stdout": "/zabbix/bin/\n/zabbix/bin/zabbix_sender\n/zabbix/bin/zabbix_get\n/zabbix/conf/\n/zabbix/conf/zabbix_agentd/\n/zabbix/conf/zabbix_agentd/userparameter_examples.conf\n/zabbix/conf/zabbix_agentd/userparameter_mysql.conf\n/zabbix/conf/zabbix_agentd.conf\n/zabbix/install.sh\n/zabbix/sbin/\n/zabbix/sbin/zabbix_agentd\n/zabbix/sbin/start.sh\n/zabbix/sbin/stop.sh", 
+    "stdout_lines": [
+        "/zabbix/bin/", 
+        "/zabbix/bin/zabbix_sender", 
+        "/zabbix/bin/zabbix_get", 
+        "/zabbix/conf/", 
+        "/zabbix/conf/zabbix_agentd/", 
+        "/zabbix/conf/zabbix_agentd/userparameter_examples.conf", 
+        "/zabbix/conf/zabbix_agentd/userparameter_mysql.conf", 
+        "/zabbix/conf/zabbix_agentd.conf", 
+        "/zabbix/install.sh", 
+        "/zabbix/sbin/", 
+        "/zabbix/sbin/zabbix_agentd", 
+        "/zabbix/sbin/start.sh", 
+        "/zabbix/sbin/stop.sh"
+    ]
+}
+2020-10-14 08:45:27,995 p=13617 u=vagrant |  TASK [get list of old file in /zabbix] ****************************************************************
+2020-10-14 08:45:27,995 p=13617 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:17
+2020-10-14 08:45:28,165 p=13617 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:45:28,420 p=13617 u=vagrant |  changed: [centOS] => {
+    "changed": true, 
+    "cmd": "ls /zabbix", 
+    "delta": "0:00:00.004918", 
+    "end": "2020-10-14 08:45:28.365332", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "ls /zabbix", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2020-10-14 08:45:28.360414", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "backup_2020-10-14_08-45-26.tar.gz\nbin\nconf\ninstall.sh\nsbin", 
+    "stdout_lines": [
+        "backup_2020-10-14_08-45-26.tar.gz", 
+        "bin", 
+        "conf", 
+        "install.sh", 
+        "sbin"
+    ]
+}
+2020-10-14 08:45:28,443 p=13617 u=vagrant |  TASK [remove old file in /zabbix] *********************************************************************
+2020-10-14 08:45:28,443 p=13617 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:21
+2020-10-14 08:45:28,547 p=13617 u=vagrant |  skipping: [centOS] => (item=backup_2020-10-14_08-45-26.tar.gz)  => {
+    "changed": false, 
+    "item": "backup_2020-10-14_08-45-26.tar.gz", 
+    "skip_reason": "Conditional result was False"
+}
+2020-10-14 08:45:28,733 p=13617 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:45:29,056 p=13617 u=vagrant |  changed: [centOS] => (item=bin) => {
+    "changed": true, 
+    "cmd": "rm -rf /zabbix/bin", 
+    "delta": "0:00:00.005549", 
+    "end": "2020-10-14 08:45:28.989519", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "rm -rf /zabbix/bin", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "item": "bin", 
+    "rc": 0, 
+    "start": "2020-10-14 08:45:28.983970", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "", 
+    "stdout_lines": [], 
+    "warnings": [
+        "Consider using the file module with state=absent rather than running 'rm'.  If you need to use command because file is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message."
+    ]
+}
+2020-10-14 08:45:29,198 p=13617 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:45:29,451 p=13617 u=vagrant |  changed: [centOS] => (item=conf) => {
+    "changed": true, 
+    "cmd": "rm -rf /zabbix/conf", 
+    "delta": "0:00:00.004774", 
+    "end": "2020-10-14 08:45:29.389475", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "rm -rf /zabbix/conf", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "item": "conf", 
+    "rc": 0, 
+    "start": "2020-10-14 08:45:29.384701", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "", 
+    "stdout_lines": [], 
+    "warnings": [
+        "Consider using the file module with state=absent rather than running 'rm'.  If you need to use command because file is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message."
+    ]
+}
+2020-10-14 08:45:29,591 p=13617 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:45:29,900 p=13617 u=vagrant |  changed: [centOS] => (item=install.sh) => {
+    "changed": true, 
+    "cmd": "rm -rf /zabbix/install.sh", 
+    "delta": "0:00:00.005277", 
+    "end": "2020-10-14 08:45:29.812162", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "rm -rf /zabbix/install.sh", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "item": "install.sh", 
+    "rc": 0, 
+    "start": "2020-10-14 08:45:29.806885", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "", 
+    "stdout_lines": [], 
+    "warnings": [
+        "Consider using the file module with state=absent rather than running 'rm'.  If you need to use command because file is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message."
+    ]
+}
+2020-10-14 08:45:30,025 p=13617 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:45:30,281 p=13617 u=vagrant |  changed: [centOS] => (item=sbin) => {
+    "changed": true, 
+    "cmd": "rm -rf /zabbix/sbin", 
+    "delta": "0:00:00.004658", 
+    "end": "2020-10-14 08:45:30.224440", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "rm -rf /zabbix/sbin", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "item": "sbin", 
+    "rc": 0, 
+    "start": "2020-10-14 08:45:30.219782", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "", 
+    "stdout_lines": [], 
+    "warnings": [
+        "Consider using the file module with state=absent rather than running 'rm'.  If you need to use command because file is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message."
+    ]
+}
+2020-10-14 08:45:30,282 p=13617 u=vagrant |   [WARNING]: Consider using the file module with state=absent rather than running 'rm'.  If you need to
+use command because file is insufficient you can add 'warn: false' to this command task or set
+'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2020-10-14 08:45:30,305 p=13617 u=vagrant |  TASK [upload zabiix install file] *********************************************************************
+2020-10-14 08:45:30,305 p=13617 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:31
+2020-10-14 08:45:30,401 p=13617 u=vagrant |  included: /home/vagrant/ansible/yaml/zabbix/set_upload_zabiix_file.yml for centOS
+2020-10-14 08:45:30,430 p=13617 u=vagrant |  TASK [unarchive] **************************************************************************************
+2020-10-14 08:45:30,430 p=13617 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/set_upload_zabiix_file.yml:2
+2020-10-14 08:45:30,847 p=13617 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/files/stat.py
+2020-10-14 08:45:31,462 p=13617 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/files/unarchive.py
+2020-10-14 08:45:31,957 p=13617 u=vagrant |  changed: [centOS] => {
+    "changed": true, 
+    "dest": "/zabbix", 
+    "extract_results": {
+        "cmd": [
+            "/usr/bin/gtar", 
+            "--extract", 
+            "-C", 
+            "/zabbix", 
+            "-z", 
+            "-f", 
+            "/home/anagent/.ansible/tmp/ansible-tmp-1602665130.55-87801693675438/source"
+        ], 
+        "err": "", 
+        "out": "", 
+        "rc": 0
+    }, 
+    "gid": 1001, 
+    "group": "anagent", 
+    "handler": "TgzArchive", 
+    "invocation": {
+        "module_args": {
+            "attributes": null, 
+            "backup": null, 
+            "content": null, 
+            "creates": null, 
+            "delimiter": null, 
+            "dest": "/zabbix", 
+            "directory_mode": null, 
+            "exclude": [], 
+            "extra_opts": [], 
+            "follow": false, 
+            "force": null, 
+            "group": null, 
+            "keep_newer": false, 
+            "list_files": false, 
+            "mode": null, 
+            "owner": null, 
+            "regexp": null, 
+            "remote_src": false, 
+            "selevel": null, 
+            "serole": null, 
+            "setype": null, 
+            "seuser": null, 
+            "src": "/home/anagent/.ansible/tmp/ansible-tmp-1602665130.55-87801693675438/source", 
+            "unsafe_writes": null, 
+            "validate_certs": true
+        }
+    }, 
+    "mode": "0775", 
+    "owner": "anagent", 
+    "secontext": "unconfined_u:object_r:default_t:s0", 
+    "size": 100, 
+    "src": "/home/anagent/.ansible/tmp/ansible-tmp-1602665130.55-87801693675438/source", 
+    "state": "directory", 
+    "uid": 1001
+}
+2020-10-14 08:45:31,982 p=13617 u=vagrant |  TASK [install zabbix] *********************************************************************************
+2020-10-14 08:45:31,982 p=13617 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:41
+2020-10-14 08:45:32,084 p=13617 u=vagrant |  included: /home/vagrant/ansible/yaml/zabbix/set_install_zabbix.yml for centOS
+2020-10-14 08:45:32,117 p=13617 u=vagrant |  TASK [install zabbix] *********************************************************************************
+2020-10-14 08:45:32,117 p=13617 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/set_install_zabbix.yml:2
+2020-10-14 08:45:32,306 p=13617 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:45:32,573 p=13617 u=vagrant |  changed: [centOS] => {
+    "changed": true, 
+    "cmd": "sh /zabbix/install.sh", 
+    "delta": "0:00:00.004491", 
+    "end": "2020-10-14 08:45:32.508414", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "sh /zabbix/install.sh", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2020-10-14 08:45:32.503923", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "", 
+    "stdout_lines": []
+}
+2020-10-14 08:45:32,610 p=13617 u=vagrant |  TASK [set zabbix conf] ********************************************************************************
+2020-10-14 08:45:32,610 p=13617 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:44
+2020-10-14 08:45:32,717 p=13617 u=vagrant |  included: /home/vagrant/ansible/yaml/zabbix/set_zabbix_conf.yml for centOS
+2020-10-14 08:45:32,750 p=13617 u=vagrant |  TASK [set zabbix_agentd.conf] *************************************************************************
+2020-10-14 08:45:32,750 p=13617 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/set_zabbix_conf.yml:2
+2020-10-14 08:45:33,161 p=13617 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/files/replace.py
+2020-10-14 08:45:33,437 p=13617 u=vagrant |  changed: [centOS] => (item=[u'^Server=.*', u'Server=192.168.1.10']) => {
+    "changed": true, 
+    "invocation": {
+        "module_args": {
+            "after": null, 
+            "attributes": null, 
+            "backup": false, 
+            "before": null, 
+            "content": null, 
+            "delimiter": null, 
+            "directory_mode": null, 
+            "encoding": "utf-8", 
+            "follow": false, 
+            "force": null, 
+            "group": null, 
+            "mode": null, 
+            "owner": null, 
+            "path": "/zabbix/conf/zabbix_agentd.conf", 
+            "regexp": "^Server=.*", 
+            "remote_src": null, 
+            "replace": "Server=192.168.1.10", 
+            "selevel": null, 
+            "serole": null, 
+            "setype": null, 
+            "seuser": null, 
+            "src": null, 
+            "unsafe_writes": null, 
+            "validate": null
+        }
+    }, 
+    "item": [
+        "^Server=.*", 
+        "Server=192.168.1.10"
+    ], 
+    "msg": "1 replacements made"
+}
+2020-10-14 08:45:33,559 p=13617 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/files/replace.py
+2020-10-14 08:45:33,887 p=13617 u=vagrant |  changed: [centOS] => (item=[u'^ServerActive.*', u'ServerActive=192.168.1.10']) => {
+    "changed": true, 
+    "invocation": {
+        "module_args": {
+            "after": null, 
+            "attributes": null, 
+            "backup": false, 
+            "before": null, 
+            "content": null, 
+            "delimiter": null, 
+            "directory_mode": null, 
+            "encoding": "utf-8", 
+            "follow": false, 
+            "force": null, 
+            "group": null, 
+            "mode": null, 
+            "owner": null, 
+            "path": "/zabbix/conf/zabbix_agentd.conf", 
+            "regexp": "^ServerActive.*", 
+            "remote_src": null, 
+            "replace": "ServerActive=192.168.1.10", 
+            "selevel": null, 
+            "serole": null, 
+            "setype": null, 
+            "seuser": null, 
+            "src": null, 
+            "unsafe_writes": null, 
+            "validate": null
+        }
+    }, 
+    "item": [
+        "^ServerActive.*", 
+        "ServerActive=192.168.1.10"
+    ], 
+    "msg": "1 replacements made"
+}
+2020-10-14 08:45:34,021 p=13617 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/files/replace.py
+2020-10-14 08:45:34,273 p=13617 u=vagrant |  changed: [centOS] => (item=[u'^LogFile=.*', u'LogFile=/zabbix/log/zabbix_agentd.log']) => {
+    "changed": true, 
+    "invocation": {
+        "module_args": {
+            "after": null, 
+            "attributes": null, 
+            "backup": false, 
+            "before": null, 
+            "content": null, 
+            "delimiter": null, 
+            "directory_mode": null, 
+            "encoding": "utf-8", 
+            "follow": false, 
+            "force": null, 
+            "group": null, 
+            "mode": null, 
+            "owner": null, 
+            "path": "/zabbix/conf/zabbix_agentd.conf", 
+            "regexp": "^LogFile=.*", 
+            "remote_src": null, 
+            "replace": "LogFile=/zabbix/log/zabbix_agentd.log", 
+            "selevel": null, 
+            "serole": null, 
+            "setype": null, 
+            "seuser": null, 
+            "src": null, 
+            "unsafe_writes": null, 
+            "validate": null
+        }
+    }, 
+    "item": [
+        "^LogFile=.*", 
+        "LogFile=/zabbix/log/zabbix_agentd.log"
+    ], 
+    "msg": "1 replacements made"
+}
+2020-10-14 08:45:34,303 p=13617 u=vagrant |  TASK [chk zabbix_agentd.conf] *************************************************************************
+2020-10-14 08:45:34,303 p=13617 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/set_zabbix_conf.yml:13
+2020-10-14 08:45:34,480 p=13617 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:45:34,750 p=13617 u=vagrant |  changed: [centOS] => {
+    "changed": true, 
+    "cmd": "cat /zabbix/conf/zabbix_agentd.conf | grep ^Server=.*\n cat /zabbix/conf/zabbix_agentd.conf | grep ^ServerActive=.* # or ActiveServer\n cat /zabbix/conf/zabbix_agentd.conf | grep ^LogFile=.*", 
+    "delta": "0:00:00.010924", 
+    "end": "2020-10-14 08:45:34.693876", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "cat /zabbix/conf/zabbix_agentd.conf | grep ^Server=.*\n cat /zabbix/conf/zabbix_agentd.conf | grep ^ServerActive=.* # or ActiveServer\n cat /zabbix/conf/zabbix_agentd.conf | grep ^LogFile=.*", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2020-10-14 08:45:34.682952", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "Server=192.168.1.10\nServerActive=192.168.1.10\nLogFile=/zabbix/log/zabbix_agentd.log", 
+    "stdout_lines": [
+        "Server=192.168.1.10", 
+        "ServerActive=192.168.1.10", 
+        "LogFile=/zabbix/log/zabbix_agentd.log"
+    ]
+}
+2020-10-14 08:45:34,777 p=13617 u=vagrant |  TASK [debug zabbix_agentd_conf file] ******************************************************************
+2020-10-14 08:45:34,777 p=13617 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/set_zabbix_conf.yml:20
+2020-10-14 08:45:34,916 p=13617 u=vagrant |  ok: [centOS] => {
+    "zabbix_agentd_conf.stdout_lines": [
+        "Server=192.168.1.10", 
+        "ServerActive=192.168.1.10", 
+        "LogFile=/zabbix/log/zabbix_agentd.log"
+    ]
+}
+2020-10-14 08:45:34,948 p=13617 u=vagrant |  TASK [start zabbix] ***********************************************************************************
+2020-10-14 08:45:34,949 p=13617 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/main_update.yml:51
+2020-10-14 08:45:35,097 p=13617 u=vagrant |  included: /home/vagrant/ansible/yaml/zabbix/set_start_zabbix.yml for centOS
+2020-10-14 08:45:35,133 p=13617 u=vagrant |  TASK [start zabbix] ***********************************************************************************
+2020-10-14 08:45:35,134 p=13617 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/set_start_zabbix.yml:2
+2020-10-14 08:45:35,326 p=13617 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:45:35,579 p=13617 u=vagrant |  changed: [centOS] => {
+    "changed": true, 
+    "cmd": "sh /zabbix/sbin/start.sh", 
+    "delta": "0:00:00.007603", 
+    "end": "2020-10-14 08:45:35.521685", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "sh /zabbix/sbin/start.sh", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2020-10-14 08:45:35.514082", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "", 
+    "stdout_lines": []
+}
+2020-10-14 08:45:35,604 p=13617 u=vagrant |  TASK [chk zabbix process] *****************************************************************************
+2020-10-14 08:45:35,605 p=13617 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/set_start_zabbix.yml:5
+2020-10-14 08:45:35,828 p=13617 u=vagrant |  Using module file /home/vagrant/.local/lib/python2.7/site-packages/ansible-2.7.8-py2.7.egg/ansible/modules/commands/command.py
+2020-10-14 08:45:36,158 p=13617 u=vagrant |  changed: [centOS] => {
+    "changed": true, 
+    "cmd": "ps -ef | grep -v grep | grep zabbix_agentd | wc -l", 
+    "delta": "0:00:00.041917", 
+    "end": "2020-10-14 08:45:36.092367", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "ps -ef | grep -v grep | grep zabbix_agentd | wc -l", 
+            "_uses_shell": true, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2020-10-14 08:45:36.050450", 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "0", 
+    "stdout_lines": [
+        "0"
+    ]
+}
+2020-10-14 08:45:36,187 p=13617 u=vagrant |  TASK [debug zabbix process] ***************************************************************************
+2020-10-14 08:45:36,187 p=13617 u=vagrant |  task path: /home/vagrant/ansible/yaml/zabbix/set_start_zabbix.yml:9
+2020-10-14 08:45:36,335 p=13617 u=vagrant |   [WARNING]: when statements should not include jinja2 templating delimiters such as {{ }} or {% %}.
+Found: {{ false if rs.stdout | int > 0 else true }}
+
+2020-10-14 08:45:36,344 p=13617 u=vagrant |  fatal: [centOS]: FAILED! => {
+    "msg": "ERROR!!! Please Check Zabbix agent Process..."
+}
+2020-10-14 08:45:36,345 p=13617 u=vagrant |  PLAY RECAP ********************************************************************************************
+2020-10-14 08:45:36,346 p=13617 u=vagrant |  centOS                     : ok=15   changed=9    unreachable=0    failed=1   
