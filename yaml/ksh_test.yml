@@ -1,0 +1,10 @@
+---
+- hosts: all
+
+  tasks:
+  - shell: sudo yum erase git -y
+
+  - setup:
+    register: rs
+
+  - debug: var=rs

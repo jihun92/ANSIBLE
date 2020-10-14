@@ -1,0 +1,11 @@
+---
+- hosts: centOS
+  gather_facts: yes
+  vars:
+    user: anagent
+
+  tasks:
+  - name: stop zabbix
+    include_tasks: set_stop_zabbix.yml
+    
+

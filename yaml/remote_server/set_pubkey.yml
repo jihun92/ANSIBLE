@@ -1,0 +1,35 @@
+---
+- hosts: aix
+  gather_facts: no
+
+  tasks:
+  - name: get ansible server pubkey
+    local_action: command cat ~/.ssh/id_rsa.pub
+    register: pubkey
+
+  - name: chk dir of .ssh in remote server
+    raw: ls -a
+    register: rs_list
+
+  - name: if not exit dir of .ssh, make dir in remote server
+    raw: mkdir ~/.ssh
+    when: dir_name not in rs_list.stdout
+    vars:
+      dir_name: ".ssh"
+
+  - name: chek pubkey
+    raw: cat ~/.ssh/authorized_keys
+    register: rs_akeys
+    ignore_errors: yes
+
+  - name: set pubkey in remote server
+    raw: echo {{pubkey.stdout}} >> ~/.ssh/authorized_keys
+    when: rs_akeys is failed or pubkey.stdout not in rs_akeys.stdout
+
+  ### debug 
+
+  - name: deubg authorized_keys
+    raw: cat ~/.ssh/authorized_keys
+    register: rs
+  
+  - debug: var=rs

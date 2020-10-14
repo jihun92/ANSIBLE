@@ -1,0 +1,15 @@
+---
+- hosts: aix
+  gather_facts: no
+  vars:
+    file_name: "/home/anagent/Python-2.7.5.tgz"
+
+  tasks:
+  - raw: tar xvf {{file_name}}
+
+  ### debug
+#  - name: chk downlaod python
+#    raw: ls -al | grep Python
+#    register: rs
+# 
+#  - debug: var=rs

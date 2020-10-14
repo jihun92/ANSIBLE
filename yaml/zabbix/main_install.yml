@@ -1,0 +1,36 @@
+---
+- hosts: centOS
+  gather_facts: yes
+  vars:
+    user: anagent
+
+  tasks:
+  - name: set mkdir
+    include_tasks: set_mkdir_zabbix.yml
+    vars:
+      user_name: "{{ user }}"
+
+  - name: upload zabiix install file
+    include_tasks: set_upload_zabiix_file.yml
+    vars:
+      sys_info: 
+        os: "{{ ansible_distribution }}"
+        var: "{{ ansible_distribution_major_version }}"
+        bit: "{{ ansible_architecture }}"
+      src: "~/ansible/file/"
+      dest: "/zabbix"
+
+  - name: install zabbix
+    include_tasks: set_install_zabbix.yml 
+
+  - name: set zabbix conf
+    #include_tasks: set_zabbix_conf.yml
+    include_tasks: set_chk_zabbix_conf.yml
+    vars:
+      ip: 192.168.1.10
+      log_path: /zabbix/log/zabbix_agentd.log
+
+  - name: start zabbix
+    include_tasks: set_start_zabbix.yml
+    
+

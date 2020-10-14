@@ -1,0 +1,10 @@
+---
+- hosts: all
+
+  tasks:
+  - shell: id
+    become: yes
+  - yum:
+      name: vim
+      state: absent
+    become: yes

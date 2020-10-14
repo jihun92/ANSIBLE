@@ -1,0 +1,14 @@
+
+  - unarchive:
+      src: "{{src+file_name}}"
+      dest: "{{dest}}"
+    vars:
+      file_name: "{{ file_name_prefix + file_name_os + file_name_ver + file_name_bit + file_name_type }}"
+      file_name_prefix: "zabbix_agnets_" 
+      file_name_type: ".tar.gz"
+      file_name_os: "{{ sys_info.os | lower }}"
+      file_name_ver: "{{ sys_info.var }}"
+      file_name_bit: "{{ '' if sys_info.bit == 'x86_64' else '_i386' }}"
+
+#  - debug:
+#      msg: "{{ file_name }}"

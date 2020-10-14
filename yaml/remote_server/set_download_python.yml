@@ -1,0 +1,17 @@
+---
+- hosts: aix
+  gather_facts: no
+  vars:
+    src: "~/ansible/install/python/python-2.7.5/Python-2.7.5.tgz"
+    dest: "/home/anagent"
+
+  tasks:
+  # 있으면 다운로드 스킵 추가 
+  - local_action: command scp {{src}} {{ansible_ssh_user}}@{{ansible_host}}:{{dest}}
+
+  ### debug
+  - name: chk downlaod python
+    raw: ls -al | grep Python
+    register: rs
+ 
+  - debug: var=rs

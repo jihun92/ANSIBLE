@@ -1,0 +1,16 @@
+
+  - name: stop zabbix
+    shell: sh /zabbix/sbin/stop.sh
+
+  - name: chk zabbix process
+    shell: ps -ef | grep -v grep | grep zabbix_agentd | wc -l
+    register: rs
+
+  - name: debug zabbix process
+    debug:
+      msg: "{{ msg_run if rs.stdout | int > 0 else msg_not_run }}"
+    failed_when: "{{ false if rs.stdout | int == 0 else true }}"
+    vars:
+      msg_run: "ERROR!!! Still working Zabbix agent Process..."
+      msg_not_run: "Stop Zabbix agent Process..."
+    

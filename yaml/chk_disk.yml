@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: aix
   gather_facts: yes
   
   tasks:

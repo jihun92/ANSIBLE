@@ -1,0 +1,16 @@
+
+  - name: get zabbix_agentd.conf
+    shell: |
+      cat /zabbix/conf/zabbix_agentd.conf | grep ^Server=.*
+      cat /zabbix/conf/zabbix_agentd.conf | grep ^ServerActive=.* # or ActiveServer
+      cat /zabbix/conf/zabbix_agentd.conf | grep ^LogFile=.*
+    register: rs
+
+  - name: chk zabbix_agentd_conf
+    debug:
+      msg: "{{ rs.stdout_lines }}"
+    failed_when: rs.stdout_lines[0] != condi1 or rs.stdout_lines[1] != condi2 or rs.stdout_lines[2] != condi3
+    vars:
+      condi1: Server={{ip}}
+      condi2: ServerActive={{ip}}
+      condi3: LogFile={{log_path}}

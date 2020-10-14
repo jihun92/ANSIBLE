@@ -1,0 +1,6 @@
+---
+- hosts: aix
+  gather_facts: no
+
+  tasks:
+  - raw: uname -a

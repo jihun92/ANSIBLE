@@ -1,0 +1,3 @@
+
+ - name: install zabbix
+   shell: sh /zabbix/install.sh
