@@ -1,0 +1,20 @@
+---
+- hosts: centOS
+
+  roles:
+  - role: zabbix
+    vars:
+      cmd: upload
+      file_name: test.txt
+
+### cmd option
+# 
+# install:
+# 
+# upgrade:
+# 
+# start:
+# 
+# stop:
+# 
+# upload:  

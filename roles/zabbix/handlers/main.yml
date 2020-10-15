@@ -12,5 +12,5 @@
   include: set_stop_zabbix.yml
 
 - name: upload
-  include: install.yml
+  include: set_upload_file.yml
 
