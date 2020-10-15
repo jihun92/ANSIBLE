@@ -1,0 +1,15 @@
+
+  - name: make dir of /zabbix 
+    raw: sudo mkdir /zabbix
+    register: rs
+    failed_when: "{{ 'File exists' not in rs.stdout and rs.stdout != '' }}"
+
+  - name: chown dir of /zabbix 
+    raw: sudo chown '{{user}}':'{{user}}' /zabbix 
+
+  - name: get state /zabbix
+    raw: ls -al / | grep zabbix
+    register: zabbix_dir_info
+
+  - name: debug dir of /zabbix
+    debug: var=zabbix_dir_info.stdout

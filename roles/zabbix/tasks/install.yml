@@ -1,0 +1,25 @@
+---
+- name: make dir of /zabbix home
+  include: set_mkdir.yml
+
+- name: get OS Info
+  include: get_os_info.yml
+
+- name: set_fact zabbix install file name
+  set_fact:
+    file_name: "{{ 'zabbix_agnets_centos'+os_info.ver+'' if os_info.bit == '64' else '_i386' }}.tar.gz"
+
+- name: upload zabbix file
+  include: set_upload_file.yml
+
+- name: unarchive file of zabbix
+  include: set_unarchive_file.yml
+
+- name: run install.sh for install zabbix
+  include: set_install_zabbix.yml
+
+- name: chk zabbix conf
+  include: chk_zabbix_conf.yml
+
+- name: start zabbix
+  include: set_start_zabbix.yml

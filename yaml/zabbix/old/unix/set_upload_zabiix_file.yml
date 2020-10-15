@@ -1,0 +1,27 @@
+
+  - name: get OS bit and Version
+    raw: getconf LONG_BIT && uname -a
+    register: sys_info
+
+  - name: upload zabbix file
+    local_action: command scp {{src+file_name}} {{ansible_ssh_user}}@{{ansible_host}}:{{dest}}
+    vars:
+      file_name: "{{ file_name_prefix + file_name_os + file_name_ver + file_name_bit + file_name_type }}"
+      file_name_prefix: "zabbix_agnets_" 
+      file_name_type: ".tar.gz"
+      file_name_os: "aix"
+      file_name_ver: "{{ '' if sys_info.stdout_lines[1] == 'el5' else '' }}" # 수정 필요 
+      file_name_bit: "{{ '' if sys_info.stdout_lines[0] == '64' else '_i386' }}"
+
+  - name: Unzip zabbix file
+    raw: tar zxvf {{dest}}/{{file_name}} -C /zabbix
+    vars:
+      file_name: "{{ file_name_prefix + file_name_os + file_name_ver + file_name_bit + file_name_type }}"
+      file_name_prefix: "zabbix_agnets_"
+      file_name_type: ".tar.gz"
+      file_name_os: "aix"
+      file_name_ver: "{{ '' if sys_info.stdout_lines[1] == 'el5' else '' }}" # 수정 필요
+      file_name_bit: "{{ '' if sys_info.stdout_lines[0] == '64' else '_i386' }}"
+
+#  - debug:
+#      msg: "{{ file_name }}"

@@ -1,0 +1,10 @@
+---
+- name: get OS bit and Version
+  raw: getconf LONG_BIT && uname -a
+  register: os
+
+- name: set_fact os_info
+  set_fact:
+    os_info:
+      bit: "{{ os.stdout_lines[0] }}"
+      ver: "{{ os.stdout_lines[1].split('el')[-1][0] }}"

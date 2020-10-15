@@ -1,0 +1,3 @@
+---
+- name: upload zabbix file
+  local_action: command scp {{src+file_name}} {{ansible_ssh_user}}@{{ansible_host}}:{{dest}}

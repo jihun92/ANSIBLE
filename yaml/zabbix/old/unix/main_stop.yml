@@ -1,0 +1,11 @@
+---
+- hosts: aix
+  gather_facts: no
+  vars:
+    user: anagent
+
+  tasks:
+  - name: stop zabbix
+    include_tasks: set_stop_zabbix.yml
+    
+

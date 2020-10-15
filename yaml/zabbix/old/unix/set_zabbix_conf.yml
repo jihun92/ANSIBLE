@@ -1,0 +1,23 @@
+
+  - name: set zabbix_agentd.conf
+    replace:
+      path: /zabbix/conf/zabbix_agentd.conf
+      regexp: "{{ item[0] }}"
+      replace: "{{ item[1] }}"
+    loop:
+      - ['^Server=.*', 'Server={{ip}}']
+      - ['^ServerActive.*', 'ServerActive={{ip}}'] # ServerActive= or ActiveServer
+      - ['^LogFile=.*', 'LogFile={{log_path}}']
+
+  # debug
+  - name: chk zabbix_agentd.conf
+    shell: |
+      cat /zabbix/conf/zabbix_agentd.conf | grep ^Server=.*
+      cat /zabbix/conf/zabbix_agentd.conf | grep ^ServerActive=.* # or ActiveServer
+      cat /zabbix/conf/zabbix_agentd.conf | grep ^LogFile=.*
+    register: zabbix_agentd_conf
+
+  - name: debug zabbix_agentd_conf file
+    debug:
+      var: zabbix_agentd_conf.stdout_lines
+   

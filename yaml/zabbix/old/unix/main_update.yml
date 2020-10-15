@@ -1,0 +1,51 @@
+---
+- hosts: aix
+  gather_facts: no
+  vars:
+    user: anagent
+
+  tasks:
+  - name: Get timestamp from the system
+    shell: "date +%Y-%m-%d_%H-%M-%S"
+    register: tstamp
+    delegate_to: localhost
+
+  - name: backup existing Zabbix files
+    raw: tar zcvf {{dest}} {{src}}
+    vars:
+      src: /zabbix/*
+      dest: /zabbix/{{file_name}}
+      file_name: backup_{{tstamp.stdout}}.tar.gz
+
+  - name: get list of old file in /zabbix
+    raw: ls -l /zabbix
+    register: list
+
+  - name: remove old file in /zabbix
+    raw: rm -rf {{src}}{{item.split(' ')[-1]}}
+    with_list: "{{ list.stdout_lines }}"
+    when: condi != item.split(' ')[-1]
+    vars:
+      condi: "{{ file_name }}"
+      src: /zabbix/
+      file_name: backup_{{tstamp.stdout}}.tar.gz
+
+  - name: upload zabiix install file
+    include_tasks: set_upload_zabiix_file.yml
+    vars:
+      src: "~/ansible/file/"
+      dest: "/zabbix"
+
+  - name: install zabbix
+    include_tasks: set_install_zabbix.yml
+
+  - name: set zabbix conf
+    include_tasks: set_chk_zabbix_conf.yml
+    vars:
+    #ip: 192.168.1.10
+    #log_path: /zabbix/log/zabbix_agentd.log
+      ip: 127.0.0.1
+      log_path: /tmp/zabbix_agentd.log
+                                     
+  - name: start zabbix
+    include_tasks: set_start_zabbix.yml

@@ -1,0 +1,16 @@
+---
+- name: install
+  include: install.yml
+
+- name: upgrade
+  include: install.yml
+
+- name: start
+  include: set_start_zabbix.yml
+
+- name: stop
+  include: set_stop_zabbix.yml
+
+- name: upload
+  include: install.yml
+
