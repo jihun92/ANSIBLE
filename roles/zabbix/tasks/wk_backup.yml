@@ -1,0 +1,16 @@
+---
+- name: make dir of /zabbix home
+  include: set_mkdir.yml
+  vars:
+    sudo: False
+    src: "{{ zabbix_home }}"
+    target: ".tmp"
+
+- name: archive tar.gz
+  raw: cd /zabbix/.tmp && tar zcvf {{backup_name}} {{zabbix_home}}
+
+- name: rm files
+  raw: rm -rf {{zabbix_home}}*
+
+- name: move to /zabbix form /zabbix/.tmp/
+  raw: cd /zabbix/.tmp && mv {{backup_name}} ../

@@ -4,7 +4,7 @@
   roles:
   - role: zabbix
     vars:
-      cmd: stop
+      cmd: upgrade
 
 ### cmd option
 # 

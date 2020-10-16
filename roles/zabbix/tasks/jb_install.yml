@@ -1,0 +1,6 @@
+---
+- name: make and change onwer dir of /zabbix
+  include: wk_setting_zabbix_home_dir.yml
+
+- name: install zabbix
+  include: wk_install.yml

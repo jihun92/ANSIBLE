@@ -1,0 +1,8 @@
+---
+- name: Backup /zabbix
+  include: wk_backup.yml
+  vars:
+    backup_name: "backup.tar.gz"
+
+- name: install new version of zabbix
+  include: wk_install.yml

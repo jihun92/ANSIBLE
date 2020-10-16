@@ -1,3 +1,0 @@
----
-- name: unarchive file
-  raw: tar zxvf {{dest}}/{{file_name}} -C /zabbix

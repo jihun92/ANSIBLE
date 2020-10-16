@@ -1,19 +1,4 @@
 ---
-- name: make dir of /zabbix home
-  include: set_mkdir.yml
-  vars:
-    sudo: True
-    src: "/"
-    target: "zabbix"
-
-- name: chown dir of /zabbix
-  include: set_chown.yml
-  vars:
-    owner: "{{ansible_ssh_user}}"
-    group: "{{ansible_ssh_user}}"
-    src: "/"
-    target: "zabbix"
-
 - name: get OS Info
   include: get_os_info.yml
 
@@ -24,8 +9,8 @@
 - name: upload zabbix file
   include: set_upload_file.yml
 
-- name: unarchive file of zabbix
-  include: set_unarchive_file.yml
+- name: unarchive file
+  raw: tar zxvf {{zabbix_home}}/{{file_name}} -C {{zabbix_home}}
 
 - name: run install.sh for install zabbix
   include: set_install_zabbix.yml

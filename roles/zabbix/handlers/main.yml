@@ -1,9 +1,9 @@
 ---
 - name: install
-  include: sub_install.yml
+  include: jb_install.yml
 
 - name: upgrade
-  include: install.yml
+  include: jb_upgrade.yml
 
 - name: start
   include: set_start_zabbix.yml

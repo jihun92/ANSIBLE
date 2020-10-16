@@ -1,6 +1,6 @@
 ---
 - name: get exists dir
-  raw: ls -l {{src}} | grep {{target}}
+  raw: ls -all {{src}} | grep {{target}}
   register: ls_list
   ignore_errors: yes
 
