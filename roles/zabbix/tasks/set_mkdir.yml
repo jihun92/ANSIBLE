@@ -1,28 +1,21 @@
 ---
-- name: get exists dir of /zabbix
-  raw: ls -l / | grep zabbix
+- name: get exists dir
+  raw: ls -l {{src}} | grep {{target}}
   register: ls_list
+  ignore_errors: yes
 
-- name: init is_zabbix
+- name: init is_dir
   set_fact:
-    is_zabbix: False
+    is_dir: False
 
-- name: set is_zabbix
+- name: set is_dir
   set_fact:
-    is_zabbix: True
-  when: item.split(' ')[-1] == 'zabbix'
+    is_dir: True
+  when: item.split(' ')[-1] == target
   with_list: "{{ ls_list.stdout_lines }}"
 
-- name: make dir of /zabbix
-  raw: sudo mkdir /zabbix
-  when: not is_zabbix
-
-- name: chown dir of /zabbix
-  raw: sudo chown '{{ansible_ssh_user}}':'{{ansible_ssh_user}}' /zabbix
-
-- name: get state /zabbix
-  raw: ls -l / | grep zabbix
-  register: zabbix_dir_info
-
-- name: debug dir of /zabbix
-  debug: var=zabbix_dir_info.stdout_lines
+- name: make dir
+  raw: "{{root_authority}} mkdir {{src}}{{target}}"
+  when: not is_dir
+  vars:
+    root_authority: "{{ 'sudo' if sudo == True else '' }}"

@@ -1,6 +1,6 @@
 ---
 - name: install
-  include: install.yml
+  include: sub_install.yml
 
 - name: upgrade
   include: install.yml

@@ -1,6 +1,18 @@
 ---
 - name: make dir of /zabbix home
   include: set_mkdir.yml
+  vars:
+    sudo: True
+    src: "/"
+    target: "zabbix"
+
+- name: chown dir of /zabbix
+  include: set_chown.yml
+  vars:
+    owner: "{{ansible_ssh_user}}"
+    group: "{{ansible_ssh_user}}"
+    src: "/"
+    target: "zabbix"
 
 - name: get OS Info
   include: get_os_info.yml
