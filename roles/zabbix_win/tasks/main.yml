@@ -1,0 +1,5 @@
+---
+- name: RUN ANSIBLE!!
+  local_action: command echo {{cmd}}
+  notify:
+  - "{{ cmd }}"

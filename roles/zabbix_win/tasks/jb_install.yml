@@ -1,0 +1,31 @@
+---
+  - name: mkdir /zabbix
+    win_file:
+      path: "{{ ZABBIX_HOME }}"
+      state: directory
+
+  - name: upload zabbix install file
+    win_copy:
+      src: "{{FILE_SRC}}{{ZABBIX_FILE}}"
+      dest: "{{ ZABBIX_HOME }}"
+
+  - name: unzip
+    win_unzip:
+      src: "{{ ZABBIX_HOME }}{{ ZABBIX_FILE }}"
+      dest: "{{ ZABBIX_HOME }}"
+
+  - name: set zabbix_agentd.conf
+    win_lineinfile:
+     path: "{{ ZABBIX_CONF }}zabbix_agentd.conf"
+     backrefs: yes
+     regexp: "{{ item[0] }}"
+     line: "{{ item[1] }}"
+    loop:
+      - ['^Server=.*', 'Server={{IP}}']
+      - ['^ServerActive=.*', 'ServerActive={{ACTIVE_IP}}'] # ServerActive= or ActiveServer
+      - ['^LogFile=.*', 'LogFile={{LOG_PATH}}']
+
+  - name: install zabbix
+    win_shell: .\zabbix_agentd.exe -i -c \'{{ZABBIX_CONF}}zabbix_agentd.conf\'
+    args:
+      chdir: "{{ ZABBIX_BIN }}"

@@ -1,0 +1,5 @@
+---
+  - name: stop zabbit
+    win_shell: .\zabbix_agentd.exe -f -c \'{{ZABBIX_CONF}}zabbix_agentd.conf\'
+    args:
+      chdir: "{{ ZABBIX_BIN }}"

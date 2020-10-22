@@ -1,0 +1,8 @@
+---
+- hosts: centOS
+
+  tasks:
+  - file:
+      path: /aaa
+      state: directory
+    become: yes

@@ -1,0 +1,14 @@
+---
+ - name: backup
+   win_copy:
+     src: "{{ ZABBIX_HOME }}"
+     dest: "{{ BACKUP_DEST }}{{ BACKUP_NAME }}"
+     remote_src: yes
+
+ - name: remove old zabbix dir
+   win_file:
+     path: "{{ ZABBIX_HOME }}"
+     state: absent
+
+ - name: install zabbix
+   include: jb_install.yml

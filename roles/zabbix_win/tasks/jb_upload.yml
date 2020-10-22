@@ -1,0 +1,5 @@
+---
+  - name: upload file
+    win_copy:
+      src: "{{ FILE_SRC }}{{ FILE }}"
+      dest: "{{ FILE_UPLOAD_DEST }}{{ FILE }}" 

@@ -1,0 +1,17 @@
+---
+IP: 1.1.1.1
+ACTIVE_IP: 2.2.2.2
+LOG_PATH: /zabbix/log
+ZABBIX_HOME: C:\Program Files\zabbix\
+ZABBIX_CONF: "{{ ZABBIX_HOME }}conf\\"
+ZABBIX_BIN: C:\Program Files\zabbix\bin\
+ZABBIX_FILE: zabbix_agnets_win.zip
+FILE_SRC: /home/vagrant/ansible/roles/files/
+
+# upgrade option
+BACKUP_DEST: C:\Users\{{ansible_ssh_user}}\
+BACKUP_NAME: old_zabbix
+
+# upload optin
+FILE: test.txt
+FILE_UPLOAD_DEST: C:\Users\{{ansible_ssh_user}}\

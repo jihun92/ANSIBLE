@@ -1,9 +1,0 @@
----
-- hosts: aix
-  gather_facts: no
-
-  tasks:
-  - name: Get timestamp from the system
-    shell: "date +%Y-%m-%d_%H-%M-%S"
-    register: tstamp
-    delegate_to: localhost
