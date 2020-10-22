@@ -5,8 +5,8 @@ LOG_PATH: /zabbix/log
 ZABBIX_HOME: C:\Program Files\zabbix\
 ZABBIX_CONF: "{{ ZABBIX_HOME }}conf\\"
 ZABBIX_BIN: C:\Program Files\zabbix\bin\
-ZABBIX_FILE: zabbix_agnets_win.zip
-FILE_SRC: /home/vagrant/ansible/roles/files/
+ZABBIX_FILE: zabbix_agents_win.zip
+FILE_SRC: ~/ansible/roles/files/
 
 # upgrade option
 BACKUP_DEST: C:\Users\{{ansible_ssh_user}}\

@@ -1,0 +1,9 @@
+---
+  - name: archive tar.gz
+    raw: cd {{ BACKUP_DEST  }} && tar zcvf {{ BACKUP_NAME }} {{ ZABBIX_HOME }}
+
+  - name: rm old zabbix file
+    raw: rm -rf {{ ZABBIX_HOME }}*
+
+  - name: install zabbix
+    include: jb_install.yml

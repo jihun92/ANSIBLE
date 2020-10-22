@@ -1,0 +1,70 @@
+---
+  - name: make zabbix dir
+    raw: sudo mkdir {{ ZABBIX_HOME }}
+    register: rs
+    failed_when: condi not in rs.stdout and rs.stdout != ''
+    vars:
+      condi: "File exists"
+  
+  - name: chown dir of /zabbix
+    raw: sudo chown '{{ USER }}':'{{ GROUP }}' {{ ZABBIX_HOME }}
+
+  - name: get OS bit and Version
+    raw: getconf LONG_BIT && uname -a
+    register: os
+
+  - name: set_fact os_info
+    set_fact:
+      os_info:
+        bit: "{{ os.stdout_lines[0] }}"
+        ver: "{{ os.stdout_lines[1].split('el')[-1][0] }}"
+
+  - name: set_fact of file_name (ZABBIX_FILE_CENTOS6_64BIT)
+    set_fact:
+      file_name: "{{ ZABBIX_FILE_CENTOS6_64BIT }}"
+    when: os_info.bit == '64' and os_info.ver == '6'
+      
+  - name: set_fact of file_name (ZABBIX_FILE_CENTOS6_32BIT)
+    set_fact:
+      file_name: "{{ ZABBIX_FILE_CENTOS6_32BIT }}"
+    when: os_info.bit == '32' and os_info.ver == '6'
+    
+  - name: set_fact of file_name (ZABBIX_FILE_CENTOS7_64BIT)
+    set_fact:
+      file_name: "{{ ZABBIX_FILE_CENTOS7_64BIT }}"
+    when: os_info.bit == '64' and os_info.ver == '7'
+    
+  - name: set_fact of file_name (ZABBIX_FILE_CENTOS7_32BIT)
+    set_fact:
+      file_name: "{{ ZABBIX_FILE_CENTOS7_32BIT }}"
+    when: os_info.bit == '32' and os_info.ver == '7' 
+
+  - name: upload zabbix file
+    local_action: command scp {{FILE_SRC+file_name}} {{USER}}@{{USER_IP}}:{{ZABBIX_HOME}}
+    
+  - name: unarchive zabbix tar.gz
+    raw: tar zxvf {{ ZABBIX_HOME }}/{{file_name}} -C {{ ZABBIX_HOME }}
+
+  - name: start install.sh in /zabbix
+    raw: cd {{ ZABBIX_HOME }} && sh install.sh    
+ 
+  - name: set zabbix_agentd.conf
+    raw: |
+      cd {{ ZABBIX_CONF }} && sed -i 's/^Server=.*/Server={{ IP }}/g' zabbix_agentd.conf
+      cd {{ ZABBIX_CONF }} && sed -i 's/^ServerActive=.*/ServerActive={{ ACTIVE_IP }}/g' zabbix_agentd.conf
+      cd {{ ZABBIX_CONF }} && sed -i 's/^LogFile=.*/LogFile={{ LOG_PATH }}/g' zabbix_agentd.conf
+  
+  - name: start zabbix
+    raw: cd {{ ZABBIX_SBIN }} && sudo sh start.sh
+  
+  - name: get zabbix process
+    raw: ps -ef | grep -v grep | grep zabbix_agentd | wc -l
+    register: rs
+  
+  - name: chk zabbix process
+    debug:
+      msg: "{{ msg_run if rs.stdout | int > 0 else msg_not_run }}"
+    failed_when: "{{ false if rs.stdout | int > 0 else true }}"
+    vars:
+      msg_run: "Working Zabbix agent Process..."
+      msg_not_run: "ERROR!!! Please Check Zabbix agent Process..." 

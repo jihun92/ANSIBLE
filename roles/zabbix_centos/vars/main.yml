@@ -1,0 +1,24 @@
+---
+IP: 1.1.1.1
+ACTIVE_IP: 2.2.2.2
+LOG_PATH: \/zabbix\/log
+ZABBIX_HOME: /zabbix/
+USER: "{{ ansible_ssh_user }}"   # zabbix dir chown user
+GROUP: "{{ ansible_ssh_user }}"  # zabbix dir chown group
+USER_IP: "{{ ansible_host }}"    # using scp
+ZABBIX_CONF: /zabbix/conf/
+ZABBIX_SBIN: /zabbix/sbin/
+FILE_SRC: ~/ansible/roles/files/
+
+ZABBIX_FILE_CENTOS6_64BIT: zabbix_agents_centos6.tar.gz
+ZABBIX_FILE_CENTOS6_32BIT: zabbix_agents_centos6_i386.tar.gz
+ZABBIX_FILE_CENTOS7_64BIT: zabbix_agents_centos7.tar.gz
+ZABBIX_FILE_CENTOS7_32BIT: zabbix_agents_centos7_i386.tar.gz
+
+# upgrade option
+BACKUP_DEST: ~/
+BACKUP_NAME: old_zabbix.tar.gz
+
+# upload optin
+FILE: test.txt
+FILE_UPLOAD_DEST: ~/

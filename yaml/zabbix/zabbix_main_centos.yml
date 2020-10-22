@@ -2,6 +2,6 @@
 - hosts: "{{ hosts }}"
 
   roles:
-  - role: zabbix
+  - role: zabbix_centos
     vars:
-      cmd: "{{ cmd }}"
+      cmd: "{{cmd}}"

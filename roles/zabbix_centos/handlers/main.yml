@@ -1,0 +1,16 @@
+---
+- name: install
+  include: jb_install.yml
+
+- name: upgrade
+  include: jb_upgrade.yml
+
+- name: start
+  include: jb_start.yml
+
+- name: stop
+  include: jb_stop.yml
+
+- name: upload
+  include: jb_upload.yml
+
