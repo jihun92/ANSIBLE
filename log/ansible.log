@@ -34504,3 +34504,522 @@ Found: {{ false if rs.stdout | int == 0 else true }}
 2020-10-22 17:41:36,866 p=10787 u=vagrant |  META: ran handlers
 2020-10-22 17:41:36,868 p=10787 u=vagrant |  PLAY RECAP ********************************************************************************************
 2020-10-22 17:41:36,868 p=10787 u=vagrant |  centOS                     : ok=2    changed=2    unreachable=0    failed=0   
+2020-10-23 06:13:47,361 p=2090 u=vagrant |   [WARNING]: Found variable using reserved name: hosts
+
+2020-10-23 06:13:47,368 p=2090 u=vagrant |  PLAY [win_me,] ****************************************************************************************
+2020-10-23 06:13:47,395 p=2090 u=vagrant |  TASK [zabbix_win : RUN ANSIBLE!!] *********************************************************************
+2020-10-23 06:13:47,860 p=2090 u=vagrant |  changed: [win_me -> localhost]
+2020-10-23 06:13:47,862 p=2090 u=vagrant |  RUNNING HANDLER [zabbix_win : upload file] ************************************************************
+2020-10-23 06:13:47,965 urllib3.connectionpool Starting new HTTP connection (1): 192.168.56.1:5985
+2020-10-23 06:13:49,987 p=2090 u=vagrant |  fatal: [win_me]: UNREACHABLE! => {"changed": false, "msg": "plaintext: HTTPConnectionPool(host='192.168.56.1', port=5985): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fe3d270fc90>: Failed to establish a new connection: [Errno 111] Connection refused',))", "unreachable": true}
+2020-10-23 06:13:49,988 p=2090 u=vagrant |  PLAY RECAP ********************************************************************************************
+2020-10-23 06:13:49,988 p=2090 u=vagrant |  win_me                     : ok=1    changed=1    unreachable=1    failed=0   
+2020-10-23 06:14:20,361 p=2155 u=vagrant |   [WARNING]: Found variable using reserved name: hosts
+
+2020-10-23 06:14:20,368 p=2155 u=vagrant |  PLAY [win_me,] ****************************************************************************************
+2020-10-23 06:14:20,386 p=2155 u=vagrant |  TASK [zabbix_win : RUN ANSIBLE!!] *********************************************************************
+2020-10-23 06:14:20,818 p=2155 u=vagrant |  changed: [win_me -> localhost]
+2020-10-23 06:14:20,820 p=2155 u=vagrant |  RUNNING HANDLER [zabbix_win : upload file] ************************************************************
+2020-10-23 06:14:20,898 urllib3.connectionpool Starting new HTTP connection (1): 192.168.56.1:5985
+2020-10-23 06:14:22,907 p=2155 u=vagrant |  fatal: [win_me]: UNREACHABLE! => {"changed": false, "msg": "plaintext: HTTPConnectionPool(host='192.168.56.1', port=5985): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fe1fd24dad0>: Failed to establish a new connection: [Errno 111] Connection refused',))", "unreachable": true}
+2020-10-23 06:14:22,910 p=2155 u=vagrant |  PLAY RECAP ********************************************************************************************
+2020-10-23 06:14:22,911 p=2155 u=vagrant |  win_me                     : ok=1    changed=1    unreachable=1    failed=0   
+2020-10-23 06:22:10,051 p=2191 u=vagrant |   [WARNING]: Found variable using reserved name: hosts
+
+2020-10-23 06:22:10,058 p=2191 u=vagrant |  PLAY [win_dev,] ***************************************************************************************
+2020-10-23 06:22:10,080 p=2191 u=vagrant |  TASK [zabbix_win : RUN ANSIBLE!!] *********************************************************************
+2020-10-23 06:22:10,579 p=2191 u=vagrant |  changed: [win_dev -> localhost]
+2020-10-23 06:22:10,582 p=2191 u=vagrant |  RUNNING HANDLER [zabbix_win : upload file] ************************************************************
+2020-10-23 06:22:10,656 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.14:5985
+2020-10-23 06:22:13,982 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 1622
+2020-10-23 06:22:14,000 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:22:14,993 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:22:15,674 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:22:16,519 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2231
+2020-10-23 06:22:16,527 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:22:16,543 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:22:17,673 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2495
+2020-10-23 06:22:17,686 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:22:17,711 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:22:17,725 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:22:18,320 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2159
+2020-10-23 06:22:18,338 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:22:18,355 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:22:19,211 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:22:19,882 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:22:20,149 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2011
+2020-10-23 06:22:20,188 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:22:20,200 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:22:21,044 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 1911
+2020-10-23 06:22:21,061 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:22:21,070 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 602
+2020-10-23 06:22:21,077 p=2191 u=vagrant |  changed: [win_dev]
+2020-10-23 06:22:21,080 p=2191 u=vagrant |  PLAY RECAP ********************************************************************************************
+2020-10-23 06:22:21,080 p=2191 u=vagrant |  win_dev                    : ok=2    changed=2    unreachable=0    failed=0   
+2020-10-23 06:33:28,642 p=2389 u=vagrant |   [WARNING]: Found variable using reserved name: hosts
+
+2020-10-23 06:33:28,647 p=2389 u=vagrant |  PLAY [win_dev,] ***************************************************************************************
+2020-10-23 06:33:28,662 p=2389 u=vagrant |  TASK [zabbix_win : RUN ANSIBLE!!] *********************************************************************
+2020-10-23 06:33:29,256 p=2389 u=vagrant |  changed: [win_dev -> localhost]
+2020-10-23 06:33:29,261 p=2389 u=vagrant |  RUNNING HANDLER [zabbix_win : mkdir /zabbix] **********************************************************
+2020-10-23 06:33:29,327 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.13:5985
+2020-10-23 06:33:32,345 p=2389 u=vagrant |  fatal: [win_dev]: UNREACHABLE! => {"changed": false, "msg": "plaintext: HTTPConnectionPool(host='192.168.1.13', port=5985): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0e77a59e10>: Failed to establish a new connection: [Errno 113] No route to host',))", "unreachable": true}
+2020-10-23 06:33:32,350 p=2389 u=vagrant |  RUNNING HANDLER [zabbix_win : upload zabbix install file] *********************************************
+2020-10-23 06:33:32,523 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.13:5985
+2020-10-23 06:33:35,352 p=2389 u=vagrant |  fatal: [win_dev]: UNREACHABLE! => {"changed": false, "msg": "plaintext: HTTPConnectionPool(host='192.168.1.13', port=5985): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0e77a51f50>: Failed to establish a new connection: [Errno 113] No route to host',))", "unreachable": true}
+2020-10-23 06:33:35,357 p=2389 u=vagrant |  RUNNING HANDLER [zabbix_win : unzip] ******************************************************************
+2020-10-23 06:33:35,505 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.13:5985
+2020-10-23 06:33:38,356 p=2389 u=vagrant |  fatal: [win_dev]: UNREACHABLE! => {"changed": false, "msg": "plaintext: HTTPConnectionPool(host='192.168.1.13', port=5985): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0e77ec7a90>: Failed to establish a new connection: [Errno 113] No route to host',))", "unreachable": true}
+2020-10-23 06:33:38,361 p=2389 u=vagrant |  RUNNING HANDLER [zabbix_win : set zabbix_agentd.conf] *************************************************
+2020-10-23 06:33:38,546 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.13:5985
+2020-10-23 06:33:41,396 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.13:5985
+2020-10-23 06:33:41,402 p=2389 u=vagrant |  failed: [win_dev] (item=[u'^Server=.*', u'Server=1.1.1.1']) => {"item": ["^Server=.*", "Server=1.1.1.1"], "msg": "plaintext: HTTPConnectionPool(host='192.168.1.13', port=5985): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0e77a49990>: Failed to establish a new connection: [Errno 113] No route to host',))", "unreachable": true}
+2020-10-23 06:33:44,394 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.13:5985
+2020-10-23 06:33:44,398 p=2389 u=vagrant |  failed: [win_dev] (item=[u'^ServerActive=.*', u'ServerActive=2.2.2.2']) => {"item": ["^ServerActive=.*", "ServerActive=2.2.2.2"], "msg": "plaintext: HTTPConnectionPool(host='192.168.1.13', port=5985): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0e7799dfd0>: Failed to establish a new connection: [Errno 113] No route to host',))", "unreachable": true}
+2020-10-23 06:33:47,372 p=2389 u=vagrant |  failed: [win_dev] (item=[u'^LogFile=.*', u'LogFile=/zabbix/log']) => {"item": ["^LogFile=.*", "LogFile=/zabbix/log"], "msg": "plaintext: HTTPConnectionPool(host='192.168.1.13', port=5985): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0e7799df90>: Failed to establish a new connection: [Errno 113] No route to host',))", "unreachable": true}
+2020-10-23 06:33:47,374 p=2389 u=vagrant |  fatal: [win_dev]: UNREACHABLE! => {"changed": false, "msg": "All items completed", "results": [{"_ansible_ignore_errors": null, "_ansible_item_label": ["^Server=.*", "Server=1.1.1.1"], "_ansible_item_result": true, "item": ["^Server=.*", "Server=1.1.1.1"], "msg": "plaintext: HTTPConnectionPool(host='192.168.1.13', port=5985): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0e77a49990>: Failed to establish a new connection: [Errno 113] No route to host',))", "unreachable": true}, {"_ansible_ignore_errors": null, "_ansible_item_label": ["^ServerActive=.*", "ServerActive=2.2.2.2"], "_ansible_item_result": true, "item": ["^ServerActive=.*", "ServerActive=2.2.2.2"], "msg": "plaintext: HTTPConnectionPool(host='192.168.1.13', port=5985): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0e7799dfd0>: Failed to establish a new connection: [Errno 113] No route to host',))", "unreachable": true}, {"_ansible_ignore_errors": null, "_ansible_item_label": ["^LogFile=.*", "LogFile=/zabbix/log"], "_ansible_item_result": true, "item": ["^LogFile=.*", "LogFile=/zabbix/log"], "msg": "plaintext: HTTPConnectionPool(host='192.168.1.13', port=5985): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0e7799df90>: Failed to establish a new connection: [Errno 113] No route to host',))", "unreachable": true}]}
+2020-10-23 06:33:47,379 p=2389 u=vagrant |  RUNNING HANDLER [zabbix_win : install zabbix] *********************************************************
+2020-10-23 06:33:47,526 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.13:5985
+2020-10-23 06:33:50,374 p=2389 u=vagrant |  fatal: [win_dev]: UNREACHABLE! => {"changed": false, "msg": "plaintext: HTTPConnectionPool(host='192.168.1.13', port=5985): Max retries exceeded with url: /wsman (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0e77a44ed0>: Failed to establish a new connection: [Errno 113] No route to host',))", "unreachable": true}
+2020-10-23 06:33:50,376 p=2389 u=vagrant |  PLAY RECAP ********************************************************************************************
+2020-10-23 06:33:50,376 p=2389 u=vagrant |  win_dev                    : ok=1    changed=1    unreachable=5    failed=0   
+2020-10-23 06:34:26,701 p=2429 u=vagrant |   [WARNING]: Found variable using reserved name: hosts
+
+2020-10-23 06:34:26,717 p=2429 u=vagrant |  PLAY [win,] *******************************************************************************************
+2020-10-23 06:34:26,758 p=2429 u=vagrant |  TASK [zabbix_win : RUN ANSIBLE!!] *********************************************************************
+2020-10-23 06:34:27,466 p=2429 u=vagrant |  changed: [win -> localhost]
+2020-10-23 06:34:27,472 p=2429 u=vagrant |  RUNNING HANDLER [zabbix_win : mkdir /zabbix] **********************************************************
+2020-10-23 06:34:27,589 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.14:5985
+2020-10-23 06:34:27,729 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 1622
+2020-10-23 06:34:27,750 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:34:28,267 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:34:28,918 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:34:29,542 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2011
+2020-10-23 06:34:29,555 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:34:29,570 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 602
+2020-10-23 06:34:29,581 p=2429 u=vagrant |  changed: [win]
+2020-10-23 06:34:29,586 p=2429 u=vagrant |  RUNNING HANDLER [zabbix_win : upload zabbix install file] *********************************************
+2020-10-23 06:34:29,704 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.14:5985
+2020-10-23 06:34:29,783 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 1622
+2020-10-23 06:34:29,800 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:34:30,435 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:34:31,061 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:34:31,513 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2267
+2020-10-23 06:34:31,523 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:34:31,546 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:34:32,831 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2495
+2020-10-23 06:34:32,847 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:34:32,871 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:34:33,287 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:34:33,443 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:34:33,521 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:34:33,578 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:34:33,630 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:34:33,737 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:34:33,804 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:34:33,859 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:34:33,915 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:34:34,021 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:34:34,061 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:34:34,399 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:34:34,427 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:34:34,540 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:34:34,592 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:34:34,627 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:34:34,635 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:34:34,840 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2159
+2020-10-23 06:34:34,850 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:34:34,871 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:34:35,357 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:34:36,025 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:34:36,548 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2011
+2020-10-23 06:34:36,556 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:34:36,568 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:34:37,286 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 1911
+2020-10-23 06:34:37,295 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:34:37,313 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 602
+2020-10-23 06:34:37,319 p=2429 u=vagrant |  changed: [win]
+2020-10-23 06:34:37,322 p=2429 u=vagrant |  RUNNING HANDLER [zabbix_win : unzip] ******************************************************************
+2020-10-23 06:34:37,439 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.14:5985
+2020-10-23 06:34:37,814 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 1622
+2020-10-23 06:34:37,826 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:34:38,511 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:34:39,177 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:34:40,764 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2155
+2020-10-23 06:34:40,770 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:34:40,778 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 602
+2020-10-23 06:34:40,783 p=2429 u=vagrant |  changed: [win]
+2020-10-23 06:34:40,786 p=2429 u=vagrant |  RUNNING HANDLER [zabbix_win : set zabbix_agentd.conf] *************************************************
+2020-10-23 06:34:40,861 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.14:5985
+2020-10-23 06:34:41,047 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 1622
+2020-10-23 06:34:41,058 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:34:41,589 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:34:42,215 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:34:43,016 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2079
+2020-10-23 06:34:43,028 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:34:43,073 p=2429 u=vagrant |  changed: [win] => (item=[u'^Server=.*', u'Server=1.1.1.1'])
+2020-10-23 06:34:43,080 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:34:43,609 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:34:44,216 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:34:44,850 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2079
+2020-10-23 06:34:44,859 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:34:44,882 p=2429 u=vagrant |  changed: [win] => (item=[u'^ServerActive=.*', u'ServerActive=2.2.2.2'])
+2020-10-23 06:34:44,888 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:34:45,663 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:34:46,293 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:34:46,753 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2079
+2020-10-23 06:34:47,054 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:34:47,063 p=2429 u=vagrant |  changed: [win] => (item=[u'^LogFile=.*', u'LogFile=/zabbix/log'])
+2020-10-23 06:34:47,071 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 602
+2020-10-23 06:34:47,083 p=2429 u=vagrant |  RUNNING HANDLER [zabbix_win : install zabbix] *********************************************************
+2020-10-23 06:34:47,165 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.14:5985
+2020-10-23 06:34:47,229 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 1622
+2020-10-23 06:34:47,251 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:34:48,026 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:34:48,731 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:34:50,462 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2611
+2020-10-23 06:34:50,468 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:34:50,476 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 602
+2020-10-23 06:34:50,481 p=2429 u=vagrant |  changed: [win]
+2020-10-23 06:34:50,483 p=2429 u=vagrant |  PLAY RECAP ********************************************************************************************
+2020-10-23 06:34:50,483 p=2429 u=vagrant |  win                        : ok=6    changed=6    unreachable=0    failed=0   
+2020-10-23 06:35:10,072 p=2469 u=vagrant |   [WARNING]: Found variable using reserved name: hosts
+
+2020-10-23 06:35:10,076 p=2469 u=vagrant |  PLAY [win,] *******************************************************************************************
+2020-10-23 06:35:10,091 p=2469 u=vagrant |  TASK [zabbix_win : RUN ANSIBLE!!] *********************************************************************
+2020-10-23 06:35:10,590 p=2469 u=vagrant |  changed: [win -> localhost]
+2020-10-23 06:35:10,595 p=2469 u=vagrant |  RUNNING HANDLER [zabbix_win : backup] *****************************************************************
+2020-10-23 06:35:10,702 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.14:5985
+2020-10-23 06:35:10,787 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 1622
+2020-10-23 06:35:10,804 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:35:11,532 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:35:12,153 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:35:13,515 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 3107
+2020-10-23 06:35:13,527 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:35:13,541 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 602
+2020-10-23 06:35:13,548 p=2469 u=vagrant |  fatal: [win]: FAILED! => {"changed": true, "cmd": "Compress-Archive -Path C:\\Program Files\\zabbix\\ -DestinationPath C:\\Users\\vagrant\\old_zabbix.zip", "delta": "0:00:00.936745", "end": "2020-10-23 06:35:13.544507", "msg": "non-zero return code", "rc": 1, "start": "2020-10-23 06:35:12.607762", "stderr": "Compress-Archive : A positional parameter cannot be found that accepts argument 'Files\\zabbix\\'.\r\nAt line:1 char:65\r\n+ ... ing $false; Compress-Archive -Path C:\\Program Files\\zabbix\\ -Destinat ...\r\n+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : InvalidArgument: (:) [Compress-Archive], ParameterBindingException\r\n    + FullyQualifiedErrorId : PositionalParameterNotFound,Compress-Archive", "stderr_lines": ["Compress-Archive : A positional parameter cannot be found that accepts argument 'Files\\zabbix\\'.", "At line:1 char:65", "+ ... ing $false; Compress-Archive -Path C:\\Program Files\\zabbix\\ -Destinat ...", "+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", "    + CategoryInfo          : InvalidArgument: (:) [Compress-Archive], ParameterBindingException", "    + FullyQualifiedErrorId : PositionalParameterNotFound,Compress-Archive"], "stdout": "", "stdout_lines": []}
+2020-10-23 06:35:13,551 p=2469 u=vagrant |  RUNNING HANDLER [zabbix_win : remove old zabbix dir] **************************************************
+2020-10-23 06:35:13,553 p=2469 u=vagrant |  RUNNING HANDLER [zabbix_win : mkdir /zabbix] **********************************************************
+2020-10-23 06:35:13,555 p=2469 u=vagrant |  RUNNING HANDLER [zabbix_win : upload zabbix install file] *********************************************
+2020-10-23 06:35:13,558 p=2469 u=vagrant |  RUNNING HANDLER [zabbix_win : unzip] ******************************************************************
+2020-10-23 06:35:13,561 p=2469 u=vagrant |  RUNNING HANDLER [zabbix_win : set zabbix_agentd.conf] *************************************************
+2020-10-23 06:35:13,566 p=2469 u=vagrant |  RUNNING HANDLER [zabbix_win : install zabbix] *********************************************************
+2020-10-23 06:35:13,567 p=2469 u=vagrant |  NO MORE HOSTS LEFT ************************************************************************************
+2020-10-23 06:35:13,569 p=2469 u=vagrant |  PLAY RECAP ********************************************************************************************
+2020-10-23 06:35:13,569 p=2469 u=vagrant |  win                        : ok=1    changed=1    unreachable=0    failed=1   
+2020-10-23 06:37:08,461 p=2504 u=vagrant |   [WARNING]: Found variable using reserved name: hosts
+
+2020-10-23 06:37:08,465 p=2504 u=vagrant |  PLAY [win,] *******************************************************************************************
+2020-10-23 06:37:08,488 p=2504 u=vagrant |  TASK [zabbix_win : RUN ANSIBLE!!] *********************************************************************
+2020-10-23 06:37:08,956 p=2504 u=vagrant |  changed: [win -> localhost]
+2020-10-23 06:37:08,959 p=2504 u=vagrant |  RUNNING HANDLER [zabbix_win : backup] *****************************************************************
+2020-10-23 06:37:09,020 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.14:5985
+2020-10-23 06:37:09,071 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 1622
+2020-10-23 06:37:09,081 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:37:09,530 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:37:10,185 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:37:11,647 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 3099
+2020-10-23 06:37:11,661 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:37:11,673 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 602
+2020-10-23 06:37:11,681 p=2504 u=vagrant |  fatal: [win]: FAILED! => {"changed": true, "cmd": "Compress-Archive -Path C:\\Program Files\\zabbix -DestinationPath C:\\Users\\vagrant\\old_zabbix.zip", "delta": "0:00:00.953504", "end": "2020-10-23 06:37:11.696062", "msg": "non-zero return code", "rc": 1, "start": "2020-10-23 06:37:10.742557", "stderr": "Compress-Archive : A positional parameter cannot be found that accepts argument 'Files\\zabbix'.\r\nAt line:1 char:65\r\n+ ... ing $false; Compress-Archive -Path C:\\Program Files\\zabbix -Destinati ...\r\n+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : InvalidArgument: (:) [Compress-Archive], ParameterBindingException\r\n    + FullyQualifiedErrorId : PositionalParameterNotFound,Compress-Archive", "stderr_lines": ["Compress-Archive : A positional parameter cannot be found that accepts argument 'Files\\zabbix'.", "At line:1 char:65", "+ ... ing $false; Compress-Archive -Path C:\\Program Files\\zabbix -Destinati ...", "+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", "    + CategoryInfo          : InvalidArgument: (:) [Compress-Archive], ParameterBindingException", "    + FullyQualifiedErrorId : PositionalParameterNotFound,Compress-Archive"], "stdout": "", "stdout_lines": []}
+2020-10-23 06:37:11,684 p=2504 u=vagrant |  RUNNING HANDLER [zabbix_win : remove old zabbix dir] **************************************************
+2020-10-23 06:37:11,687 p=2504 u=vagrant |  RUNNING HANDLER [zabbix_win : mkdir /zabbix] **********************************************************
+2020-10-23 06:37:11,691 p=2504 u=vagrant |  RUNNING HANDLER [zabbix_win : upload zabbix install file] *********************************************
+2020-10-23 06:37:11,695 p=2504 u=vagrant |  RUNNING HANDLER [zabbix_win : unzip] ******************************************************************
+2020-10-23 06:37:11,699 p=2504 u=vagrant |  RUNNING HANDLER [zabbix_win : set zabbix_agentd.conf] *************************************************
+2020-10-23 06:37:11,702 p=2504 u=vagrant |  RUNNING HANDLER [zabbix_win : install zabbix] *********************************************************
+2020-10-23 06:37:11,703 p=2504 u=vagrant |  NO MORE HOSTS LEFT ************************************************************************************
+2020-10-23 06:37:11,704 p=2504 u=vagrant |  PLAY RECAP ********************************************************************************************
+2020-10-23 06:37:11,704 p=2504 u=vagrant |  win                        : ok=1    changed=1    unreachable=0    failed=1   
+2020-10-23 06:38:20,074 p=2536 u=vagrant |   [WARNING]: Found variable using reserved name: hosts
+
+2020-10-23 06:38:20,080 p=2536 u=vagrant |  PLAY [win,] *******************************************************************************************
+2020-10-23 06:38:20,119 p=2536 u=vagrant |  TASK [zabbix_win : RUN ANSIBLE!!] *********************************************************************
+2020-10-23 06:38:20,777 p=2536 u=vagrant |  changed: [win -> localhost]
+2020-10-23 06:38:20,781 p=2536 u=vagrant |  RUNNING HANDLER [zabbix_win : backup] *****************************************************************
+2020-10-23 06:38:20,890 p=2536 u=vagrant |  ok: [win] => {
+    "msg": "Compress-Archive -Path C:\\Program Files\\zabbix\\ -DestinationPath C:\\Users\\vagrant\\old_zabbix.zip"
+}
+2020-10-23 06:38:20,895 p=2536 u=vagrant |  RUNNING HANDLER [zabbix_win : remove old zabbix dir] **************************************************
+2020-10-23 06:38:21,018 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.14:5985
+2020-10-23 06:38:21,108 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 1622
+2020-10-23 06:38:21,126 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:38:21,790 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:38:22,404 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:38:22,728 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2011
+2020-10-23 06:38:22,740 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:38:22,752 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 602
+2020-10-23 06:38:22,760 p=2536 u=vagrant |  changed: [win]
+2020-10-23 06:38:22,764 p=2536 u=vagrant |  RUNNING HANDLER [zabbix_win : mkdir /zabbix] **********************************************************
+2020-10-23 06:38:22,849 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.14:5985
+2020-10-23 06:38:22,931 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 1622
+2020-10-23 06:38:22,945 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:38:23,423 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:38:24,019 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:38:24,911 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2011
+2020-10-23 06:38:24,926 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:38:24,943 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 602
+2020-10-23 06:38:24,949 p=2536 u=vagrant |  changed: [win]
+2020-10-23 06:38:24,954 p=2536 u=vagrant |  RUNNING HANDLER [zabbix_win : upload zabbix install file] *********************************************
+2020-10-23 06:38:25,094 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.14:5985
+2020-10-23 06:38:25,176 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 1622
+2020-10-23 06:38:25,192 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:38:25,691 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:38:26,498 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:38:26,779 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2267
+2020-10-23 06:38:26,795 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:38:26,813 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:38:27,583 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2491
+2020-10-23 06:38:27,596 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:38:27,615 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:38:27,877 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:38:27,965 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:38:28,015 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:38:28,067 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:38:28,117 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:38:28,174 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:38:28,223 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:38:28,274 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:38:28,319 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:38:28,360 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:38:28,413 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:38:28,502 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:38:28,557 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:38:28,608 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:38:28,658 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:38:28,709 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:38:28,725 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:38:28,937 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2159
+2020-10-23 06:38:28,953 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:38:28,992 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:38:29,621 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:38:30,339 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:38:30,864 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2011
+2020-10-23 06:38:30,876 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:38:30,898 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:38:31,875 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 1911
+2020-10-23 06:38:31,889 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:38:31,906 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 602
+2020-10-23 06:38:31,919 p=2536 u=vagrant |  changed: [win]
+2020-10-23 06:38:31,924 p=2536 u=vagrant |  RUNNING HANDLER [zabbix_win : unzip] ******************************************************************
+2020-10-23 06:38:32,040 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.14:5985
+2020-10-23 06:38:32,129 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 1622
+2020-10-23 06:38:32,158 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:38:32,735 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:38:33,374 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:38:33,899 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2155
+2020-10-23 06:38:33,911 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:38:33,926 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 602
+2020-10-23 06:38:33,933 p=2536 u=vagrant |  changed: [win]
+2020-10-23 06:38:33,936 p=2536 u=vagrant |  RUNNING HANDLER [zabbix_win : set zabbix_agentd.conf] *************************************************
+2020-10-23 06:38:34,050 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.14:5985
+2020-10-23 06:38:34,138 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 1622
+2020-10-23 06:38:34,155 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:38:34,918 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:38:35,545 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:38:36,155 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2079
+2020-10-23 06:38:36,165 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:38:36,196 p=2536 u=vagrant |  changed: [win] => (item=[u'^Server=.*', u'Server=1.1.1.1'])
+2020-10-23 06:38:36,197 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:38:36,785 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:38:37,420 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:38:38,663 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2079
+2020-10-23 06:38:38,678 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:38:38,725 p=2536 u=vagrant |  changed: [win] => (item=[u'^ServerActive=.*', u'ServerActive=2.2.2.2'])
+2020-10-23 06:38:38,735 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:38:39,387 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:38:40,014 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:38:41,201 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2079
+2020-10-23 06:38:41,208 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:38:41,214 p=2536 u=vagrant |  changed: [win] => (item=[u'^LogFile=.*', u'LogFile=/zabbix/log'])
+2020-10-23 06:38:41,216 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 602
+2020-10-23 06:38:41,232 p=2536 u=vagrant |  RUNNING HANDLER [zabbix_win : install zabbix] *********************************************************
+2020-10-23 06:38:41,287 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.14:5985
+2020-10-23 06:38:41,363 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 1622
+2020-10-23 06:38:41,372 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:38:41,755 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:38:42,358 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:38:43,628 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2559
+2020-10-23 06:38:43,664 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:38:43,676 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 602
+2020-10-23 06:38:43,686 p=2536 u=vagrant |  fatal: [win]: FAILED! => {"changed": true, "cmd": ".\\zabbix_agentd.exe -i -c \\'C:\\Program Files\\zabbix\\conf\\zabbix_agentd.conf\\'", "delta": "0:00:00.812142", "end": "2020-10-23 06:38:43.708349", "msg": "non-zero return code", "rc": 1, "start": "2020-10-23 06:38:42.896207", "stderr": "zabbix_agentd.exe [2280]: ERROR: service [Zabbix Agent] already exists", "stderr_lines": ["zabbix_agentd.exe [2280]: ERROR: service [Zabbix Agent] already exists"], "stdout": "", "stdout_lines": []}
+2020-10-23 06:38:43,687 p=2536 u=vagrant |  NO MORE HOSTS LEFT ************************************************************************************
+2020-10-23 06:38:43,690 p=2536 u=vagrant |  PLAY RECAP ********************************************************************************************
+2020-10-23 06:38:43,691 p=2536 u=vagrant |  win                        : ok=7    changed=6    unreachable=0    failed=1   
+2020-10-23 06:41:54,834 p=2582 u=vagrant |  ERROR! this task 'debug' has extra params, which is only allowed in the following modules: shell, win_shell, include_vars, add_host, raw, include_role, meta, set_fact, include, import_tasks, script, import_role, include_tasks, group_by, command, win_command
+
+The error appears to have been in '/home/vagrant/ansible/roles/zabbix_win/tasks/jb_upgrade.yml': line 2, column 4, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+ - name: backup
+   ^ here
+
+2020-10-23 06:42:38,823 p=2593 u=vagrant |  ERROR! failed at splitting arguments, either an unbalanced jinja2 block or quotes: Compress-Archive -Path C:\'Program Files'\zabbix\  -DestinationPath {{BACKUP_DEST}}{{BACKUP_NAME}} -Force
+
+The error appears to have been in '/home/vagrant/ansible/roles/zabbix_win/tasks/jb_upgrade.yml': line 2, column 4, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+ - name: backup
+   ^ here
+
+2020-10-23 06:42:53,111 p=2601 u=vagrant |  ERROR! failed at splitting arguments, either an unbalanced jinja2 block or quotes: Compress-Archive -Path C:\'Program Files'\zabbix\  -DestinationPath {{BACKUP_DEST}}{{BACKUP_NAME}} -Force
+
+The error appears to have been in '/home/vagrant/ansible/roles/zabbix_win/tasks/jb_upgrade.yml': line 2, column 4, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+ - name: backup
+   ^ here
+
+2020-10-23 06:43:12,407 p=2609 u=vagrant |  ERROR! Syntax Error while loading YAML.
+  found unknown escape character
+
+The error appears to have been in '/home/vagrant/ansible/roles/zabbix_win/tasks/jb_upgrade.yml': line 3, column 57, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+ - name: backup
+   win_shell: "Compress-Archive -Path C:\'Program Files'\zabbix\  -DestinationPath {{BACKUP_DEST}}{{BACKUP_NAME}} -Force"
+                                                        ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes.  Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2020-10-23 06:43:38,142 p=2617 u=vagrant |   [WARNING]: Found variable using reserved name: hosts
+
+2020-10-23 06:43:38,155 p=2617 u=vagrant |  PLAY [win,] *******************************************************************************************
+2020-10-23 06:43:38,172 p=2617 u=vagrant |  TASK [zabbix_win : RUN ANSIBLE!!] *********************************************************************
+2020-10-23 06:43:38,580 p=2617 u=vagrant |  changed: [win -> localhost]
+2020-10-23 06:43:38,582 p=2617 u=vagrant |  RUNNING HANDLER [zabbix_win : backup] *****************************************************************
+2020-10-23 06:43:38,634 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.14:5985
+2020-10-23 06:43:38,708 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 1622
+2020-10-23 06:43:38,733 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:43:39,346 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:43:40,001 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:43:43,225 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2451
+2020-10-23 06:43:43,238 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:43:43,249 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 602
+2020-10-23 06:43:43,255 p=2617 u=vagrant |  changed: [win]
+2020-10-23 06:43:43,259 p=2617 u=vagrant |  RUNNING HANDLER [zabbix_win : remove old zabbix dir] **************************************************
+2020-10-23 06:43:43,338 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.14:5985
+2020-10-23 06:43:43,435 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 1622
+2020-10-23 06:43:43,447 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:43:44,204 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:43:44,845 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:43:45,383 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2011
+2020-10-23 06:43:45,396 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:43:45,449 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 602
+2020-10-23 06:43:45,457 p=2617 u=vagrant |  changed: [win]
+2020-10-23 06:43:45,461 p=2617 u=vagrant |  RUNNING HANDLER [zabbix_win : mkdir /zabbix] **********************************************************
+2020-10-23 06:43:45,607 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.14:5985
+2020-10-23 06:43:45,682 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 1622
+2020-10-23 06:43:45,698 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:43:46,264 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:43:46,859 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:43:47,517 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2011
+2020-10-23 06:43:47,529 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:43:47,545 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 602
+2020-10-23 06:43:47,556 p=2617 u=vagrant |  changed: [win]
+2020-10-23 06:43:47,562 p=2617 u=vagrant |  RUNNING HANDLER [zabbix_win : upload zabbix install file] *********************************************
+2020-10-23 06:43:47,692 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.14:5985
+2020-10-23 06:43:47,765 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 1622
+2020-10-23 06:43:47,783 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:43:48,531 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:43:49,204 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:43:49,585 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2267
+2020-10-23 06:43:49,592 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:43:49,602 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:43:50,228 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2495
+2020-10-23 06:43:50,239 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:43:50,256 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:43:50,554 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:43:50,694 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:43:50,729 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:43:50,769 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:43:50,803 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:43:50,856 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:43:50,909 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:43:50,964 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:43:51,008 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:43:51,068 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:43:51,121 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:43:51,174 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:43:51,199 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:43:51,231 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:43:51,262 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:43:51,289 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:43:51,297 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:43:51,439 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2159
+2020-10-23 06:43:51,451 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:43:51,490 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:43:52,729 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:43:53,394 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:43:54,323 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2011
+2020-10-23 06:43:54,350 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:43:54,388 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:43:55,470 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 1911
+2020-10-23 06:43:55,484 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:43:55,495 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 602
+2020-10-23 06:43:55,504 p=2617 u=vagrant |  changed: [win]
+2020-10-23 06:43:55,508 p=2617 u=vagrant |  RUNNING HANDLER [zabbix_win : unzip] ******************************************************************
+2020-10-23 06:43:55,568 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.14:5985
+2020-10-23 06:43:55,650 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 1622
+2020-10-23 06:43:55,669 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:43:56,268 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:43:56,938 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:43:57,859 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2155
+2020-10-23 06:43:57,875 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:43:57,889 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 602
+2020-10-23 06:43:57,894 p=2617 u=vagrant |  changed: [win]
+2020-10-23 06:43:57,897 p=2617 u=vagrant |  RUNNING HANDLER [zabbix_win : set zabbix_agentd.conf] *************************************************
+2020-10-23 06:43:57,977 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.14:5985
+2020-10-23 06:43:58,054 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 1622
+2020-10-23 06:43:58,067 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:43:59,486 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:44:00,832 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:44:02,384 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2079
+2020-10-23 06:44:02,395 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:44:02,439 p=2617 u=vagrant |  changed: [win] => (item=[u'^Server=.*', u'Server=1.1.1.1'])
+2020-10-23 06:44:02,444 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:44:03,035 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:44:03,794 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:44:05,262 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2079
+2020-10-23 06:44:05,270 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:44:05,294 p=2617 u=vagrant |  changed: [win] => (item=[u'^ServerActive=.*', u'ServerActive=2.2.2.2'])
+2020-10-23 06:44:05,296 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:44:06,196 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:44:06,877 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:44:08,282 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2079
+2020-10-23 06:44:08,291 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:44:08,299 p=2617 u=vagrant |  changed: [win] => (item=[u'^LogFile=.*', u'LogFile=/zabbix/log'])
+2020-10-23 06:44:08,312 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 602
+2020-10-23 06:44:08,328 p=2617 u=vagrant |  RUNNING HANDLER [zabbix_win : install zabbix] *********************************************************
+2020-10-23 06:44:08,433 urllib3.connectionpool Starting new HTTP connection (1): 192.168.1.14:5985
+2020-10-23 06:44:08,610 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 1622
+2020-10-23 06:44:08,628 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 847
+2020-10-23 06:44:09,313 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 753
+2020-10-23 06:44:10,034 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 998
+2020-10-23 06:44:11,799 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 2559
+2020-10-23 06:44:11,813 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 757
+2020-10-23 06:44:11,826 urllib3.connectionpool http://192.168.1.14:5985 "POST /wsman HTTP/1.1" 200 602
+2020-10-23 06:44:11,835 p=2617 u=vagrant |  fatal: [win]: FAILED! => {"changed": true, "cmd": ".\\zabbix_agentd.exe -i -c \\'C:\\Program Files\\zabbix\\conf\\zabbix_agentd.conf\\'", "delta": "0:00:01.077689", "end": "2020-10-23 06:44:11.788418", "msg": "non-zero return code", "rc": 1, "start": "2020-10-23 06:44:10.710728", "stderr": "zabbix_agentd.exe [736]: ERROR: service [Zabbix Agent] already exists", "stderr_lines": ["zabbix_agentd.exe [736]: ERROR: service [Zabbix Agent] already exists"], "stdout": "", "stdout_lines": []}
+2020-10-23 06:44:11,836 p=2617 u=vagrant |  NO MORE HOSTS LEFT ************************************************************************************
+2020-10-23 06:44:11,838 p=2617 u=vagrant |  PLAY RECAP ********************************************************************************************
+2020-10-23 06:44:11,838 p=2617 u=vagrant |  win                        : ok=7    changed=7    unreachable=0    failed=1   

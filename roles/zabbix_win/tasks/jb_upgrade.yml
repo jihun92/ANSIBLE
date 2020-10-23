@@ -1,10 +1,7 @@
 ---
  - name: backup
-   win_copy:
-     src: "{{ ZABBIX_HOME }}"
-     dest: "{{ BACKUP_DEST }}{{ BACKUP_NAME }}"
-     remote_src: yes
-
+   win_shell: Compress-Archive -Path C:\\'Program Files\'\zabbix\  -DestinationPath {{BACKUP_DEST}}{{BACKUP_NAME}} -Force
+  
  - name: remove old zabbix dir
    win_file:
      path: "{{ ZABBIX_HOME }}"

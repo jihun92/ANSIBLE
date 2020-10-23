@@ -10,7 +10,7 @@ FILE_SRC: ~/ansible/roles/files/
 
 # upgrade option
 BACKUP_DEST: C:\Users\{{ansible_ssh_user}}\
-BACKUP_NAME: old_zabbix
+BACKUP_NAME: old_zabbix.zip
 
 # upload optin
 FILE: test.txt
