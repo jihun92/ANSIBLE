@@ -1,8 +1,8 @@
 ---
-- hosts: centOS
+- hosts: win
 
   tasks:
-  - file:
-      path: /aaa
-      state: directory
-    become: yes
+  - win_lineinfile:
+      path: C:\test.txt
+      line: test4
+    check_mode: yes

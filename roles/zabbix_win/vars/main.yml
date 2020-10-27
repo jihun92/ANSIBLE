@@ -1,7 +1,7 @@
 ---
-IP: 1.1.1.1
-ACTIVE_IP: 2.2.2.2
-LOG_PATH: /zabbix/log
+IP: 127.0.0.1
+ACTIVE_IP: 127.0.0.1
+LOG_PATH: c:\zabbix_agentd.log
 ZABBIX_HOME: C:\Program Files\zabbix\
 ZABBIX_CONF: "{{ ZABBIX_HOME }}conf\\"
 ZABBIX_BIN: C:\Program Files\zabbix\bin\

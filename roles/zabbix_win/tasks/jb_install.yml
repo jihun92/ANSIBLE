@@ -14,16 +14,28 @@
       src: "{{ ZABBIX_HOME }}{{ ZABBIX_FILE }}"
       dest: "{{ ZABBIX_HOME }}"
 
-  - name: set zabbix_agentd.conf
+  - name: check zabbix_agentd.conf
     win_lineinfile:
-     path: "{{ ZABBIX_CONF }}zabbix_agentd.conf"
-     backrefs: yes
-     regexp: "{{ item[0] }}"
-     line: "{{ item[1] }}"
+      path: "{{ ZABBIX_CONF }}zabbix_agentd.conf"
+      line: "{{ item }}"
     loop:
-      - ['^Server=.*', 'Server={{IP}}']
-      - ['^ServerActive=.*', 'ServerActive={{ACTIVE_IP}}'] # ServerActive= or ActiveServer
-      - ['^LogFile=.*', 'LogFile={{LOG_PATH}}']
+      - 'Server={{IP}}'
+      - 'ServerActive={{ACTIVE_IP}}'
+      - 'LogFile={{LOG_PATH}}'
+    check_mode: yes
+    register: rs
+    failed_when: rs is changed
+
+#  - name: set zabbix_agentd.conf
+#    win_lineinfile:
+#     path: "{{ ZABBIX_CONF }}zabbix_agentd.conf"
+#     backrefs: yes
+#     regexp: "{{ item[0] }}"
+#     line: "{{ item[1] }}"
+#    loop:
+#      - ['^Server=.*', 'Server={{IP}}']
+#      - ['^ServerActive=.*', 'ServerActive={{ACTIVE_IP}}'] # ServerActive= or ActiveServer
+#      - ['^LogFile=.*', 'LogFile={{LOG_PATH}}']
 
   - name: install zabbix
     win_shell: .\zabbix_agentd.exe -i -c \'{{ZABBIX_CONF}}zabbix_agentd.conf\'
